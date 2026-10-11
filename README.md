@@ -1,10 +1,10 @@
-# Dr.Rosario_PharmD.github.io
+# Dr. Rosario — nrosario07.github.io
 
 Dr. Rosario, PharmD — professional portfolio and free ClinicalRx tools for healthcare professionals and students.
 
-Foundation release 0.2.0, October 11, 2026. ClinicalRx is a working platform name.
+Guided clinical tools release 0.3.1, October 11, 2026. ClinicalRx is a working platform name.
 
-A free static professional portfolio and tools workspace. No build, account, database, API key, paid service, external font or CDN dependency is required. The profile is populated from the supplied September 2026 CV and VA resume. LinkedIn is the sole public contact method; a curated public CV summary is included. Clinical content is a foundation demonstration, not a validated decision-support release.
+A free static professional portfolio and tools workspace. No build, account, database, API key, paid service, external font or CDN dependency is required. The profile is populated from the supplied September 2026 CV and VA resume. LinkedIn is the sole public contact method; a curated public CV summary is included. Clinical content is an educational/reference release requiring institutional clinical review before patient use.
 
 ## Run and verify
 
@@ -12,8 +12,8 @@ Open `docs/index.html` in a browser. All scripts and reference data are local. C
 
 ## Publish on GitHub Pages
 
-Repository: https://github.com/nrosario07/Dr.Rosario_PharmD.github.io
-Expected project-site URL after Pages activation: https://nrosario07.github.io/Dr.Rosario_PharmD.github.io/
+Repository: https://github.com/nrosario07/nrosario07.github.io
+GitHub Pages site: https://nrosario07.github.io/
 
 1. Open repository Settings → Pages.
 2. Under Build and deployment, choose Deploy from a branch.
@@ -21,9 +21,9 @@ Expected project-site URL after Pages activation: https://nrosario07.github.io/D
 4. Leave Custom domain blank and keep HTTPS enabled.
 5. Open the deployment URL shown by GitHub and check all navigation, a fictional note, source filters and downloads.
 
-The repository name makes this a project site; renaming to nrosario07.github.io would use the account-root URL instead. Relative paths support either. This foundation does not require GitHub Actions configuration, a paid plan or a custom domain.
+The repository is the account-root site, nrosario07.github.io. Relative paths also support a project site if moved later. No custom GitHub Actions configuration, paid plan or custom domain is needed.
 
-The files are prepared for this repository. The GitHub connector can read the repository but rejected a blob upload with HTTP 403, Resource not accessible by integration. No site files were uploaded through the connector. Upload this package through GitHub Add file → Upload files, or grant the connection repository-content write access. Pages activation and a live deployment are not yet verified.
+The files are prepared for this repository. The GitHub connector can read the repository but rejected a blob upload with HTTP 403, Resource not accessible by integration. No site files were uploaded through the connector. Upload this package through GitHub Add file → Upload files, or grant the connection repository-content write access. The existing 0.2 site was already published; the 0.3 update still needs upload and deployment verification.
 
 Official instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
@@ -32,7 +32,10 @@ Official instructions: https://docs.github.com/en/pages/getting-started-with-git
 - `docs/index.html`: static entrypoint with restrictive content security policy.
 - `docs/assets/styles.css`: responsive presentation, keyboard focus and print styles.
 - `docs/assets/app.js`: navigation, forms and browser-memory workflow.
-- `docs/assets/core.js`: pure note, financial and economic functions.
+- `docs/assets/core.js`: pure note, financial and foundation economic functions.
+- `docs/assets/clinical.js`: reviewed limited rules, calculators, patient generation and structured exports.
+- `docs/assets/workspaces.js`: guided smart-note/business/calculator controls and local events.
+- `docs/data/clinical-rules.json` and `docs/assets/rules.js`: matching offline reference subset and source hashes.
 - `docs/data/registry.json`: canonical versioned source/rationale metadata.
 - `docs/assets/content.js`: offline copy of the registry, avoiding any fetch requests.
 - `docs/downloads/`: original generic note and EHR adaptation guide.
@@ -63,3 +66,13 @@ Original materials remain subject to the owner's rights. External sources are li
 ## Public CV generation
 
 The included public CV is an original selected summary. To regenerate it, run `python scripts/public-cv.py` in an environment with ReportLab and DejaVu fonts; adjust the font paths for other operating systems. These dependencies are only for document generation, never for site visitors. Run `python scripts/package.py` to create the standalone preview and ZIP.
+
+## Guided clinical tools release 0.3
+
+Guided MTP/SOAP and business sections now include educational help and sources. Both tools share economic event records. Patient drafts derive from agreed SOAP instructions and require explicit review before download. The limited service review uses Original Medicare office incident-to gates and a clinic-specific MD/DO sign-off control; it never assigns higher E/M levels from pharmacist note complexity. A small FY2027 ICD-10-CM subset supplies candidates for confirmation. CMS annual 2026 Texas benchmarks are historical published base references, not current claim quotes. Adult BMI and legacy Cockcroft–Gault calculators require explicit applicability inputs.
+
+Run `node --test tests/*.test.js`. Read [the current implementation specification](documentation/BUILD_SPECIFICATION.md) and [release validation](documentation/RELEASE_0.3.1.md). The reference rebuild script is maintainer-only and verifies pinned CDC/CMS archive hashes. No patient data leaves the browser or persists after reload. Structured JSON/CSV exports require a de-identified encounter reference and approved storage. No vendor-certified EHR import is supplied.
+
+### Payer clarification 0.3.1
+
+Broader potential codes are retained for explicit payer/contract review: 48 reference identifiers across 14 families. Commercial higher E/M, MA negotiated terms, PartD MTM sponsor payment and Texas MCO arrangements are distinguished from Original Medicare PFS rules. No universal Medicaid APM requirement is asserted. The contract-review appendix records terms and unmet evidence without automatically converting them into claims or business collections. CMS May2026 deprescribing guidance and inactive CY2027 proposals are linked. See the current specification and release note.
