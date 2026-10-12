@@ -1,0 +1,22 @@
+name: ClinicalRx public source review
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/check-sources.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-source-review
+          path: source-monitor-report.json
+          retention-days: 30
