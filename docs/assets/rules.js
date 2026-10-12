@@ -1,6 +1,6 @@
 /* Offline reference subset. Rebuild only from reviewed official sources. */
 window.ClinicalRules = {
-  "version": "0.3.1",
+  "version": "0.4.0",
   "checked": "2026-10-11",
   "icdStart": "2026-10-01",
   "icdEnd": "2027-09-30",

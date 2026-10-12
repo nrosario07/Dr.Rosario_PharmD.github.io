@@ -1,3 +1,129 @@
+# ClinicalRx v0.5 build specification
+
+Owner: Dr. Norbert Rosario, PharmD. Professional profile and separately branded free ClinicalRx tools. Contact: LinkedIn only. GitHub Pages serves `docs/`; no paid services, account requirement or backend.
+
+## Current release and shared state
+
+The four pillars have independent routes and use one in-memory encounter. Education Studio reads and edits the same assessment, agreed plan, monitoring, follow-up, education and teach-back as MTP/SOAP. Patient drafts use the existing readability and pending-versus-agreed action guards. Editing invalidates prior review. Medication cabinet reconciliation can be explicitly appended to SOAP objective; it does not assume actual adherence, dispense a prescription or establish a diagnosis.
+
+`advanced.js` holds pure conversion, FIB-4, perioperative calendar, inhaler review and limited interaction-review rules. `advanced-platform.js` supplies route overrides. `platform.js` keeps AF scores, taper planning, adherence, quality and condition worksheets. `workspaces.js` handles SOAP, billing and business. `app.js` passes shared state. Public clinical content is separate from private uploads and CV contact details.
+
+## Medication Intelligence Engine
+
+Medication name search is public and default-enabled, on Enter or Look up. RxNorm returns available IN/PIN/MIN/SCD/SBD/GPCK/BPCK identities without the previous 80-result truncation. User chooses the exact RxCUI and one openFDA label record. Label set UUID, effective date and exact DailyMed URL are displayed. Sections expose returned label text for indication, mechanism, adult/pediatric dosage, strengths, boxed warning, contraindications, warnings, adverse reactions, interactions, special populations and counseling. Missing text is explicitly unavailable, not a declaration of safety. Adult/pediatric and renal/pregnancy sections require reading the complete selected source.
+
+RxClass enriches classification. MedlinePlus Connect returns patient-information links with attribution. PubMed ESearch returns up to ten public medication search matches; these are unappraised citations, not automatically accepted guideline evidence. DailyMed links open original product labels because direct browser API CORS cannot be assumed. APIs use no credentials, no-referrer, 15-second timeout and a bounded 24-hour in-memory cache. CSP allows only four source origins. Only a drug term/RxCUI is transmitted; cabinet combinations, encounter text and patient factors are never sent. Public clinical queries reject obvious encounter identifiers/text, but the user must enter a medication name only.
+
+Prices, comprehensive interaction severity, synthesized clinical pearls and guideline-specific medication roles are not supplied by this engine. Retail prices are not fabricated. The local cabinet review detects duplicate RxCUIs and selected-label ingredient mentions. A mention can describe no interaction; it never automatically means avoid or change a dose. No flags does not establish safety. RxNav's interaction API was discontinued; a comprehensive institutional checker is still required.
+
+## Calculators and clinical workflow boundaries
+
+- FIB-4: age × AST / (platelets × sqrt(ALT)); adult stable-lab context, AST/ALT U/L and platelets 10^9/L. No universal cutoff or fibrosis diagnosis. AASLD provenance appears in output.
+- Steroid: approximate oral anti-inflammatory reference ratios, not mineralocorticoid replacement or taper instructions; Endotext source.
+- Benzodiazepine: approximate oral equivalent ratios from SPS; patient response and withdrawal require individualized assessment. The existing taper worksheet remains separate.
+- Antipsychotic: Leucht2014 primary minimum-effective-dose ratio, oral adult non-first-episode/nonrefractory schizophrenia only; no LAI, clozapine or automatic cross-taper.
+- Insulin: supported LANTUS label starting-dose rules only: once-daily NPH 1:1; twice-daily NPH total 80%; once-daily TOUJEO 80%. Units are not mL; no arbitrary concentration conversion, U-500 or titration.
+- PREVENT: official AHA calculator link and externally calculated endpoint/date documentation. Native risk equation is NOT implemented; AHA requires acceptance of its free code license and access to its approved source package. Do not substitute an older ASCVD equation or inferred coefficients.
+- Adherence: clinician-recorded patient self-report VAS0–10, with study 9–10 versus 0–8 associations, educational PDC and MPR. Combined output flags concordance/discordance, not a validated joint predictor or calibrated patient probability. Record patient interaction rather than substitute a clinician guess for the validated question.
+
+## Anticoagulation calendar
+
+Inputs include indication, medication/dose, adult age/sex, weight, SCr, verified CrCl, INR, procedure/date, bleeding/thrombotic risk, mechanical valve, stroke/VTE history, kidney stability and plan reference. The rule requires an explicit clinician-reviewed elective interruption decision. It excludes urgent, neuraxial, HIT, unstable kidney function/dialysis, CrCl<30 and unreviewed active-bleeding situations. Very-high/recent-event cases require a specialist exception. It does not select a DOAC dose or automatically bridge warfarin.
+
+Calendar renders dated action rows. For the approved standard warfarin hold pathway, last scheduled dose is D−6 and hold begins D−5. DOAC full-calendar hold intervals reflect selected drug, bleeding risk and verified CrCl. Exact last-dose clock time is NOT computed; the team must confirm prescribed frequency and procedure time. Warfarin bridge exception requires specialist rationale, an explicitly approved enoxaparin reference regimen, INR start threshold, postoperative approval and stop criteria. Future INR and hemostasis remain conditional; no fixed bridge-stop date is predicted. High-risk DOAC restart reference uses a conservative D+3, subject to team approval. Print/Save as PDF and text export retain conditional draft language. Separate final patient instruction approval and clock-time automation remain future work.
+
+## Inhalers, code selectors and measures
+
+Asthma/COPD/device routes open an assessment and teaching workflow. Adult COPD: confirmed diagnosis, CAT, treated exacerbations, eosinophils/current therapy, coexisting asthma, technique and device-fit prompts. GOLD2026 initial grouping uses one moderate/severe exacerbation for E; follow-up is not automatically treated as initial selection. Asthma age12+ uses four-week symptoms, activity and SABA-frequency context; ICS-formoterol reliever is not scored using the SABA-frequency item. No brand/dose prescription is generated. Source links include current GOLD/GINA, Allergy & Asthma Network device videos, CDC and the owner-supplied UseInhalers channel. Previous failure needs distinction from technique, access or adherence.
+
+Offline ICD-10-CM FY2027 bundle contains 74,879 billable descriptions, effective2026-10-01 to2027-09-30. Search is local, returns at most60 matching choices and requires explicit provider-documentation/index/tabular review; it does not infer disease from medication. CPT/HCPCS selector exposes the existing48 reference identifiers; choosing a code does not assign a claim or bypass payer/role/criteria requirements. HEDIS MY2026 and CMS Stars2027 reference-title dropdowns do not include licensed specifications/value sets and do not certify eligibility/closure. Generic dermatology/biologic modules remain review worksheets, with source links labeled as references, not complete treatment algorithms.
+
+## Verification, maintenance and remaining work
+
+106 automated tests pass: existing note/billing/privacy/export cases, route smoke rendering, conversion arithmetic/population guards, FIB-4, calendar dates/exclusions and pulmonary assessments. Minimal DOM harness is not browser visual or live endpoint QA. Live browser testing is still required on GitHub Pages for CORS, selected-product metadata, keyboard behavior and printing.
+
+Weekly source monitoring flags source-byte changes for human review; it does not publish clinical rules automatically. Source retrieval/effective date, formula method and rule-version assumptions must remain visible. Changes require applicable guideline/label review and tests. Outstanding work includes a licensed native PREVENT implementation, validated comprehensive DDI data, verified price benchmarks, exact approved perioperative dose-time and separate final patient/clinician exports, structured cabinet regimen editing, automated reviewed transfer of pulmonary findings, additional drug-label section normalization and completed condition-specific therapeutic algorithms.
+
+## Upload
+
+Unzip the update and upload the contents of `docs/` into repository `docs/`, replacing same-name assets. Keep Pages main:/docs. Upload `documentation/`, `tests/`, `scripts/` and `.github/` to their matching repository directories if maintaining the build and monitoring. The standalone preview is for local review and is not the deployed entrypoint. Preserve unrelated files and private materials outside the public repo.
+
+---
+
+## Previous specification history
+
+# Implementation specification — ClinicalRx 0.4
+
+Prepared October11,2026, America/Chicago. This section supersedes 0.3.1/0.3/0.2 behavior below. Professional identity, LinkedIn-only public contact and free GitHub Pages hosting remain. Repository nrosario07/nrosario07.github.io publishes main:/docs. Source archive contains only public site/code, original summaries and curated metadata; original private uploads remain excluded.
+
+## Product model and release status
+
+ClinicalRx has four pillars: Clinical Care; Drug & Evidence Intelligence; Professional Practice; Education. The tools hub is the professional site's Clinical Tools route. Available functions are distinguished from source-linked clinician worksheets and unreleased prescribing engines. Twenty condition workspaces cover the requested clinical breadth, including HIV/OIs, HCV, hormones, dermatology, biologics and devices. Their source editions/jurisdictions/readiness are explicit; directory inclusion is not complete rule validation.
+
+Working calculation/review modules: adult BMI, Cockcroft–Gault, CKD-EPI2021 eGFR, percent total body-weight loss, CHA2DS2-VASc/HAS-BLED, PHQ9, educational PDC/MPR, owner adherence-scale context, slow-taper arithmetic, quality-gap organizer, structured E/M criteria, medication identity/label retrieval and guided care documentation. Automated DOAC dosing/bridging, insulin conversions/titration, disease treatment selection, dose equivalence/cross-taper, vaccine catch-up, certified HEDIS/Stars closure and calibrated adherence prediction remain unreleased. No placeholder is represented as a completed recommendation engine.
+
+## Compact workflows and screenshot correction
+
+Owner screenshots4–7 revealed radios inheriting the global100% text-input width. CSS now explicitly makes choice-set radio/checkbox width automatic with a16px flex basis and wrapping labels. Essential SOAP fields and six business-plan sections remain visible; metadata, teach-back evidence, economics, coding, contracts, handouts and exports expand on demand. Guidance becomes a compact disclosure. No hidden input is deleted, and route changes preserve draft state in memory. Essential note output includes actual facts, concise code-review status and improvement prompts; detailed evidence stays in its expandable panel. Business drafts omit unused advanced sections and embedded long instructional prose.
+
+## Architecture, routes and data authority
+
+Deferred classic script order: content.js, core.js, rules.js, clinical.js, module-data.js, modules.js, drug-api.js, platform.js, workspaces.js, app.js. Existing profile metadata remains in registry.json; sync-registry.js generates content.js. modules.json is the condition/education/readiness authority; sync-modules.js generates module-data.js. clinical-rules.json/rules.js remain the limited pinned code/fee subset. Pure modules.js contains new formulas and review logic; platform.js contains the four-pillar routes, condition worksheets and public drug view. Existing core.js/clinical.js retain notes/economics/payer gates and structured exports. Schema/reference version is0.4.0; JSON service.levelReference records the conditional E/M review independently of the office pathway and contract terms.
+
+New routes: medicine, adherence, anticoag, library, taper, quality, guidelines, education, care-{known module ID}. clinical-tools opens the four-pillar hub. Unknown route identifiers fall back safely. Route hashes contain no patient facts. Tools remain framework-free and require no account, API key, database, cloud model or paid subscription.
+
+## Public APIs and privacy boundary
+
+Default medication lookup is off. An explicit checkbox enables public medication-name requests to RxNorm and selected-RxCUI requests to openFDA. Encounter/SOAP/MTP, quality, adherence and calculator inputs are never bound to API queries. Public-name validation limits length/characters and rejects obvious encounter terms; users must still enter only a public medication name. Selected identifiers must come from returned RxNorm choices. Fixed HTTPS endpoints, credentials:omit, no-referrer,15second aborts, busy guards and HTTP-error handling are used. Patient data must never be included in the public lookup field.
+
+Host CSP connect-src allows only rxnav.nlm.nih.gov and api.fda.gov; other input workflows remain local. No persistence, analytics, remote script or server-side clinical storage exists. Public response cache is memory-only, expires after24hours and retains original retrieval timestamp. Changing medication identity clears old labels. Async route/request checks prevent an old response from attaching to a different identity/route. Unknown/missing/rate-limited data stay unavailable; there is no proxy/API-key workaround.
+
+Public API probes succeeded with CORS* for RxNorm and openFDA. DailyMed answered without a browser CORS header, so the browser uses original DailyMed SPL links rather than an assumed direct API. Labels are retrieved by selected RxCUI, then the clinician selects an exact returned product; manufacturer, set ID and effective date accompany short excerpts. Retrieval time differs from label effective time. Excerpts are not complete contraindication/dose instructions and never drive therapy. openFDA's unvalidated-data warning is displayed. Original DailyMed, PubMed, MedlinePlus and PurpleBook links support review. These latter links are not claimed as implemented API integrations.
+
+## New clinical calculation contracts
+
+CKD-EPI2021 creatinine:142×min(SCr/k,1)^alpha×max(SCr/k,1)^-1.2×0.9938^age×1.012 if the female equation coefficient is selected. k=.7/.9 and alpha=-.241/-.302 for female/male coefficients. Adults18–120, positive mg/dL, explicit coefficient and stable/IDMS context required. Result mL/min/1.73m2, not CrCl or a diagnosis from one value; AKI/dialysis/unknown contexts excluded.
+
+Percent total body-weight loss:100×(starting−current)/starting, positive weights in one explicit kg/lb unit. Retain negative values for gain; no pharmacotherapy target is inferred.
+
+CHA2DS2-VASc sums original components and mutually exclusive age bands; HAS-BLED counts eight explicitly reviewed non-age factors and age>65. All factors require yes/no, not unchecked-as-no. Adult clinical AF/no mechanical valve or moderate/severe mitral stenosis context required. Source definitions must be reviewed for renal/liver/BP/alcohol/INR factors. No annual risk probability, treatment threshold, DOAC dose or withholding decision is inferred.
+
+PHQ9 scores nine past-two-week symptom items0–3, requires all responses, and produces a screening/severity total0–27. Standard severity bands are descriptive, not diagnostic. Positive item9 flags a clinical safety assessment irrespective of total; zero does not exclude risk. Permission-to-display attribution is retained from the NIH instrument resource. No antidepressant recommendation is generated.
+
+Taper illustration accepts a clinician-selected current dose, reduction>0–10% and interval2–4weeks with planning attestation. It computes four successive current-dose percentage reductions. It does not round to available formulations, convert drugs, reach an automatic zero endpoint, choose the correct pace or prescribe. ASAM2025 source, withdrawal/seizure/monitoring considerations, pause/slow review and no-abrupt-stop context accompany the output. Other individualized schedules remain outside this limited illustration.
+
+## Adherence and quality contracts
+
+Educational PDC uses one unchanged medication, complete nonreversed dated fills, explicit inclusive window, early-refill carry-forward and clipping to the window. Prior fills may carry coverage into the window; overlapping coverage is counted once. Invalid dates/supply, duplicate identical fills, empty history, unknown review or oversized windows stay unavailable. MPR here is specifically uncapped days supply dispensed inside the fixed window divided by window days; end stock can inflate it. No therapeutic-class switching, hospitalization, enrollment/exclusion logic or copyrighted annual value-set specification is implemented. Possession is not ingestion, and neither result is certified Stars/HEDIS closure.
+
+The owner-supplied adherence manuscript and supplement were read locally. Original question11 is displayed with DOI/PMID. Integer0–10 score categories show observed study associations:48/61 at scores9–10 and16/34 at scores≤8 had MPR≥.80. These95-person cohort results are not individualized probabilities or an externally calibrated predictor. No missing regression equation is invented. Barriers, shared action and follow-up remain clinician documentation.
+
+Quality Gap Closer records measure/product/year, exact controlling source/version, eligibility/exclusions, gap, action owner/date, status and closure evidence. Marking an action complete does not close a measure. Only explicit user-entered eligibility/source/closure evidence can be described as user documented, never independently certified. CMS current annual Stars files and NCQA references remain controlling; copyrighted measure definitions are not reproduced.
+
+## E/M and improvement prompts
+
+Original Medicare pharmacist-only office E/M remains the separate99211 incident-to review, not a universal commercial cap. Other service families require their own rules. Conditional established-patient commercial/MA level reference requires written policy accepting the lawful performer and eligible MDM/time, documented recognition, actual SOAP/author/scope/billing-entity evidence and a reviewed patient category. MDM uses the middle of three user-assessed component levels (two-of-three). Eligible-time thresholds are10/20/30/40minutes for the limited99212–99215 reference. Current licensed descriptors and payer criteria remain necessary; no word count, number of medicines or inferred time establishes a level. Output identifies the next level's criteria for review without recommending manufactured work. Clinical edits clear actual E/M evidence. These are conditional references, not approved claims or automatic contract recognition.
+
+Note improvement prompts identify missing reasoning/findings/actions/monitoring/education/follow-up and connect facts→rationale→action. Business prompts identify missing need, payer evidence, outcomes, milestones and budget. These are original teaching prompts, not patient-specific prescribing recommendations. Sources remain adjacent in the UI and output when a code reference is produced.
+
+## Provenance and automated source monitoring
+
+Each clinical formula/output links its controlling reference; care worksheets require source section/date/applicability/reviewer. The guideline registry shows source edition, US/source-specific jurisdiction, readiness, registry-entry check date and review due date. A source lead with unverified edition is never labelled a completed rule. Overdue labels appear after the review date. Complete recommendation provenance should include source locator, edition/effective dates, population, jurisdiction, formula/rule version, reviewer and limitations before a future rule is enabled.
+
+A weekly ChatGPT condition-watch automation was created and timezone-corrected for Monday08:00 America/Chicago, with change-only notifications and primary-source links. It checks CMS/Texas/FDA/API and major guideline sources, distinguishes proposals/final changes, and never auto-publishes clinical decisions. The GitHub workflow source-monitor.yml, once uploaded, runs Monday14:00UTC, retains an availability/hash report and has contents:read permission only. check-sources.py reads public registries/URLs only; no patient/private data or credentials. Initial hashes are byte baselines, not evidence validation; cosmetic content changes require triage. Unavailable, changed or unbaselined sources enter a review queue. Approved rule updates require source review and tests. Thus monitoring is automated, clinical currency is not guaranteed by a timer.
+
+## Verification and deployment
+
+97 automated tests passed, including public API opt-in/query isolation/cache/errors, pure clinical formulas, score exclusions/unknowns, owner-scale boundaries, refill overlap/gaps/windows/duplicates, PHQ9 safety signal, taper and E/M gates, radio-width rule, old/new routes and event-capable form tests. Public endpoint probes confirmed responses/CORS as described. Browser visual/mobile/screen-reader/download/print QA remains pending because the supported browser-preview capability was unavailable. No institutional clinical/payer certification is implied.
+
+Run node --test tests/*.test.js after changes. Run sync-registry.js/sync-modules.js for their corresponding metadata. The pinned-reference maintainer script rebuilds reviewed code/fee sources. package.py generates the0.4 source ZIP, portable preview and current specification copy. GitHub integration uploads previously returned403; manual upload remains the supported handoff in this session. Upload docs/documentation/scripts/tests/README and optional .github workflow at their existing paths. Preserve main:/docs and inspect newer repository changes before replacing files.
+
+See RELEASE_0.4.md for readiness and the fictional-case checklist. The next clinical rules must be delivered in small evidence-reviewed modules with exact labels, contraindications, dosing units/populations/exclusions, meaningful fixtures and source-change handling. The twenty worksheets are an organized starting point for that work, not a substitute for it.
+
+---
+
+Historical specifications follow; their privacy/API and module-status statements are superseded by0.4 above.
+
 # Implementation specification — guided clinical tools 0.3.1
 
 Date: October 11, 2026. Professional owner: Dr. Norbert Rosario, PharmD. Working platform name: ClinicalRx. Repository: https://github.com/nrosario07/nrosario07.github.io. Site: https://nrosario07.github.io/. Deploy `main:/docs` through GitHub Pages. The 0.3.1 payer clarification below supersedes earlier narrow billing descriptions; this current section supersedes the historical 0.2 specification below; master specification 1.3 remains the requirements baseline.

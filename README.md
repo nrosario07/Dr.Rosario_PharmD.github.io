@@ -2,7 +2,7 @@
 
 Dr. Rosario, PharmD — professional portfolio and free ClinicalRx tools for healthcare professionals and students.
 
-Guided clinical tools release 0.3.1, October 11, 2026. ClinicalRx is a working platform name.
+Guided clinical tools release 0.4.0, October 11, 2026. ClinicalRx is a working platform name.
 
 A free static professional portfolio and tools workspace. No build, account, database, API key, paid service, external font or CDN dependency is required. The profile is populated from the supplied September 2026 CV and VA resume. LinkedIn is the sole public contact method; a curated public CV summary is included. Clinical content is an educational/reference release requiring institutional clinical review before patient use.
 
@@ -71,8 +71,14 @@ The included public CV is an original selected summary. To regenerate it, run `p
 
 Guided MTP/SOAP and business sections now include educational help and sources. Both tools share economic event records. Patient drafts derive from agreed SOAP instructions and require explicit review before download. The limited service review uses Original Medicare office incident-to gates and a clinic-specific MD/DO sign-off control; it never assigns higher E/M levels from pharmacist note complexity. A small FY2027 ICD-10-CM subset supplies candidates for confirmation. CMS annual 2026 Texas benchmarks are historical published base references, not current claim quotes. Adult BMI and legacy Cockcroft–Gault calculators require explicit applicability inputs.
 
-Run `node --test tests/*.test.js`. Read [the current implementation specification](documentation/BUILD_SPECIFICATION.md) and [release validation](documentation/RELEASE_0.3.1.md). The reference rebuild script is maintainer-only and verifies pinned CDC/CMS archive hashes. No patient data leaves the browser or persists after reload. Structured JSON/CSV exports require a de-identified encounter reference and approved storage. No vendor-certified EHR import is supplied.
+Run `node --test tests/*.test.js`. Read [the current implementation specification](documentation/BUILD_SPECIFICATION.md) and [release validation](documentation/RELEASE_0.4.md). The reference rebuild script is maintainer-only and verifies pinned CDC/CMS archive hashes. Encounter inputs are never sent to APIs; public medication lookups are opt-in and separate. No patient data is intended to leave the browser or persists after reload. Structured JSON/CSV exports require a de-identified encounter reference and approved storage. No vendor-certified EHR import is supplied.
 
 ### Payer clarification 0.3.1
 
 Broader potential codes are retained for explicit payer/contract review: 48 reference identifiers across 14 families. Commercial higher E/M, MA negotiated terms, PartD MTM sponsor payment and Texas MCO arrangements are distinguished from Original Medicare PFS rules. No universal Medicaid APM requirement is asserted. The contract-review appendix records terms and unmet evidence without automatically converting them into claims or business collections. CMS May2026 deprescribing guidance and inactive CY2027 proposals are linked. See the current specification and release note.
+
+## Clinical tools 0.4
+
+Fixes full-width radio controls shown in owner screenshots and reduces MTP/business screens to essentials with collapsed optional sections. Restores the four pillars and adds public RxNorm/openFDA drug lookup, adherence/PDC/MPR/owner-scale review, AF scores, CKD-EPI eGFR, percent weight loss, PHQ-9, a mathematical taper aid, quality-gap organizer and twenty source-linked condition review worksheets. Readiness is explicit: worksheets are not completed prescribing algorithms. Structured payer-recognized E/M criteria may produce a conditional established-patient candidate after actual SOAP/performer/policy review; Original Medicare office limits remain separate.
+
+Weekly ChatGPT source-change alerts were created separately for Monday8am America/Chicago. Optional GitHub source-monitor workflow runs Mondays14:00UTC after upload, writes a review artifact and never changes clinical rules. Public page hashes can change cosmetically; clinical rule updates require source/effective-date review and tests. No claim that everything is automatically current. DailyMed direct links are used because browser CORS was not verified. See RELEASE_0.4.md for the manual upload and fictional-case review checklist.

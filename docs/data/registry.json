@@ -774,6 +774,86 @@
       "status": "Primary reference / rule-specific review",
       "lastChecked": "2026-10-11",
       "reviewStatus": "Limited reference review; not contract, coverage or claim approval"
+    },
+    {
+      "id": "S55",
+      "title": "2021 race-free CKD-EPI creatinine equation",
+      "url": "https://www.kidney.org/ckd-epi-creatinine-equation-2021",
+      "category": "Clinical calculation",
+      "summary": "Adult stable-kidney IDMS-creatinine formula; not CrCl, acute-kidney assessment or a CKD diagnosis from one value.",
+      "status": "Limited rule / retrieval reference",
+      "lastChecked": "2026-10-11",
+      "reviewStatus": "Rule-specific review; not full clinical release certification"
+    },
+    {
+      "id": "S56",
+      "title": "2023 AF guideline and risk-score tables",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11104284/",
+      "category": "Clinical calculation",
+      "summary": "Source for CHA2DS2-VASc/HAS-BLED factor review. Point totals alone do not select therapy or establish individual event probabilities.",
+      "status": "Limited rule / retrieval reference",
+      "lastChecked": "2026-10-11",
+      "reviewStatus": "Rule-specific review; not full clinical release certification"
+    },
+    {
+      "id": "S57",
+      "title": "NIH PHQ-9 instrument",
+      "url": "https://www.nih.gov/node/19946",
+      "category": "Clinical calculation",
+      "summary": "PHQ-9 symptom-frequency/severity scoring over two weeks. Positive item9 triggers clinical safety assessment; no diagnosis or antidepressant is inferred.",
+      "status": "Limited rule / retrieval reference",
+      "lastChecked": "2026-10-11",
+      "reviewStatus": "Rule-specific review; not full clinical release certification"
+    },
+    {
+      "id": "S58",
+      "title": "PQA adherence methodology",
+      "url": "https://www.pqa.org/measures/measures-resources/",
+      "category": "Adherence methodology",
+      "summary": "Public methodology context for educational PDC. Exact copyrighted annual measure specifications, eligibility, exclusions and value sets are not reproduced.",
+      "status": "Limited rule / retrieval reference",
+      "lastChecked": "2026-10-11",
+      "reviewStatus": "Rule-specific review; not full clinical release certification"
+    },
+    {
+      "id": "S59",
+      "title": "Joint ASAM benzodiazepine taper guidance",
+      "url": "https://www.asam.org/quality-care/clinical-guidelines/benzodiazepine-tapering",
+      "category": "Clinical planning",
+      "summary": "Clinician-selected slow-taper discussion context; no automatic equivalence, cross-taper, formulation rounding or prescription is generated.",
+      "status": "Limited rule / retrieval reference",
+      "lastChecked": "2026-10-11",
+      "reviewStatus": "Rule-specific review; not full clinical release certification"
+    },
+    {
+      "id": "S60",
+      "title": "CMS Stars annual source files",
+      "url": "https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data",
+      "category": "Quality measurement",
+      "summary": "Current annual data/technical-note source. The Gap Closer is a documentation organizer and does not implement certified measure closure.",
+      "status": "Limited rule / retrieval reference",
+      "lastChecked": "2026-10-11",
+      "reviewStatus": "Rule-specific review; not full clinical release certification"
+    },
+    {
+      "id": "S61",
+      "title": "RxNorm free API documentation",
+      "url": "https://lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html",
+      "category": "Public drug APIs",
+      "summary": "Opt-in public medication identity lookup; only medication term/selected RxCUI is sent, separately from encounter inputs. Response data require identity review.",
+      "status": "Limited rule / retrieval reference",
+      "lastChecked": "2026-10-11",
+      "reviewStatus": "Rule-specific review; not full clinical release certification"
+    },
+    {
+      "id": "S62",
+      "title": "openFDA label endpoint",
+      "url": "https://open.fda.gov/apis/drug/label/how-to-use-the-endpoint/",
+      "category": "Public drug APIs",
+      "summary": "Opt-in selected-RxCUI label retrieval. API results are unvalidated; choose exact product and verify original current label. No treatment rule is generated from API text.",
+      "status": "Limited rule / retrieval reference",
+      "lastChecked": "2026-10-11",
+      "reviewStatus": "Rule-specific review; not full clinical release certification"
     }
   ],
   "rationales": [
@@ -1104,5 +1184,5 @@
       "locator": "Table 2"
     }
   ],
-  "version": "0.3.1"
+  "version": "0.4.0"
 }
