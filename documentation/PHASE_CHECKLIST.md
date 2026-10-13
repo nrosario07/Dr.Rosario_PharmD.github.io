@@ -1,3 +1,9 @@
+# Calculator-policy update — ClinicalRx0.6.1
+
+The user's link-first policy supersedes native generic-calculator development. Completed: curated exact links; local result documentation and reviewed SOAP transfer; removal of hosted PREVENT and local questionnaire/conversion/calculator interfaces from their public routes.130 automated tests pass. PREVENT native licensing/source acquisition is no longer a task or blocker. HAM-D now links to its external tool. New custom calculator development requires documented lack of a suitable validated online tool.
+
+The historical phase table below describes0.6 capabilities. Native generic-scoring entries are retired in0.6.1, not scheduled for further development. Custom clinical/professional workflow phases remain active. Current priority is post-upload browser verification of the external directory and result→SOAP flow, then medication intelligence and unique calendar/reporting workflows.
+
 # ClinicalRx phase checklist — v0.6.0
 
 Statuses describe delivered capability, not clinical certification. A release is not browser-verified merely because its prior version was tested.

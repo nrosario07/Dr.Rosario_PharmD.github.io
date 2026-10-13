@@ -1,4 +1,4 @@
-# Dr. Rosario / ClinicalRx build specification — v0.6.0
+# Dr. Rosario / ClinicalRx build specification — v0.6.1
 
 ## Product and audience
 
@@ -8,7 +8,7 @@ Four pillars work independently and through explicit local transfers: Clinical C
 
 ## Architecture and deployment
 
-Buildless HTML/CSS/classic JavaScript, served from main:/docs by GitHub Pages. No paid backend, account, cloud LLM, analytics or persistent patient storage. Hosted index uses CSP self-only script/style plus specific public API origins. Release asset query0.6.0 prevents cached older scripts. startup.js provides visible resource/runtime initialization errors.
+Buildless HTML/CSS/classic JavaScript, served from main:/docs by GitHub Pages. No paid backend, account, cloud LLM, analytics or persistent patient storage. Hosted index uses CSP self-only script/style plus specific public API origins. Release asset query0.6.1 prevents cached older scripts. startup.js provides visible resource/runtime initialization errors.
 
 Source modules:
 
@@ -37,13 +37,17 @@ Explicit cabinet sync preserves objective text and replaces its marked cabinet b
 
 ## Calculator and assessment interfaces
 
-Use explicit units, required population/context, missing-versus-zero distinction, source/method, clear result status and clinical limits. New PHQ-9/GAD-7 use original response items over the past two weeks, four selectable0–3 response cards and answered-count feedback. All items are required for total. GAD-7 totals0–21 with5/10/15 severity boundaries. PHQ-9 totals0–27 with existing severity bands; positive item9 prompts timely local-protocol suicide-risk assessment even before total is complete. Difficulty is recorded separately and does not change the score. Neither tool diagnoses a disorder or selects medication. Transfer to SOAP requires explicit clinician review and preserves source/result in encounter.toolFindings; it does not become an agreed patient medication plan.
+Use explicit units, required population/context, missing-versus-zero distinction, source/method, clear result status and clinical limits. Established clinical scores and screenings now link externally. Clinician-reviewed external results can be recorded locally and explicitly transferred into SOAP; no native score is computed by the result recorder.
 
-PREVENT now has eligibility, cardiovascular/kidney/metabolic inputs, Base/uACR/HbA1c/SDI/Full model preparation, external links and separately recorded10-/30-year CVD/ASCVD/HF results. Unknown history and out-of-range values are flagged without clipping. SDI is a decile, not ZIP code. External result cards require verified user-entered results with date/source and eligible inputs;30-year results above59 are suppressed. No native PREVENT risk equation, PREVENT-age or percentile is implemented. The owner must accept the free AHA license and provide the approved versioned source package; then implement exact coefficients/method and verify official fixtures before enabling native calculation. MDCalc informs interaction design, not a license to copy its code or bypass AHA access requirements.
+## Calculator policy — superseding v0.6
 
-HAM-D remains planned pending verification of a specific clinician-rated17-item version, response anchors and training protocol. Do not substitute PHQ/GAD responses or infer a HAM-D score from free text.
+ClinicalRx0.6.1 removes the PREVENT input/result workspace entirely. PREVENT is a plain external AHA link in the directory; there is no local clinical form, equation or result recorder for PREVENT. Native implementation and its licensing task are retired.
 
-Existing calculators retain their documented bounds: adult BMI, explicit-weight Cockcroft–Gault without empiric SCr rounding, race-free eGFR, FIB-4 stable adult screening without universal fibrosis classification, AF risk-point totals, PDC/MPR educational fixed-window calculations, patient-report VAS associations and scoped conversions. VAS has explicit record action so neutral slider position is not silently scored. Its association and combined PDC/MPR flags are not a validated individual probability model.
+Prefer a reviewed exact link to a suitable online calculator from the original professional/government source, ClinCalc or MDCalc. The directory covers PREVENT, CHA₂DS₂-VASc, HAS-BLED, CrCl, eGFR, BMI/BSA, FIB-4, PHQ-9, GAD-7, HAM-D and steroid/benzodiazepine equivalence. PHQ/GAD native questionnaire/scoring interfaces are removed. Other previously exposed generic calculator routes now open external-tool links and optional local external-result documentation instead of calculating. Local result recording requires value/units, date, method/version and clinician review before SOAP transfer; it does not infer interpretation, diagnosis, treatment or billing. No form values are automatically sent externally.
+
+calculator-links.js overrides legacy generic-calculator routes after other route factories are composed. Older pure arithmetic primitives remain for regression/history compatibility but are not exposed as interactive calculators through these routes. Existing unique note, cabinet, patient-plan, procedure-calendar, practice-capacity/economic and research-linked adherence workflows are retained. Embedded workflow arithmetic does not justify a new standalone copy of an established calculator.
+
+Before developing any new interactive calculator, document the search date, candidate tools, underlying primary validation/method, unmet need and why no suitable validated online tool exists. An unavailable API, a different visual design or a preference to keep everything on one page is not sufficient justification to recreate it. Review external methods and applicability; do not label an entire provider’s catalog universally validated or imply endorsement. Show source-review dates and retain link-access checks. AHA returned403 to this run's direct HTTP checker, while its public page was retrieved by web search; this is an access limitation, not evidence the calculator is withdrawn.
 
 ## Clinical pathways
 
@@ -69,7 +73,7 @@ Source monitoring flags public changes for review and never silently alters clin
 
 ## Validation and release management
 
-Read AUDIT_0.6.0.md and PHASE_CHECKLIST.md. Live v0.5.2:16 assets matched package; eleven profile pages and39 distinct tool routes browser-smoke-tested; full public medication→cabinet→SOAP→patient-plan workflow tested with fictional data. New v0.6:137 automated tests passed; local new-release browser preview blocked by cloud file-URL policy. New visual/mobile/keyboard/print/live API regression checks must occur after upload. Do not describe route smoke checks as complete algorithm validation.
+Read AUDIT_0.6.0.md and PHASE_CHECKLIST.md. Live v0.5.2:16 assets matched package; eleven profile pages and39 distinct tool routes browser-smoke-tested; full public medication→cabinet→SOAP→patient-plan workflow tested with fictional data. New v0.6:130 automated tests passed; local new-release browser preview blocked by cloud file-URL policy. New visual/mobile/keyboard/print/live API regression checks must occur after upload. Do not describe route smoke checks as complete algorithm validation.
 
 Deliver one archive with docs, documentation, scripts, tests and .github kept intact, plus START_HERE instructions. Site-only browser upload uses the ENTIRE docs folder at repository root, never flattened individual files or the ZIP itself. Full GitHub Desktop upload also preserves the source-monitor workflow. Keep Pages main:/docs. No repository deletion is needed. Preserve unrelated owner files and review same-name replacements.
 
