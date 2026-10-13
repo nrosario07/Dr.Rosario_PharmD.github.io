@@ -1,0 +1,46 @@
+{
+  "sources": {
+    "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications": {
+      "latestPublication": "2026-09-15",
+      "baselineSafetyFlag": "Injectafer boxed warning, FDA2026-09-01; newly verified here, not newly issued since prior check",
+      "alertedOn": "2026-10-12"
+    },
+    "https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data": {
+      "publication": "2026-10-08",
+      "technicalNotesVersion": "2026-09-30",
+      "status": "already present at prior hash baseline"
+    },
+    "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-proposed-rule": {
+      "publication": "2026-07-14",
+      "status": "proposal; no verified final rule in this run"
+    },
+    "https://www.tmhp.com/resources/provider-manuals/tmppm/2026-tmppm-release-notes": {
+      "updated": "2026-09-30",
+      "edition": "October2026",
+      "status": "accessible; publication predates prior monitoring check"
+    },
+    "https://professional.diabetes.org/standards-of-care": {
+      "edition": "2026",
+      "status": "no verified new guideline edition"
+    },
+    "https://ginasthma.org/2026-gina-strategy-report/": {
+      "edition": "2026",
+      "status": "landing-page bytes changed; no verified material guideline revision"
+    },
+    "https://goldcopd.org/2026-gold-report-and-pocket-guide/": {
+      "edition": "2026",
+      "status": "landing-page bytes changed; no verified material guideline revision"
+    },
+    "https://kdigo.org/guidelines/ckd-evaluation-and-management/": {
+      "edition": "2024",
+      "status": "focused update underway, already identified in ClinicalRx module registry"
+    },
+    "https://www.cdc.gov/vaccines/hcp/imz-schedules/": {
+      "edition": "2025-07-02",
+      "amendment": "2026-04-27",
+      "status": "unchanged source hash; current schedule/legal context must be checked before any future vaccine engine"
+    }
+  },
+  "checkedDate": "2026-10-12",
+  "comparisonLimit": "Prior report retained hashes/availability, not article content or publication metadata. Do not equate changed landing-page hashes with changed recommendations."
+}
