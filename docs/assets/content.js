@@ -582,18 +582,6 @@ window.ClinicalData = {
       "sourceVersion": "Registry 0.1"
     },
     {
-      "id": "S37",
-      "title": "Optimizing Medications for Better Health — external reference",
-      "category": "CMM and MTP resources",
-      "url": "https://www.optimizingmeds.org/",
-      "status": "External link only",
-      "summary": "User-suggested reference. Follow the resource owner’s access and reuse terms. No materials or tools from this resource are embedded.",
-      "lastChecked": "2026-10-11",
-      "reviewStatus": "Homepage and reuse policy reviewed; no calculator coefficient validation",
-      "rights": "Homepage link only. No copied framework, protected assessment, logo or tool.",
-      "sourceVersion": "Registry 0.2.0"
-    },
-    {
       "id": "P02",
       "title": "Accuracy of and prescriber perceptions related to documenting antibiotic indications during order entry at an academic medical center",
       "category": "Owner publications",

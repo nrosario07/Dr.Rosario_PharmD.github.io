@@ -12,7 +12,7 @@
       line('Reason for encounter', encounter.reason), line('Author and actual role', encounter.author),
       line('Scope or privilege reference', encounter.authority), '', 'SUBJECTIVE',
       line('Patient goals, symptoms, actual medication use and barriers', encounter.subjective), '', 'OBJECTIVE',
-      line('Reconciliation, dated results and observed administration', encounter.objective), '', 'ASSESSMENT',
+      line('Reconciliation, dated results and observed administration', encounter.objective), '', line('History / ROS actually obtained', encounter.historyDetails), line('Examination actually performed', encounter.examDetails), 'ASSESSMENT',
       line('Problems addressed and clinical reasoning', encounter.assessment)];
     mtps.forEach((m, index) => {
       out.push('', `MTP ${index + 1}`, line('Problem ID', m.id), line('Medication and indication', m.medication),
