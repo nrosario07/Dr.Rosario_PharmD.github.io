@@ -1,27 +1,26 @@
-# Calculator-policy update — ClinicalRx0.6.1
+# ClinicalRx phase checklist — v0.8.0
 
-The user's link-first policy supersedes native generic-calculator development. Completed: curated exact links; local result documentation and reviewed SOAP transfer; removal of hosted PREVENT and local questionnaire/conversion/calculator interfaces from their public routes.130 automated tests pass. PREVENT native licensing/source acquisition is no longer a task or blocker. HAM-D now links to its external tool. New custom calculator development requires documented lack of a suitable validated online tool.
+Statuses describe actual delivered scope, not clinical certification. Generic calculator development is retired under the link-first policy; PREVENT licensing is no longer a blocker.
 
-The historical phase table below describes0.6 capabilities. Native generic-scoring entries are retired in0.6.1, not scheduled for further development. Custom clinical/professional workflow phases remain active. Current priority is post-upload browser verification of the external directory and result→SOAP flow, then medication intelligence and unique calendar/reporting workflows.
+| Phase | Completed | Remaining / blockers |
+|---|---|---|
+| Professional brand | 11 professional pages, four pillars, free Pages, LinkedIn-only contact | Mobile/accessibility refinement; new-release browser regression |
+| CMM / MTP continuity | Guided SOAP/MTP, reviewed patient plan, external-result transfer; v0.7 explicit local save/preview/restore with review resets | Structured reporting; governed EHR mappings; standalone quality/adherence form persistence |
+| Medication intelligence | RxNorm identities, selected label, source dates, cabinet and explicit SOAP sync; stale-label/duplicate fixes | Comprehensive validated DDI and pricing sources; pediatric/organ normalization; literature appraisal |
+| Calculator references | Reviewed external directory and local result recorder; PREVENT external-only | Ongoing destination checks; new custom calculator only after documenting no suitable validated online option |
+| Clinical pathways | Bounded anticoagulation calendar, inhaler review, adult T2D prompts | Interval-aware bridge orders and reviewed exports; full prescribing pathways require validated rules and fixtures |
+| Practice development | Business outline, payer/economic review, staffing/capacity planner; local draft continuity | Denials, payment-delay and working-capital model; dated contract evidence; governed CPA authoring |
+| Education | SOAP-derived agreed-action patient plans and inhaler teaching links | Reviewed Spanish, device-specific handouts, quizzes and teaching studio |
+| Quality / adherence | Educational organizers, recorded VAS and gap actions | Authorized measure specifications, denominator/exclusions, validated prediction calibration; no certified HEDIS/Stars output |
+| Residency | Scope retained | Current ASHP program standards and complete evidence/recruitment/orientation/audit workflows; later phase |
+| Monitoring / releases | Source queue and review-only monitoring, reproducible packet, current audit | Verify uploaded monitoring workflow and dated controlling-source comparisons; never auto-publish clinical changes |
 
-# ClinicalRx phase checklist — v0.6.0
+## Current position
 
-Statuses describe delivered capability, not clinical certification. A release is not browser-verified merely because its prior version was tested.
+**Phase 01B — local continuity and structured reporting is implemented, with browser acceptance pending. The full platform is incomplete.** Four-pillar foundation is delivered; clinical pathways, medication completeness, quality measures and education remain partial. Residency remains deferred. This release adds a current-encounter reporting view, evidence-completeness flags and privacy-minimal reviewed CSV. Longitudinal/institution-approved reporting remains future work.
 
-| Phase | Completed | Remaining / blocked | Status |
-|---|---|---|---|
-| 00 Professional brand and deployment | Eleven profile sections, public CV summary, LinkedIn-only contact, free GitHub Pages structure, versioned assets, four-pillar hub | Review real-world mobile accessibility and visual refinement after each deployment | Foundation complete; live0.5.2 browser-smoke-tested |
-| 01 CMM/MTP and practice foundation | Guided SOAP, structured MTPs, coding/payer review, reviewed patient drafts, economic scenarios, credentialing/source tools | Local import/export restore, richer data reporting, reviewed dated payer records, EHR-specific governed mappings | Delivered with limits |
-| 02 Medication Intelligence | Default public RxNorm search, selected openFDA/DailyMed labels, RxClass/MedlinePlus/PubMed provenance, local cabinet, explicit SOAP sync | Comprehensive validated DDI source, retail/benchmark price source, pediatric/organ section normalization, literature appraisal | Retrieval and cabinet workflow live-tested; class-display fix pending new browser check |
-| 03 Interactive calculators and screening | BMI/CrCl/eGFR, FIB-4, AF scores, PDC/MPR/VAS, conversions; new response-card PHQ-9/GAD-7 and SOAP transfer | HAM-D17 clinician-rating protocol/source verification and additional validated screeners; native PREVENT | v0.6 implementation complete for listed bounded tools;137 tests pass across release |
-| 03A Native PREVENT | Complete input/eligibility/model preparation and external endpoint-result recording | Owner accepts free AHA license and obtains approved R/STATA source package; implement exact version and independently verify official fixtures before enabling results | Native equation blocked on source/license package; no native probabilities |
-| 04 Clinical pathways | Reviewed elective anticoagulation dated calendar; inhaler symptom/COPD/device review; new adult T2D review prompts | Exact interval-aware bridge orders and final patient/clinician exports; insulin initiation/titration; product-specific comorbidity therapy; HF/CKD/lipid/HTN pathways | Bounded review tools; not complete prescribing algorithms |
-| 05 Practice development | Existing business outline/payer/economic review; new staffing/referral capacity and launch planner | Denials/collection-delay/working-capital model; versioned local contract evidence; governed CPA template authoring | Capacity phase implemented; full cash-flow model pending |
-| 06 Education | SOAP-derived patient plans, device teaching source links, approximate readability prompts | Reviewed Spanish, device-specific handouts, protected medication/dose editing, memory-palace/quiz studio restoration | Shared patient-plan workflow live-tested; broader education studio incomplete |
-| 07 Quality and reporting | Measure-title selectors, educational adherence calculation and reviewed gap-action records | Licensed/authorized measure specifications, calibrated adherence predictor, denominator/exclusion validation, institution-approved reports | Organizer only; no certified HEDIS/Stars result |
-| 08 Residency development | Scope retained in specification | ASHP-current program-type standards, evidence matrix, recruitment/interview/orientation/competency/audit workflows | Later phase |
-| 09 Continuous audit and monitoring | Source-change queue and separate scheduled checks; this live-site audit; release report | Publish GitHub monitoring workflow through supported upload; dated document-level guideline change comparisons; new0.6 browser acceptance run | Monitoring alerts do not publish clinical rules |
+## Release acceptance
 
-## Current next action
+Completed: historical 11-page/46-route and fictional workflow audit; current mixed-deployment detection (v0.6.1 index with v0.7 assets), four-pillar/diabetes/draft browser checks; v0.7 fixes/local continuity implementation; 144 passing automated tests.
 
-Deploy0.6.0 using the correctly structured packet, then run the post-upload checklist in AUDIT_0.6.0.md. Continue with medication provenance/normalization and approved final calendar exports before expanding dose engines. Native PREVENT remains independently gated; other phases can proceed without it.
+Pending: v0.7 browser acceptance after owner uploads. Next implementation priority: medication section completeness and governed longitudinal reporting, before additional prescribing algorithms. Full pathway expansion is blocked where controlling sources, independent fixtures or institution-approved workflows are absent.

@@ -1,4 +1,16 @@
-# Dr. Rosario / ClinicalRx build specification — v0.6.1
+# Dr. Rosario / ClinicalRx build specification — v0.8.0
+
+## Phase 01B reporting — v0.8.0
+
+Add #reporting via reporting.js. Count current-tab structured MTP records by action category and separately by accepted/implemented/resolved status. Counts overlap; never sum into encounters, billable units, proven outcomes or economic savings. Flag missing/duplicate IDs, missing action category, implementation without details and resolution without follow-up. Default CSV excludes medication/narrative fields; explicit narrative selection clears export confirmation. Even minimal exports may be sensitive. Require review before CSV export, neutralize spreadsheet formula prefixes, escape CSV text and use approved local storage. No multi-patient registry, denominator/period interpretation or certified measure calculation. Evidence basis is user-entered records, not an external clinical recommendation.
+
+Example portfolios are visual/concept references only and must not appear in site links or source provenance. All current source/doc files are regression-scanned for the excluded example-site domain. SBA primary guidance replaces the historical business-plan example.
+
+## Local continuity requirements
+
+Add #draft through local-draft.js: explicit download only, then local file preview and separately confirmed replacement of tab state. Schema ClinicalRxLocalDraft version1; maximum2MB, bounded depth/records/text, unsafe property rejection. Whitelist encounter/billing/MTP/economic/business/cabinet/clinical/next/external-result state; exclude API caches and standalone adherence/quality form memories. No network, automatic browser persistence or imported executable code. Clear patient/diagnosis/payer review attestations and signing/evidence fields on restore. Imported content is unverified, never authenticated. Retain product-label set/effective/retrieval dates and prevent accidental exact-product duplicate additions. Clear prior label UI during identity retrieval; validate real external-result dates.
+
+Acceptance: schema/negative/privacy tests plus simulated save/clear/preview/restore workflow; deployed browser acceptance separately required. See AUDIT_0.8.0.md and PHASE_CHECKLIST.md. Historical native calculator descriptions below are superseded by the link-first policy; no hosted PREVENT or duplicated generic calculator forms are permitted.
 
 ## Product and audience
 
@@ -8,7 +20,7 @@ Four pillars work independently and through explicit local transfers: Clinical C
 
 ## Architecture and deployment
 
-Buildless HTML/CSS/classic JavaScript, served from main:/docs by GitHub Pages. No paid backend, account, cloud LLM, analytics or persistent patient storage. Hosted index uses CSP self-only script/style plus specific public API origins. Release asset query0.6.1 prevents cached older scripts. startup.js provides visible resource/runtime initialization errors.
+Buildless HTML/CSS/classic JavaScript, served from main:/docs by GitHub Pages. No paid backend, account, cloud LLM, analytics or persistent patient storage. Hosted index uses CSP self-only script/style plus specific public API origins. Release asset query0.8.0 prevents cached older scripts. startup.js provides visible resource/runtime initialization errors.
 
 Source modules:
 

@@ -51,13 +51,9 @@ This release completes a bounded calculator/workflow phase: full response-card P
 
 ## Design and planning references — not controlling clinical/payer authority
 
-- https://atranpharmd.github.io/
-- https://atranpharmd.github.io/projects/dm-treatment-algorithm-tool.html
-- https://atranpharmd.github.io/projects/bridge-plan-maker.xlsx
-- https://atranpharmd.github.io/projects/waco-business-plan.pdf (October2021; organizational ideas only)
 - https://www.mdcalc.com/calc/10491/predicting-risk-cardiovascular-disease-events-prevent
 
-No reference site's code, images, branding, PDF pages or workbook is redistributed with the site. Concepts inform original interfaces. Primary guidelines/labels govern clinical logic. The old business plan is not treated as current payer policy or evidence of guaranteed revenue.
+No reference site's code, images, branding, PDF pages or workbook is redistributed with the site. Concepts inform original interfaces. Primary guidelines/labels govern clinical logic. Historical planning examples are not current payer policy or evidence of guaranteed revenue.
 
 ## Post-upload browser acceptance checklist
 
