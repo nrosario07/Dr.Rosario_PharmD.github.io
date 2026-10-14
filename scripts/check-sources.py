@@ -17,6 +17,13 @@ urls = {x['url'] for x in registry['modules']}
 urls.update(x['url'] for x in json.loads((root / 'docs/data/registry.json').read_text())['sources']
             if x['url'].startswith(('https://www.cms.gov/', 'https://www.pharmacy.texas.gov/', 'https://www.tmhp.com/')))
 urls.update(['https://open.fda.gov/apis/drug/label/',
+             'https://purplebooksearch.fda.gov/index.cfm?event=downloads',
+             'https://www.pqa.org/measures/measures-resources/',
+             'https://www.tmb.texas.gov/laws-rules/occupations-code-board-rules',
+             'https://www.pharmacy.texas.gov/files_pdf/LIC-1209.pdf',
+             'https://www.cms.gov/files/document/2027-tech-notes-2026-09-30.pdf',
+             'https://sps.nhs.uk/articles/ssris-to-other-antidepressants-switching-in-adults/',
+             'https://australianprescriber.tg.org.au/articles/antipsychotic-switching-tool.html',
              'https://rxnav.nlm.nih.gov/REST/version.json',
              'https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data'])
 baseline_path = root / 'documentation/source-monitor-baseline.json'
