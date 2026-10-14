@@ -1,5 +1,8 @@
-ClinicalRx 0.5.1 — site-only upload
-
-Extract this ZIP. Upload the ENTIRE docs FOLDER to your GitHub repository ROOT using drag-and-drop; keep its subfolders. Do not upload individual files from all subfolders together and do not upload the ZIP itself.
-
-Keep Pages source main:/docs. Full step-by-step guidance: CLEAN_REINSTALL.md in the complete source packet, also provided separately.
+ClinicalRx v0.9.0
+1. Extract the ZIP. Do not upload the ZIP itself.
+2. At repository ROOT, Add file > Upload files: drag the entire docs FOLDER. Replace all matching paths including docs/index.html; preserve assets/data/downloads. Do not flatten folders.
+3. Delete obsolete docs/assets/local-draft.js if present. It is no longer loaded; no import/restore remains.
+4. Commit: Add evidence-linked SOAP tools and privacy corrections.
+5. Pages stays Deploy from a branch > main > /docs. Confirm deployment footer0.9.0; run documentation/AUDIT_0.9.0.md acceptance checklist.
+6. To install full source/documentation/monitoring, copy package root into a GitHub Desktop clone, preserving its .git and unrelated owner files, commit and push. Do not copy clinical drafts/private uploads.
+7. New browser testing remains pending deployment;155 automated tests passed. Phase01C current; platform incomplete. Documentation, source charts and limits are in documentation/.

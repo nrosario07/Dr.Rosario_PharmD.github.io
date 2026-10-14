@@ -51,3 +51,7 @@ Public APIs/data never automatically change treatment rules. Source hashes/versi
 ## Delivery/testing
 
 Reproducible tests: node --test tests/*.test.js. Packaging: python scripts/package.py. One ZIP with docs/source/tests/documentation/scripts/.github at root; exclude private uploads, caches, git and clinical drafts. External-public data only. Distinguish new automated results, deployed browser evidence and pending new-release/mobile/print verification. Update release notes/audit/checklist on each release; preserve documented limits rather than presenting all modules as complete.
+
+
+## 0.10 implementation acceptance and source coverage
+Current implementation phase:02; full platform incomplete. Deployed0.9 received documented browser acceptance on2026-10-14;0.10 is automated-tested, browser acceptance pending deployment. Medication sections expose actual API field names and one of FIELD_RETURNED/BROADER_SECTION_REVIEW/NOT_RETURNED. Counts are API coverage, never safety/completeness scores. No topic-specific claims are inferred from broader sections. A new query or blank exact-label choice must invalidate prior selection. Stale errors must not overwrite a newer request/view. Public package hashes live in docs/data/release-manifest.json; scripts/validate-site.py verifies loaded files/version/hash parity. Rebuild the manifest intentionally after edits, then test/package; never bypass failure to ship a partial upload. See RELEASE_0.10.0.md and AUDIT_0.10.0.md.
