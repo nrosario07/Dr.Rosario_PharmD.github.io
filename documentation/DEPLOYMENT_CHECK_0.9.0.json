@@ -1,0 +1,93 @@
+{
+  "checked": "2026-10-14",
+  "commit": "871e739fd6fd9846703ca791c6638407072c3a5f",
+  "entrypointVersion": [
+    "0.8.0"
+  ],
+  "assets": [
+    {
+      "path": "assets/mark.svg",
+      "matches08": true
+    },
+    {
+      "path": "assets/styles.css",
+      "matches08": true
+    },
+    {
+      "path": "assets/startup.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/content.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/core.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/rules.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/clinical.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/module-data.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/modules.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/drug-api.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/icd-index.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/advanced.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/advanced-platform.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/next-phase.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/next-platform.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/calculator-links.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/local-draft.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/reporting.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/platform.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/workspaces.js",
+      "matches08": true
+    },
+    {
+      "path": "assets/app.js",
+      "matches08": true
+    }
+  ]
+}
