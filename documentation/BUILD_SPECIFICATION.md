@@ -1,14 +1,14 @@
-# Dr. Rosario / ClinicalRx build specification — v0.11.0
+# Dr. Rosario / ClinicalRx build specification — v0.12.0
 
 ## Current phase and acceptance
 
-Phase01D CPA encounter/MTP redesign and Phase04 LAI initiation pilot are the active delivered increments; Phase02 medication intelligence remains in progress. Full platform incomplete. Deployed0.10 public lookup was browser-tested; new0.11 is automated-tested and awaits deployment acceptance. See REQUEST_MATRIX_0.11.0.md, PHASE_CHECKLIST.md and AUDIT_0.11.0.md.
+Phase 04 recommendation workflows, Phase 02 public API resilience, and Phase 05 prefilled CPA drafting are the active v0.12 increments. Full platform incomplete. Deployed v0.11 was inspected in the browser, including a successful public medication search. New v0.12 is automated-tested; browser acceptance awaits upload. See REQUEST_MATRIX_0.12.0.md, PHASE_CHECKLIST.md and AUDIT_0.12.0.md.
 
 ## Identity and architecture
 
 Dr. Rosario, PharmD is the professional brand; ClinicalRx is separately branded. Keep About → Experience → Clinical Practice → Research → Publications → Teaching → Presentations → Projects → Clinical Tools → CV → Contact. Free access, no account/paid backend. LinkedIn https://www.linkedin.com/in/norbertrosario/ is the only public contact. Never publish private CV email/phone or credentialing documents.
 
-Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.9.0. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
+Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.12.0. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
 
 ## Privacy
 
@@ -70,3 +70,13 @@ Current implementation phase:02; full platform incomplete. Deployed0.9 received 
 - PDC/MPR remains an educational single-unchanged-medication claims worksheet. Explain PQA abbreviations, VAS displayed/unrecorded distinction and separate claims/self-report interpretations; no certified measure or ingestion claim.
 - CPA builder outputs original unexecuted draft with explicit action/drug/setting limits; supplied2023 protocol is structural input, not proof of current authority. All25 grouped scopes are opt-in. No private personal credentials, signatures or contact information copied.
 - New-release acceptance includes automated tests, manifest/ZIP structure, and separately labeled browser/live evidence. Do not label a new local release browser-tested until actually deployed and tested.
+
+## v0.12 recommendation-first acceptance contract
+
+Anticoagulation asks for clinical facts, exact medication/regimen, procedure/date and risk context. A searchable procedure catalog supplies initial bleeding classification; overrides require rationale. Submit generates interruption/continuation and bridge reasoning, a conditional calendar, monitoring and AMA sources. It never asks for a prewritten interruption/bridge decision. DOACs do not receive a therapeutic bridge. High-risk warfarin exceptions are conditional, not automatic; dosing is withheld outside supported renal/weight/HIT contexts. No exact local clock interval is inferred. Neuraxial, urgent, actively bleeding and unstable cases require separate review.
+
+Switching asks for current exact product/dose/frequency/duration, target and pertinent clinical facts, not a preapproved target starting dose. Supported paths: sertraline/escitalopram adult MDD, a historical olanzapine-to-risperidone strategy explicitly marked no longer maintained by its publisher, metoprolol tartrate IR-to-succinate ER for stable hypertension, methylphenidate IR-to-CONCERTA using its exact label table, and bounded oral-to-ARISTADA/SUSTENNA initiation. Unsupported pairs, depot conversions and complex contexts return review limits rather than invented schedules. All results require clinician review.
+
+Medication lookup races RxNav with an independent NLM Clinical Tables/RxTerms request after a short delay. RxTerms is a named subset fallback with aligned RxCUI/form mappings; it is not represented as complete RxNorm coverage. Controls recover after success/failure and stale requests cannot overwrite a newer search. Public names/identifiers only are sent. The original v0.9 also used the same RxNav endpoint and 15-second timeout; the cause of the user-specific intermittent timeout is unresolved.
+
+CPA builder preloads ten standard sections and 25 grouped scopes/classes paraphrased from the supplied CPA, without publishing its identifiers. Professional identities, degrees/training, physicians, setting and effective date are local inputs. Agreement term may be fixed, renewable or ongoing. Protocol review remains at least annual under Texas §295.13; a longer agreement term does not permit a longer review interval. Drafts are unexecuted and require local physician/legal/institutional review, exact clinical appendices and signatures. Two-business-day documentation is labeled sample institutional policy, not a universal statutory deadline. Dangerous-drug signing is a separate setting-specific notification/protocol-copy branch; ordinary CPA practice is not conflated with that branch.
