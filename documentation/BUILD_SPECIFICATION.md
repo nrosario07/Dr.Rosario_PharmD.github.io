@@ -1,8 +1,8 @@
-# Dr. Rosario / ClinicalRx build specification — v0.9.0
+# Dr. Rosario / ClinicalRx build specification — v0.11.0
 
 ## Current phase and acceptance
 
-Phase 01C (evidence-linked SOAP/MTP, documentation and quality review) is implemented with explicit limits. Phase 02 medication intelligence continues; Phase 04 therapeutic switching and FDA relationships has a bounded pilot. The full platform is incomplete. Public diabetes app is removed pending a complete independently validated replacement. See PHASE_CHECKLIST.md and AUDIT_0.9.0.md.
+Phase01D CPA encounter/MTP redesign and Phase04 LAI initiation pilot are the active delivered increments; Phase02 medication intelligence remains in progress. Full platform incomplete. Deployed0.10 public lookup was browser-tested; new0.11 is automated-tested and awaits deployment acceptance. See REQUEST_MATRIX_0.11.0.md, PHASE_CHECKLIST.md and AUDIT_0.11.0.md.
 
 ## Identity and architecture
 
@@ -55,3 +55,18 @@ Reproducible tests: node --test tests/*.test.js. Packaging: python scripts/packa
 
 ## 0.10 implementation acceptance and source coverage
 Current implementation phase:02; full platform incomplete. Deployed0.9 received documented browser acceptance on2026-10-14;0.10 is automated-tested, browser acceptance pending deployment. Medication sections expose actual API field names and one of FIELD_RETURNED/BROADER_SECTION_REVIEW/NOT_RETURNED. Counts are API coverage, never safety/completeness scores. No topic-specific claims are inferred from broader sections. A new query or blank exact-label choice must invalidate prior selection. Stale errors must not overwrite a newer request/view. Public package hashes live in docs/data/release-manifest.json; scripts/validate-site.py verifies loaded files/version/hash parity. Rebuild the manifest intentionally after edits, then test/package; never bypass failure to ship a partial upload. See RELEASE_0.10.0.md and AUDIT_0.10.0.md.
+
+
+## 0.11 implementation contract
+- Keep four pillars, free access, LinkedIn-only personal contact and no automatic patient-data persistence. Public medication names/RxCUIs only to existing allowlisted sources; clinical text never to an LLM or drug API.
+- CPA encounter begins with referral reason/referring physician; selected physician-established diagnoses precede Subjective and flow into assessment/plan headings. Preserve diagnoses during edits. ROS/PE reflects only actual work; objective has distinct vitals/labs/imaging/procedure/screening fields.
+- Local MTP phrase candidates are suggestions, not validated diagnosis/interaction/dose detection. Confirm actual category/supporting facts. Manual records start blank/unconfirmed. Changes to source encounter invalidate confirmations across routes. Never infer implementation/resolution merely from confirmation. Actual-intervention text can support an implemented-process record, not a resolved outcome.
+- Economic type mapping is visible before confirmation and editable. Source records include original metric, USD/price-year limits, population, setting, method, citation and URL. Sixteen reviewed intervention categories currently available. Display ranges of analogous historical means/coefficients, not pooled estimates or confidence intervals; no average of incompatible studies. Hypothetical subtotal excludes unconfirmed/unmatched/repeated event/type. Category sums and overall study means must not be combined; no receipts or causal patient-savings claim.
+- Automatic E/M comparison currently uses actual qualifying time and new/established status. No MDM level inferred from text volume, diagnosis count, medicine count or historical history/exam counts. Free-text MDM automation requires independent fixtures before release. Medicare pharmacist-only office reference remains distinct from higher documentation candidates and payer-specific performer recognition.
+- Fee subset is144 rows for nine office codes×eight Texas localities×QP/non-QP from hash-reviewed2026 annual carrier files (updated2025-12-29, rechecked2026-10-14). Annual base comparisons only; no FQHC/facility/telehealth or unavailable-year office benchmark. No contractual rate inferred.
+- Generate >50% counseling statement only from valid actual face-to-face/total minutes and documented education. Include actual MD/DO availability only for an entered incident-to pathway and qualifying availability; never generate signatures/authentication or assert all billing prerequisites were satisfied.
+- Switching Submit generates a conditional supported plan; edits clear old plans. New LAI pilot covers only stated exact oral/product initiation pairs; requires adult stable schizophrenia context, documented tolerability, label/interaction review, date and renal context where relevant. No missed-dose, depot-to-depot or unsupported agent schedule. Stimulants, antihypertensives and IR/ER expansion remains planned.
+- Anticoagulation Submit can supply standard AF/DOAC no-bridge rationale but still requires procedure-specific interruption/risk review. High-risk bridge selection remains an explicitly approved-plan exception; no unrestricted procedure-name inference or dose rounding.
+- PDC/MPR remains an educational single-unchanged-medication claims worksheet. Explain PQA abbreviations, VAS displayed/unrecorded distinction and separate claims/self-report interpretations; no certified measure or ingestion claim.
+- CPA builder outputs original unexecuted draft with explicit action/drug/setting limits; supplied2023 protocol is structural input, not proof of current authority. All25 grouped scopes are opt-in. No private personal credentials, signatures or contact information copied.
+- New-release acceptance includes automated tests, manifest/ZIP structure, and separately labeled browser/live evidence. Do not label a new local release browser-tested until actually deployed and tested.

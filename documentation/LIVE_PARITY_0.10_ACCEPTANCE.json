@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-14",
+  "deployed": "0.10.0",
+  "indexMatchesPriorPackage": true,
+  "assets": [
+    {
+      "path": "assets/mark.svg",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/styles.css",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/startup.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/content.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/mtp-taxonomy.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/core.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/rules.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/clinical.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/module-data.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/modules.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/drug-api.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/icd-index.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/advanced.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/medication-sections.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/advanced-platform.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/next-phase.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/next-platform.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/calculator-links.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/reporting.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/clinical-support.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/purple-data.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/support-platform.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/platform.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/workspaces.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    },
+    {
+      "path": "assets/app.js",
+      "version": "0.10.0",
+      "matchesPriorPackage": true
+    }
+  ]
+}
