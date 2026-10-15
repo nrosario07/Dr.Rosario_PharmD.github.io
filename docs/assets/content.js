@@ -842,6 +842,46 @@ window.ClinicalData = {
       "status": "Limited rule / retrieval reference",
       "lastChecked": "2026-10-11",
       "reviewStatus": "Rule-specific review; not full clinical release certification"
+    },
+    {
+      "id": "ECON-OMAN-2022",
+      "title": "Category-specific modeled intervention costs",
+      "category": "Economic evidence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36287448/",
+      "summary": "Inpatient Oman modeled coefficients; historical dollars, not observed CPA savings.",
+      "status": "Bounded reference; review applicability",
+      "lastChecked": "2026-10-14",
+      "reviewStatus": "Primary-source review; local clinical validation incomplete"
+    },
+    {
+      "id": "ECON-CRIT-2021",
+      "title": "PHARM-CRIT intervention-category economic results",
+      "category": "Economic evidence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34913039/",
+      "summary": "US ICU2019 USD category totals and counts; derived means are explicitly labeled.",
+      "status": "Bounded reference; review applicability",
+      "lastChecked": "2026-10-14",
+      "reviewStatus": "Primary-source review; local clinical validation incomplete"
+    },
+    {
+      "id": "LAI-ARISTADA",
+      "title": "ARISTADA exact product label",
+      "category": "Product labels",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17a8d11b-73b0-4833-a0b4-cf1ef85edefb",
+      "summary": "Label updated2025-01-28; bounded adult schizophrenia initiation/overlap reference.",
+      "status": "Bounded reference; review applicability",
+      "lastChecked": "2026-10-14",
+      "reviewStatus": "Primary-source review; local clinical validation incomplete"
+    },
+    {
+      "id": "LAI-SUSTENNA",
+      "title": "INVEGA SUSTENNA exact product label",
+      "category": "Product labels",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1af14e42-951d-414d-8564-5d5fce138554",
+      "summary": "Label updated2025-02-14; bounded initiation reference with kidney limits.",
+      "status": "Bounded reference; review applicability",
+      "lastChecked": "2026-10-14",
+      "reviewStatus": "Primary-source review; local clinical validation incomplete"
     }
   ],
   "rationales": [

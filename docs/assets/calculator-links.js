@@ -1,4 +1,6 @@
 window.ClinicalCalculatorLinks=[
+{id:'child-pugh',checked:'2026-10-14',title:'Child-Pugh cirrhosis severity',category:'Liver',provider:'MDCalc',url:'https://www.mdcalc.com/calc/340/child-pugh-score-cirrhosis-mortality',note:'Use the appropriate population and product-specific hepatic guidance; not an automatic dose adjustment.'},
+{id:'meld',checked:'2026-10-14',title:'MELD / MELD3.0',category:'Liver',provider:'MDCalc',url:'https://www.mdcalc.com/calc/10437/model-end-stage-liver-disease-meld',note:'Confirm the score version and transplant/clinical context; not a diagnosis or prescription.'},
 {id:'prevent',title:'PREVENT cardiovascular risk',category:'Cardiovascular',provider:'American Heart Association',url:'https://professional.heart.org/en/guidelines-and-statements/prevent-calculator',note:'Use the official calculator. No PREVENT form, equation or risk-result calculation is hosted in ClinicalRx.'},
 {id:'af-scores',title:'CHA₂DS₂-VASc',category:'Cardiovascular',provider:'MDCalc',url:'https://www.mdcalc.com/calc/801/cha2ds2-vasc-score-atrial-fibrillation-stroke-risk',note:'Review applicability and the current guideline before using a risk score.'},
 {id:'has-bled',title:'HAS-BLED',category:'Cardiovascular',provider:'MDCalc',url:'https://www.mdcalc.com/calc/807/has-bled-score-major-bleeding-risk',note:'Use bleeding-risk assessment in its clinical context.'},
@@ -11,7 +13,7 @@ window.ClinicalCalculatorLinks=[
 {id:'hamd',title:'Hamilton Depression Rating Scale (HAM-D)',category:'Mental health',provider:'MDCalc',url:'https://www.mdcalc.com/calc/10043/hamilton-depression-rating-scale-hamd',note:'Clinician-rated instrument; confirm version and scoring instructions.'},
 {id:'steroid',title:'Corticosteroid equivalence',category:'Conversions',provider:'ClinCalc',url:'https://clincalc.com/Corticosteroids/',note:'Approximate anti-inflammatory equivalence; not a taper or replacement-therapy order.'},
 {id:'benzo',title:'Benzodiazepine equivalence',category:'Conversions',provider:'ClinCalc',url:'https://clincalc.com/benzodiazepine/',note:'Approximate, variable oral equivalence. Review patient factors and source assumptions.'}
-].map(row=>({...row,checked:'2026-10-12',status:'Reviewed external reference; not a ClinicalRx-certified clinical result'}));
+].map(row=>({...row,checked:row.checked||'2026-10-12',status:'Reviewed external reference; not a ClinicalRx-certified clinical result'}));
 window.ClinicalExternalCalculators=function(h){
 'use strict';const {state,e,main,heading,notice,outputPanel,output,outputEvents}=h,rows=window.ClinicalCalculatorLinks;state.externalResults=state.externalResults||{};
 const link=row=>`<a class="button primary" href="${e(row.url)}" target="_blank" rel="noopener noreferrer">Open ${e(row.provider)} calculator ↗</a>`;

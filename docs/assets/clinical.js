@@ -12,11 +12,11 @@ function diagnose(encounter,rules){
 }
 function reviewedDiagnoses(encounter,rules){
  const r=diagnose(encounter,rules);if(r.status!=='CANDIDATES')return [];
- if(encounter.diagnosisReview!=='Reviewed against diagnosing-provider documentation and index/tabular instructions')return [];
+ if(encounter.diagnosisReview!=='Reviewed against diagnosing-provider documentation and index/tabular instructions'&&encounter.diagnosisSource!=='Physician-established from referring record (user-entered)')return [];
  const selections=text(encounter.confirmedCodes).split(/[\s,;]+/);
- const full=typeof globalThis!=='undefined'&&globalThis.ClinicalICD;const chosen=full?full.filter(row=>selections.includes(row[0])).map(row=>({code:row[0],label:row[1],description:row[1],plain:row[1],family:row[0]})):r.candidates.filter(row=>selections.includes(row.code));
+ const full=typeof globalThis!=='undefined'&&globalThis.ClinicalICD;const chosen=full?full.filter(row=>selections.includes(row[0])).map(row=>({code:row[0],label:row[1],description:row[1],plain:(rules.icds.find(x=>x.code===row[0])?.plain||row[1]),family:row[0]})):r.candidates.filter(row=>selections.includes(row.code));
  // Mutually exclusive alternatives within this small bundle cannot both be confirmed.
- if(chosen.some((x,i)=>chosen.some((y,j)=>i!==j&&x.code.slice(0,3)===y.code.slice(0,3))))return [];
+ if(encounter.diagnosisSource!=='Physician-established from referring record (user-entered)'&&chosen.some((x,i)=>chosen.some((y,j)=>i!==j&&x.code.slice(0,3)===y.code.slice(0,3))))return [];
  return chosen;
 }
 const serviceGates=[['established','Established patient and initial personal service/plan by eligible billing practitioner'],['active','Billing practitioner remains actively involved'],['scope','CPA/state scope and institutional privileges verified'],['necessary','Medical necessity and service actually performed documented'],['expense','Service is an expense of the billing practice'],['supervision','Applicable direct supervision and Texas/clinic rules verified'],['notPartD','Service not paid under the Part D benefit'],['record','Approved EHR documentation/authentication completed']];

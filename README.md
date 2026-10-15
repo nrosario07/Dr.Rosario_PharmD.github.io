@@ -1,4 +1,4 @@
-# ClinicalRx v0.10.0 by Dr. Rosario
+# ClinicalRx v0.11.0 by Dr. Rosario
 
 Free four-pillar professional/clinical resource; LinkedIn-only contact. Fictional/de-identified inputs only. No PHI or automatic draft persistence. Save/restore removed; reviewed downloads remain, with a no-PHI confirmation. Pages main:/docs.
 
@@ -9,3 +9,5 @@ Current Phase01C evidence-linked SOAP/MTP/documentation and Phase04 bounded swit
 Extract ZIP; replace entire docs folder at repository root including index.html and all assets/data/downloads. Keep nested paths, main:/docs. Do not upload ZIP itself or private files. Delete obsolete docs/assets/local-draft.js if present. Use GitHub Desktop/clone to install documentation/scripts/tests/.github as well, preserving .git and unrelated owner files. Source controls remain reproducible and patient-free.
 
 Current phase02 medication-section normalization; full platform incomplete. Upload: UPLOAD_0.10.0.md. Audit: documentation/AUDIT_0.10.0.md.
+
+Release0.11 changes: CPA referral/diagnosis-first encounter, confirmed MTP candidates, category-linked historical economic references, actual-time documentation comparison, LAI initiation pilot, CPA draft builder, submit workflows and adherence definitions. Full platform incomplete. See documentation/REQUEST_MATRIX_0.11.0.md and UPLOAD_0.11.0.md.
