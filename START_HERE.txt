@@ -1,4 +1,4 @@
-ClinicalRx0.11.0 upload packet
-Read UPLOAD_0.11.0.md first. Preserve docs/ and all folder paths. Keep main /docs Pages settings. Include hidden .github/workflows using GitHub Desktop.
-Current phase01D CPA encounter/MTP and phase04 LAI pilot; full platform incomplete.
-New release automated-tested; browser acceptance awaits deployment.
+ClinicalRx 0.12.0 upload packet
+Read UPLOAD_0.12.0.md. Preserve all folder paths; Pages main /docs.
+Current work: Phase 04 recommendation workflows, Phase 02 API resilience and Phase 05 CPA drafting. Full platform incomplete.
+235 automated tests passed. New-release browser acceptance awaits deployment.
