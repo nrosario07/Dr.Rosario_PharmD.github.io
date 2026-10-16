@@ -1,3 +1,3 @@
-ClinicalRx 0.12.1 — focused medication lookup recovery patch
-Read UPLOAD_0.12.1.md. No clinical dosing rules or procedure/switch forms changed.
-Full platform incomplete. New FDA recovery path automated/runtime-tested; deployed browser acceptance pending.
+ClinicalRx 0.13.0 — MDM evidence pilot, switch usability, medication reference layout
+Read UPLOAD_0.13.0.md. Full platform incomplete.
+254 automated tests passed. Deployed v0.12.1 switch and procedure controls browser-tested; new v0.13 browser acceptance pending.
