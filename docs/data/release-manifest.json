@@ -1,8 +1,8 @@
 {
-  "version": "0.12.0",
+  "version": "0.12.1",
   "sha256": {
-    "index.html": "5ba7baf261ba1cadc1caf619805b32e98a8b8dbba48d060412a2c94298982f8f",
-    "assets/advanced-platform.js": "b5ace1240d5c8c923551740ee63e07f9fb06853a854aab1129768584628fb2c4",
+    "index.html": "3a759f09a5ee1b9f1d50b5d42af49c854605d41fdeca3da10a84f27c6dde8233",
+    "assets/advanced-platform.js": "bd8ec0e8eb71065cc76c67fb836fb69c52b58b7ef827ebd015c4cfbdc96f1830",
     "assets/advanced.js": "d30a34be61daa9712d0049176e0c240df0782078a54cc4a20b4ff0c3baf22891",
     "assets/app.js": "8714fea4d0f7fa9a069e6120c18b798578dcd1210a47f2add107ba657f754803",
     "assets/calculator-links.js": "b2271ffb1942b894bd8d9e80e1ca3c08f25ad278e6d97b50408e5592a1ed0e2c",
@@ -15,7 +15,7 @@
     "assets/cpa-workspace.js": "e687c86a358aab3fbada36fa6d66680f1cfa4df1459dd0d679c7e14d365d699a",
     "assets/decision-support.js": "8dc9c982bf3c8da330527f61b547d80b6b02878b663c82a8bc5a0ca54fc7f52e",
     "assets/decision-workspaces.js": "e52dd12e40eb53ad24624c051861c7107ce56234dd4cb906f798afbeabd3c638",
-    "assets/drug-api.js": "6f599044d65c3805c4f87680d5a563c56985feb43a138a598a4d5f471c5b4cb7",
+    "assets/drug-api.js": "4b2f6be32380f887af052ac71d051935531ea849ec979126875b6023b1d9f38a",
     "assets/encounter-review.js": "f6950936ee3d54010a2f59c367ce4529ef53bd203fdc94db4d993c61892b5cbf",
     "assets/fee-reference.js": "a70b0934fcfa4a7cc416a3a9b354416275faa278a3aa3c85a3b10c866ec322a4",
     "assets/icd-index.js": "26c0796f50a966340d3482ad48a0e8f981bcf99343845f886aa028661f9a840f",

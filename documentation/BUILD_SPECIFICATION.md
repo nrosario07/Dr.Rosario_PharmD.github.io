@@ -1,4 +1,4 @@
-# Dr. Rosario / ClinicalRx build specification — v0.12.0
+# Dr. Rosario / ClinicalRx build specification — v0.12.1
 
 ## Current phase and acceptance
 
@@ -8,7 +8,7 @@ Phase 04 recommendation workflows, Phase 02 public API resilience, and Phase 05 
 
 Dr. Rosario, PharmD is the professional brand; ClinicalRx is separately branded. Keep About → Experience → Clinical Practice → Research → Publications → Teaching → Presentations → Projects → Clinical Tools → CV → Contact. Free access, no account/paid backend. LinkedIn https://www.linkedin.com/in/norbertrosario/ is the only public contact. Never publish private CV email/phone or credentialing documents.
 
-Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.12.0. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
+Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.12.1. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
 
 ## Privacy
 
@@ -80,3 +80,11 @@ Switching asks for current exact product/dose/frequency/duration, target and per
 Medication lookup races RxNav with an independent NLM Clinical Tables/RxTerms request after a short delay. RxTerms is a named subset fallback with aligned RxCUI/form mappings; it is not represented as complete RxNorm coverage. Controls recover after success/failure and stale requests cannot overwrite a newer search. Public names/identifiers only are sent. The original v0.9 also used the same RxNav endpoint and 15-second timeout; the cause of the user-specific intermittent timeout is unresolved.
 
 CPA builder preloads ten standard sections and 25 grouped scopes/classes paraphrased from the supplied CPA, without publishing its identifiers. Professional identities, degrees/training, physicians, setting and effective date are local inputs. Agreement term may be fixed, renewable or ongoing. Protocol review remains at least annual under Texas §295.13; a longer agreement term does not permit a longer review interval. Drafts are unexecuted and require local physician/legal/institutional review, exact clinical appendices and signatures. Two-business-day documentation is labeled sample institutional policy, not a universal statutory deadline. Dangerous-drug signing is a separate setting-specific notification/protocol-copy branch; ordinary CPA practice is not conflated with that branch.
+
+## v0.12.1 medication recovery contract
+
+Scope is limited to medication lookup. Automatic mode starts NLM RxTerms after 2.5 seconds and independent openFDA label-linked search after 5 seconds, or immediately after both NLM sources fail. An explicit Search FDA directly action bypasses NLM. Only validated public drug terms are transmitted. No proxy or clinical-text forwarding is introduced. Errors identify all failed hosts and leave controls retryable; no match does not produce an invented identity.
+
+FDA harmonized RxCUIs are label-associated candidates, not an exact ingredient/strength/form relationship. Every candidate is marked accordingly; a visible warning accompanies label details and cabinet entries, and mapping limits remain in structured encounter metadata. Users must reconcile exact salt, strength, release form and actual regimen against the product label. FDA result limits and truncation are stated. FDA is not an exhaustive RxNorm replacement or an independent clinical recommendation source.
+
+The reported Anticoagulation procedure dropdown and switch result display remain open defects. No added drug-pair scope or changed dose rule is delivered in this focused patch. The v0.12.1 generated UI requires deployed browser acceptance; runtime recovery checks are not represented as browser validation.

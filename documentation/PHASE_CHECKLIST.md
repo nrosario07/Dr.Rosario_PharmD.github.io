@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist — v0.12.0
+# ClinicalRx phase checklist — v0.12.1
 
 **Current: Phase 04 recommendation workflows + Phase 02 API resilience + Phase 05 prefilled CPA drafting. Full platform incomplete. New v0.12 browser acceptance awaits upload.**
 
@@ -19,3 +19,11 @@
 |09 Monitoring/release|Review-only source monitoring/rebuild scripts; manifest and CI packet supplied|Remote .github folder still absent: upload workflows; confirm first run; never auto-publish changed clinical rules|
 
 Next: deploy v0.12 and complete the browser acceptance checklist in AUDIT_0.12.0.md. Then prioritize independent clinical review, broader exact-product switch fixtures and structured MDM/economic evidence gaps. No new clinical rule is auto-published from source monitoring. Workflow implementation is delivered; production acceptance and full-platform completion remain open.
+
+### Focused defect sequence — v0.12.1
+
+1. Medication identity availability: FDA fallback/direct action implemented; 241 automated tests and real FDA recovery runtime check passed. User-network root cause unresolved; post-upload browser acceptance open.
+2. Anticoagulation procedure choices: reported by user; diagnosis/fix/browser acceptance pending. Prior generated-calendar unit tests do not establish that dropdown works for the user.
+3. Taper & Switch result rendering: reported by user; diagnosis/fix/browser acceptance pending. All-inclusive drug coverage is not delivered and must not be claimed. Metoprolol pure-rule test passing does not prove the rendered workflow works.
+
+No next phase is claimed complete by this patch.
