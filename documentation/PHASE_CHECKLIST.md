@@ -1,6 +1,6 @@
-# ClinicalRx phase checklist — v0.13.0
+# ClinicalRx phase checklist — v0.14.0
 
-**Current: Phase01D MDM evidence pilot + Phase04 switch usability + Phase02 medication-reference design. Full platform incomplete. New v0.13 browser acceptance pending.**
+**Current: Phase04 GLP-1 switching expansion + Phase01D MTP/MDM refinements + Phase02 reference design. Full platform incomplete;0.14 browser/independent review pending.**
 
 | Phase | Completed in current build | Remaining / blocking evidence |
 |---|---|---|
@@ -20,7 +20,7 @@
 
 Next: deploy v0.12 and complete the browser acceptance checklist in AUDIT_0.12.0.md. Then prioritize independent clinical review, broader exact-product switch fixtures and structured MDM/economic evidence gaps. No new clinical rule is auto-published from source monitoring. Workflow implementation is delivered; production acceptance and full-platform completion remain open.
 
-### Focused defect sequence — v0.13.0
+### Focused defect sequence — v0.14.0
 
 1. Medication identity availability: FDA fallback/direct action implemented; 241 automated tests and real FDA recovery runtime check passed. User-network root cause unresolved; post-upload browser acceptance open.
 2. Anticoagulation procedure choices: reported by user; diagnosis/fix/browser acceptance pending. Prior generated-calendar unit tests do not establish that dropdown works for the user.
@@ -28,7 +28,7 @@ Next: deploy v0.12 and complete the browser acceptance checklist in AUDIT_0.12.0
 
 No next phase is claimed complete by this patch.
 
-### Current release acceptance and next work — v0.13.0
+### Current release acceptance and next work — v0.14.0
 
 | Item | Status | Next / blocker |
 |---|---|---|
@@ -39,3 +39,12 @@ No next phase is claimed complete by this patch.
 | Phase completion | Not complete | Do not expand into new disease algorithms before current-release acceptance |
 
 Next ordered increment: deploy0.13 and run its acceptance checklist; address reproduced defects; then expand reviewed switch-rule coverage (with exact product, population, source date and boundary fixtures), followed by broader MDM audit evidence. Larger medication datasets/pricing and the full diabetes app remain separate incomplete phases.
+
+### Current0.14 acceptance and build order
+
+- Completed locally: seven GLP-1 switch directions with distinct label/expert/research provenance; broadened explicit MTP phrasing; clarified time/MDM separation; quieter medication styling;289 passing automated tests.
+- Browser verified on deployed0.13: MDM candidate with evidence; reproduced three missed MTP phrases. No claim of new0.14 browser testing.
+- Next: deploy0.14 and complete AUDIT_0.14.0.md acceptance; resolve reproduced defects; independent clinical/coding review; then additional exact-product switch families and structured medication/condition MTP checks.
+- Still blocked/incomplete: all-inclusive switches, autonomous narrative coding, current licensed quality specifications, validated patient-specific economic avoidance, complete diabetes app and later residency platform.
+
+No phase is declared complete from added dropdown entries or automated test count alone.

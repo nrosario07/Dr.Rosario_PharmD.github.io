@@ -1,14 +1,14 @@
-# Dr. Rosario / ClinicalRx build specification — v0.13.0
+# Dr. Rosario / ClinicalRx build specification — v0.14.0
 
 ## Current phase and acceptance
 
-Current delivered increment: Phase01D MDM evidence inference pilot, Phase04 switch-workflow usability, Phase02 medication-reference design. Full platform incomplete. Deployed v0.12.1 metoprolol conversion and procedure controls were browser-tested. New v0.13 has254 automated tests; deployed-browser acceptance remains pending. See AUDIT_0.13.0.md, REQUEST_MATRIX_0.13.0.md and PHASE_CHECKLIST.md.
+Phase04 adult-T2DM GLP-1 switch expansion, Phase01D MTP/MDM refinements and Phase02 medication-reference design are the current0.14 increment. Full platform incomplete. Deployed0.13 MDM was browser-tested and MTP phrase failures reproduced;0.14 has289 automated tests but new-release browser and independent clinical review remain pending. See AUDIT_0.14.0.md and PHASE_CHECKLIST.md.
 
 ## Identity and architecture
 
 Dr. Rosario, PharmD is the professional brand; ClinicalRx is separately branded. Keep About → Experience → Clinical Practice → Research → Publications → Teaching → Presentations → Projects → Clinical Tools → CV → Contact. Free access, no account/paid backend. LinkedIn https://www.linkedin.com/in/norbertrosario/ is the only public contact. Never publish private CV email/phone or credentialing documents.
 
-Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.13.0. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
+Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.14.0. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
 
 ## Privacy
 
@@ -98,3 +98,11 @@ MDM candidates never silently replace actual-time references or override payer/f
 Switch UI filters reviewed targets by current product, labels incomplete facts, hides SSRI-only hepatic inputs outside relevant source paths, gives a clearly fictional reproducible example, and places the generated target dose before the dated actions. It remains a bounded clinical workflow, not a complete drug-pair database. Existing clinical dose rules are unchanged.
 
 Medication UI uses original ClinicalRx task flow, source badges, public-name shortcuts, topic buttons and readable label sections; the actual source APIs and uncertainty disclosures remain. OpenRxData is a visual comparator only, not copied code/data or a clinical source. No new capabilities are inferred from appearance.
+
+## v0.14 expanded coverage contract
+
+`glpSwitch` supports seven exact-product adult-T2DM directions from Victoza, Ozempic and Trulicity into selected weekly targets including Mounjaro. Current dose/frequency/duration, last dose and clinical context must be supplied; first target date is derived from last dose. Generic transition-date input is hidden for this branch. Default schedule uses reviewed target-label starts and conditional titration/reassessment, not inferred equipotent doses. Safety, current GI tolerance and insulin/sulfonylurea context cannot default to absent. No overlapping full GLP-1 regimens, automatic hypoglycemia dose reduction or invented high-dose target. Tirzepatide5mg direct-switch research is an explicitly off-label alternative for full clinician appraisal, not generated calendar instructions. Timing guidance is expert-based; extension to tirzepatide is marked extrapolation. Sources, populations and maintenance limits remain visible.
+
+MTP detection recognizes a wider bounded phrase vocabulary, excludes documented negatives/hypothetical/resolved findings, and requires confirmation. It is not comprehensive NLP or a clinical interaction/dose checker. Economic mapping remains a reviewed suggestion; ambiguous multi-action plans do not assign every finding one inferred action. The original36-category taxonomy/manual pathway remains.
+
+Time-only text must not contradict the independent MDM evidence assistant. Incomplete encounter draft fields must be visible beside a component-based candidate. No new performer/payer eligibility or fee calculation from unreviewed MDM. Medication reference typography is compact and route-scoped, preserving professional profile design and working API recovery.

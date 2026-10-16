@@ -1,3 +1,3 @@
-ClinicalRx 0.13.0 — MDM evidence pilot, switch usability, medication reference layout
-Read UPLOAD_0.13.0.md. Full platform incomplete.
-254 automated tests passed. Deployed v0.12.1 switch and procedure controls browser-tested; new v0.13 browser acceptance pending.
+ClinicalRx 0.14.0
+Read UPLOAD_0.14.0.md. Current Phase04 GLP-1 switching pilot, Phase01D MTP/MDM refinement and Phase02 reference design.
+289 automated checks. Full platform incomplete; new-release browser/independent clinical review pending.
