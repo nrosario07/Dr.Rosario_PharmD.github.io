@@ -1,14 +1,14 @@
-# Dr. Rosario / ClinicalRx build specification — v0.12.1
+# Dr. Rosario / ClinicalRx build specification — v0.13.0
 
 ## Current phase and acceptance
 
-Phase 04 recommendation workflows, Phase 02 public API resilience, and Phase 05 prefilled CPA drafting are the active v0.12 increments. Full platform incomplete. Deployed v0.11 was inspected in the browser, including a successful public medication search. New v0.12 is automated-tested; browser acceptance awaits upload. See REQUEST_MATRIX_0.12.0.md, PHASE_CHECKLIST.md and AUDIT_0.12.0.md.
+Current delivered increment: Phase01D MDM evidence inference pilot, Phase04 switch-workflow usability, Phase02 medication-reference design. Full platform incomplete. Deployed v0.12.1 metoprolol conversion and procedure controls were browser-tested. New v0.13 has254 automated tests; deployed-browser acceptance remains pending. See AUDIT_0.13.0.md, REQUEST_MATRIX_0.13.0.md and PHASE_CHECKLIST.md.
 
 ## Identity and architecture
 
 Dr. Rosario, PharmD is the professional brand; ClinicalRx is separately branded. Keep About → Experience → Clinical Practice → Research → Publications → Teaching → Presentations → Projects → Clinical Tools → CV → Contact. Free access, no account/paid backend. LinkedIn https://www.linkedin.com/in/norbertrosario/ is the only public contact. Never publish private CV email/phone or credentialing documents.
 
-Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.12.1. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
+Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.13.0. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
 
 ## Privacy
 
@@ -88,3 +88,13 @@ Scope is limited to medication lookup. Automatic mode starts NLM RxTerms after 2
 FDA harmonized RxCUIs are label-associated candidates, not an exact ingredient/strength/form relationship. Every candidate is marked accordingly; a visible warning accompanies label details and cabinet entries, and mapping limits remain in structured encounter metadata. Users must reconcile exact salt, strength, release form and actual regimen against the product label. FDA result limits and truncation are stated. FDA is not an exhaustive RxNorm replacement or an independent clinical recommendation source.
 
 The reported Anticoagulation procedure dropdown and switch result display remain open defects. No added drug-pair scope or changed dose rule is delivered in this focused patch. The v0.12.1 generated UI requires deployed browser acceptance; runtime recovery checks are not represented as browser validation.
+
+## v0.13 MDM and usability contract
+
+`ClinicalEncounterReview.mdmCandidate` returns unreviewed component candidates, exact quote/field evidence, missing requirements and a documentation-only level/code when at least two recognized components support it. It uses bounded chronic-condition and prescription vocabularies; no general language-model understanding is claimed. Stability/worsening must be explicit in assessment; medication decisions must identify a supported prescription/dose and reason in plan. Unique explicitly reviewed/ordered test names are deduplicated; BMP/CMP overlap is withheld. Negated, historical and hypothetical evidence is conservatively excluded. High/straightforward, independent historian/interpretation and full CPT auditing remain outside this pilot.
+
+MDM candidates never silently replace actual-time references or override payer/fee eligibility. Missing patient status withholds code mapping. No new PHI persistence or clinical narrative transmission. Changes recompute candidates locally; exact quotes are escaped in HTML. Unrecognized work remains for human review and is not assumed absent.
+
+Switch UI filters reviewed targets by current product, labels incomplete facts, hides SSRI-only hepatic inputs outside relevant source paths, gives a clearly fictional reproducible example, and places the generated target dose before the dated actions. It remains a bounded clinical workflow, not a complete drug-pair database. Existing clinical dose rules are unchanged.
+
+Medication UI uses original ClinicalRx task flow, source badges, public-name shortcuts, topic buttons and readable label sections; the actual source APIs and uncertainty disclosures remain. OpenRxData is a visual comparator only, not copied code/data or a clinical source. No new capabilities are inferred from appearance.
