@@ -1,9 +1,9 @@
-# ClinicalRx0.14.2 by Dr. Rosario
+# ClinicalRx0.15.0 by Dr. Rosario
 
-Free four-pillar professional and clinical resource with LinkedIn-only contact. Fictional/de-identified cases only: no PHI or automatic clinical persistence. Public drug identifiers reach public APIs; clinical drafts remain in tab memory. Intentional exports require review.
+Free four-pillar professional and clinical resource. LinkedIn-only contact; fictional/de-identified cases only. No PHI or automatic clinical persistence. Public drug-name lookups reach public APIs; encounter drafts stay in tab memory. Exports require review.
 
-Current increment: acceptance and usability—task entry points, note-section navigation, relevant switching controls, compact clinical headings and a public phase overview. Clinical algorithms are unchanged. Full platform incomplete. See documentation/PHASE_CHECKLIST.md, documentation/BUILD_SPECIFICATION.md and documentation/AUDIT_0.14.2.md.
+Current phase:04 therapeutic switching. Adds nine GLP directions with evidence-tiered options, three formulation-conversion directions and a simpler conditional form. No universal equivalence or complete medication catalog. See documentation/BUILD_SPECIFICATION.md, PHASE_CHECKLIST.md and AUDIT_0.15.0.md.
 
-293 local automated tests passed. Browser-tested deployed0.14: GLP-1 positive/GI refusal and medication→cabinet→SOAP→patient-plan review plus MTP candidates. New0.14.2 browser acceptance remains pending because GitHub rejected the source-write attempt with403 “Resource not accessible by integration.” No remote source change was made. Local/DOM tests are not independent clinical/coding validation.
+337 automated tests pass. Browser-tested baseline0.14.2: task hub/four pillars, metoprolol example and corrected CSV-block feedback. New0.15.0 has not been deployed or browser-tested. Prior GitHub integration write403 remains unresolved. Automated tests do not replace independent clinical review.
 
-Run `node --test tests/*.test.js`, `python scripts/validate-site.py` and `python scripts/package.py`. The packet preserves GitHub Pages main:/docs. Review UPLOAD_0.14.2.md only if an owner upload is needed. Source monitoring queues review and never automatically changes clinical recommendations.
+Run `node --test tests/*.test.js`, `python scripts/validate-site.py` and `python scripts/package.py`. Pages remains main:/docs. Follow UPLOAD_0.15.0.md. Source monitoring queues review and never changes clinical recommendations automatically.
