@@ -1,14 +1,16 @@
-# Dr. Rosario / ClinicalRx build specification — v0.14.0
+# Dr. Rosario / ClinicalRx build specification — v0.14.2
 
 ## Current phase and acceptance
 
-Phase04 adult-T2DM GLP-1 switch expansion, Phase01D MTP/MDM refinements and Phase02 medication-reference design are the current0.14 increment. Full platform incomplete. Deployed0.13 MDM was browser-tested and MTP phrase failures reproduced;0.14 has289 automated tests but new-release browser and independent clinical review remain pending. See AUDIT_0.14.0.md and PHASE_CHECKLIST.md.
+Current0.14.2 increment is acceptance/usability, not expansion of clinical rules. It covers task entry points, a public phase overview, note-section navigation and relevant switch controls.295 automated checks pass. Baseline0.14 GLP-1 positive/GI refusal and medication retrieval were browser-tested; new deployment acceptance is separate. Full platform incomplete. See AUDIT_0.14.2.md and PHASE_CHECKLIST.md.
+
+The 0.14.2 increment fixes a browser-reproduced false export-success message: download dispatch returns a boolean; blocked/failed requests cannot claim creation. Export option changes invalidate review and clear stale success. Browser dispatch is not proof of a saved file. No clinical recommendation or dose rule changed.
 
 ## Identity and architecture
 
 Dr. Rosario, PharmD is the professional brand; ClinicalRx is separately branded. Keep About → Experience → Clinical Practice → Research → Publications → Teaching → Presentations → Projects → Clinical Tools → CV → Contact. Free access, no account/paid backend. LinkedIn https://www.linkedin.com/in/norbertrosario/ is the only public contact. Never publish private CV email/phone or credentialing documents.
 
-Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.14.0. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
+Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.14.2. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
 
 ## Privacy
 
@@ -106,3 +108,7 @@ Medication UI uses original ClinicalRx task flow, source badges, public-name sho
 MTP detection recognizes a wider bounded phrase vocabulary, excludes documented negatives/hypothetical/resolved findings, and requires confirmation. It is not comprehensive NLP or a clinical interaction/dose checker. Economic mapping remains a reviewed suggestion; ambiguous multi-action plans do not assign every finding one inferred action. The original36-category taxonomy/manual pathway remains.
 
 Time-only text must not contradict the independent MDM evidence assistant. Incomplete encounter draft fields must be visible beside a component-based candidate. No new performer/payer eligibility or fee calculation from unreviewed MDM. Medication reference typography is compact and route-scoped, preserving professional profile design and working API recovery.
+
+## v0.14.2 workflow contract
+
+Section-jump controls use native buttons, focus the existing section and do not modify hash routes, note content or export-review state. Detailed switch coverage remains available in a native disclosure. GLP-1 paths omit irrelevant withdrawal inputs; LAI-specific inputs appear only for appropriate targets. Public release copy must reflect actual pilot status and identify later work without claiming independent validation. Preserve clinical algorithms, privacy gates, four pillars and free access through this UI-only increment.

@@ -1,50 +1,39 @@
-# ClinicalRx phase checklist — v0.14.0
+# ClinicalRx phase checklist —0.14.2
 
-**Current: Phase04 GLP-1 switching expansion + Phase01D MTP/MDM refinements + Phase02 reference design. Full platform incomplete;0.14 browser/independent review pending.**
+**Current: acceptance/usability pass across Phases00,01D,02,04 and09. Full platform incomplete.** Prior historical release details remain in their release/audit documents; this is the current checklist.
 
-| Phase | Completed in current build | Remaining / blocking evidence |
+| Phase | Delivered | Remaining / blockers |
 |---|---|---|
-|00 Profile/foundation|Four pillars, free access, LinkedIn-only contact; Pharmacist Practitioner title; unified credentials;25 CPA scope groups|New mobile/accessibility/layout browser QA|
-|01B Reporting/privacy|Tab-only input, no save/restore; no-PHI download/copy/print gates; current encounter structured exports|Governed longitudinal model intentionally absent; institutional EHR import approval|
-|01D CPA SOAP/MTP — active|Referral and physician-established diagnoses first; ROS/PE/objective categories; confirmed local MTP suggestions; patient plan; time comparison; quality bullets; conditional incident-to fields|First bounded MDM evidence pilot delivered; independent narrative/coding validation remains; broader MTP inference; current licensed code/quality acceptance fixtures|
-|01E Economics — partial|16 category-matched historical numeric benchmarks, AMA sources, methods/contexts; hypothetical deduplicated subtotal and business reference|All36 taxonomy-specific outpatient economic estimates; comparable multi-study pooling; local causal/overlap validation|
-|02 Medication intelligence|RxNorm/openFDA/enrichment, exact-label provenance,16-topic coverage, cabinet/sync; source-host errors/fallback links; overflow CSS|RxTerms/FDA recovery and refined medication reference layout delivered; intermittent user fetch failure cause unresolved; complete monographs/DDI/prices; Orange Book/PMC/device integrations; broad identity coverage beyond RxTerms subset|
-|03 External tools|One directory; Child-Pugh/MELD added; no hosted PREVENT/generic scores|More CPA-relevant validated destinations and continuing link checks|
-|04 Clinical workflows — active pilot|Submit controls; oral switch pilot; ARISTADA/SUSTENNA label-initiation calendars; reviewed anticoagulation calendar/rationale; FDA relationship table|Additional stimulants/BP/IR-ER products beyond the exact-label pilots, broader oral and LAI/depot/missed-dose rules; unrestricted bridging; independent clinical/browser/print fixtures|
-|04D Diabetes|Basic tool removed|Complete ADA app remains blocked on normalized sources, reviewed decisions and fixture validation|
-|05 Professional practice|Prefilled CPA standard text, identity/term controls and annual review enforcement; scope/source limits; existing Texas authority/code inventory; FQHC/locality labels; informational contracting steps|Executed local agreements/privileges and product-specific contracts; legal/institutional review; FQHC payment modeling|
-|06 Education|One SOAP-derived Patient Plan Studio and review gate|Bilingual/device handouts, quizzes, memory-palace studio|
-|07 Adherence/quality|Defined PQA contexts, VAS number bubble, claims/self-report interpretation, limited SOAP measures|Licensed denominator/exclusions and current-year validation; no certified HEDIS/Stars output; completed MMAS-8 validation not supplied|
-|08 Residency|Scope retained|Later ASHP program-type recruitment/orientation/audit build|
-|09 Monitoring/release|Review-only source monitoring/rebuild scripts; manifest and CI packet supplied|Remote .github folder still absent: upload workflows; confirm first run; never auto-publish changed clinical rules|
+|00 Profile and foundation|Professional profile, four pillars, LinkedIn-only contact, task-oriented hub and readable clinical headings|Narrow-screen/keyboard/visual regression across every tool|
+|01B Privacy and reporting|Tab-only drafts, no automatic save/restore, no-PHI export gates, honest dispatch feedback and structured exports|Institutional EHR adoption/review; longitudinal data model intentionally absent|
+|01D SOAP/MTP/MDM|Referral-first note, confirmed MTPs, expanded phrase recognition, evidence-backed provisional MDM, patient plan, section navigation|Broad clinical language validation, independent coding review and complete quality specifications|
+|01E Economics|Historical intervention-category benchmarks and AMA references|Outpatient/type-specific causal estimates and overlap validation; no realized-savings claim|
+|02 Medication intelligence|RxNorm/RxTerms/FDA recovery, labels, enrichment, cabinet, topic navigation and quieter reference UI|Comprehensive interactions, prices, complete monographs and broader public data normalization|
+|03 Calculator directory|Unified outbound calculators/conversions/screenings; no hosted PREVENT|Continuing destination/source checks|
+|04 Clinical workflows|Bounded anticoagulation, oral/LAI/exact IR-ER switch pilots, seven GLP-1 directions; clearer context-sensitive forms|Independent clinical review, expanded exact-product pairs, device/clock-time complexities and broader browser fixtures|
+|04D Diabetes application|Basic incomplete application removed|Complete current-source normalized decision application and independent validation|
+|05 Professional practice|Prefilled Texas CPA, identity/term controls, annual review rule, readiness and practice planning|Local physician/legal approval, institutional privileges and payer-specific contracts|
+|06 Education|SOAP-derived patient draft|Bilingual handouts, devices, quizzes and teaching studio|
+|07 Adherence/quality|Public PQA context and VAS/claims interpretation; limited measure leads|Licensed denominator/exclusion rules and independent measurement validation|
+|08 Residency|Later-build scope documented|Program-type standards/recruitment/orientation/audit implementation|
+|09 Release/source governance|Local manifest/tests, atomic verified ZIP packaging, review-only monitoring scripts; public phase overview|GitHub CI/workflow installation and reliable source-review queue; independent clinical review; no automatic clinical-rule publication|
 
-Next: deploy v0.12 and complete the browser acceptance checklist in AUDIT_0.12.0.md. Then prioritize independent clinical review, broader exact-product switch fixtures and structured MDM/economic evidence gaps. No new clinical rule is auto-published from source monitoring. Workflow implementation is delivered; production acceptance and full-platform completion remain open.
+## Ordered next steps
 
-### Focused defect sequence — v0.14.0
+1. Accept deployed0.14.2 using actual app navigation; record browser, automated and unverified results separately.
+2. Fix reproduced defects and simplify remaining long workflows before new clinical algorithms.
+3. Expand exact-product switch coverage and structured medication/condition MTP checks with controlling sources and boundary fixtures.
+4. Continue richer medication data and education; complete diabetes and later residency work only after their own acceptance gates.
 
-1. Medication identity availability: FDA fallback/direct action implemented; 241 automated tests and real FDA recovery runtime check passed. User-network root cause unresolved; post-upload browser acceptance open.
-2. Anticoagulation procedure choices: reported by user; diagnosis/fix/browser acceptance pending. Prior generated-calendar unit tests do not establish that dropdown works for the user.
-3. Taper & Switch result rendering: reported by user; diagnosis/fix/browser acceptance pending. All-inclusive drug coverage is not delivered and must not be claimed. Metoprolol pure-rule test passing does not prove the rendered workflow works.
+No phase is complete merely because the interface renders or tests pass. Human clinical, coding, legal and institutional reviews remain named blockers where applicable.
 
-No next phase is claimed complete by this patch.
+## Current run result
 
-### Current release acceptance and next work — v0.14.0
+- Browser accepted on deployed0.14: GLP-1 positive/GI refusal, public medication→cabinet→SOAP→patient-plan review, and three MTP phrase candidates.
+- Local0.14.2:295 automated tests, syntax and manifest checks passed; task navigation, compact clinical UI and phase overview implemented.
+- Publication blocked: GitHub write returned403 “Resource not accessible by integration.” No remote source changes. New0.14.2 browser acceptance remains open.
+- Next owner-independent work after write access is available: deploy this prepared release, verify new UI, then proceed through the ordered coverage/validation backlog. Do not claim another clinical phase complete.
 
-| Item | Status | Next / blocker |
-|---|---|---|
-| MDM candidate inference | First bounded local evidence pilot implemented; automated tested | Independent coding fixtures, broader vocabulary, deployed acceptance; no automatic high level |
-| Switch workflow | Existing metoprolol example browser-passed; improved input/result UI implemented | New interface browser acceptance; pair coverage still limited |
-| Anticoagulation procedure picker | Nine choices and selection/category worked in deployed audit | Original user failure not reproduced; monitor with exact search/device details if repeated |
-| Medication lookups | User reports recovery; previous lookup fix preserved | New visual/topic/shortcut browser regression |
-| Phase completion | Not complete | Do not expand into new disease algorithms before current-release acceptance |
+## October 17 acceptance update
 
-Next ordered increment: deploy0.13 and run its acceptance checklist; address reproduced defects; then expand reviewed switch-rule coverage (with exact product, population, source date and boundary fixtures), followed by broader MDM audit evidence. Larger medication datasets/pricing and the full diabetes app remain separate incomplete phases.
-
-### Current0.14 acceptance and build order
-
-- Completed locally: seven GLP-1 switch directions with distinct label/expert/research provenance; broadened explicit MTP phrasing; clarified time/MDM separation; quieter medication styling;289 passing automated tests.
-- Browser verified on deployed0.13: MDM candidate with evidence; reproduced three missed MTP phrases. No claim of new0.14 browser testing.
-- Next: deploy0.14 and complete AUDIT_0.14.0.md acceptance; resolve reproduced defects; independent clinical/coding review; then additional exact-product switch families and structured medication/condition MTP checks.
-- Still blocked/incomplete: all-inclusive switches, autonomous narrative coding, current licensed quality specifications, validated patient-specific economic avoidance, complete diabetes app and later residency platform.
-
-No phase is declared complete from added dropdown entries or automated test count alone.
+Browser reproduced on deployed0.14.0: reporting claimed CSV creation while no-PHI gate blocked it. Fixed locally in0.14.2 with blocked, successful-dispatch and failure fixtures. Combined packet includes previously unpublished0.14.1 UI improvements. Phase01B reliability and Phase00 usability remain in progress; next gate is deployed browser acceptance, then structured MTP and exact-product coverage. No new clinical phase is complete.
