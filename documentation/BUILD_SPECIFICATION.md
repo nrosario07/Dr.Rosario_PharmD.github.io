@@ -1,16 +1,27 @@
-# Dr. Rosario / ClinicalRx build specification — v0.14.2
+# Dr. Rosario / ClinicalRx build specification — v0.15.0
 
 ## Current phase and acceptance
 
-Current0.14.2 increment is acceptance/usability, not expansion of clinical rules. It covers task entry points, a public phase overview, note-section navigation and relevant switch controls.295 automated checks pass. Baseline0.14 GLP-1 positive/GI refusal and medication retrieval were browser-tested; new deployment acceptance is separate. Full platform incomplete. See AUDIT_0.14.2.md and PHASE_CHECKLIST.md.
+Current release0.15.0 advances Phase04 reviewed therapeutic switching. The full platform is incomplete.337 automated tests pass. Browser acceptance this run covers deployed0.14.2 (four pillars/task hub, metoprolol example and blocked CSV feedback); new0.15.0 is packaged but not deployed or browser-tested. See AUDIT_0.15.0.md and PHASE_CHECKLIST.md. Version-specific sections below describe historical increments; this current contract supersedes the older GLP and age behavior.
 
-The 0.14.2 increment fixes a browser-reproduced false export-success message: download dispatch returns a boolean; blocked/failed requests cannot claim creation. Export option changes invalidate review and clear stale success. Browser dispatch is not proof of a saved file. No clinical recommendation or dose rule changed.
+### Current switch contract
+
+Nine exact-product adult-T2DM directions include Mounjaro as a source to Ozempic/Trulicity. UI defaults to evidence-informed review; conservative label initiation is explicitly selectable. Both modes validate product dose, frequency, last-dose date, current tolerance, adult context and safety findings. No GLP-1 overlap or universal equipotent conversion.
+
+- Selected adults meeting implemented prospective-study screens can receive a tirzepatide5mg weekly off-label option. Screens: studied source/dose, stable3calendar months and at least13weeks (conservative implementation), A1c6.5–9%, BMI≥25 and explicit evidence/suitability review. This is not a complete trial-eligibility determination.
+- Expert semaglutide0.5mg weekly option requires a tolerated maintenance regimen for at least4weeks. Implemented source thresholds: liraglutide1.8mg, dulaglutide≥1.5mg or tirzepatide≥5mg. These are conservative implementation boundaries. Tirzepatide→semaglutide is explicitly extrapolated, not a direct reverse-switch trial.
+- Case-series higher starts are reference context only. The semaglutide2mg→tirzepatide10mg observation is not reversed into a tirzepatide10mg→semaglutide2mg recommendation. Indirect efficacy differences are presented separately from transition doses.
+- Venlafaxine IR→ER capsules and bupropion HCl IR/SR→XL use bounded label-supported total-daily-dose formulation conversions. Adult MDD and reviewed normal renal/hepatic context required. Unsupported doses, formulations or indications return no regimen.
+- Numeric age is no longer universally required. The explicit stable-adult context remains required. Exact age is retained for existing restricted CONCERTA, historical olanzapine and LAI pathways. Supplied invalid/pediatric ages are rejected. Age-related risks, frailty and organ function cannot be declared irrelevant.
+- Every result is conditional, dated and source-linked in AMA format. Changed inputs clear prior output and privacy review. Changing source/target/evidence approach clears the evidence acknowledgement. No autonomous prescribing or automatic source-driven dose updates.
+
+Form uses numbered treatment/context/GLP sections, conditional fields, collapsible evidence comparisons and monitoring details. No paid services, clinical input transmission or new persistence.
 
 ## Identity and architecture
 
 Dr. Rosario, PharmD is the professional brand; ClinicalRx is separately branded. Keep About → Experience → Clinical Practice → Research → Publications → Teaching → Presentations → Projects → Clinical Tools → CV → Contact. Free access, no account/paid backend. LinkedIn https://www.linkedin.com/in/norbertrosario/ is the only public contact. Never publish private CV email/phone or credentialing documents.
 
-Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.14.2. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
+Buildless HTML/CSS/classic JavaScript; GitHub Pages main:/docs. All entrypoint assets share version0.15.0. Four pillars: Clinical Care, Drug & Evidence Intelligence, Professional Practice, Education. Use original code/design and primary/professional provenance. Example colleague sites and the excluded CMM website are not sources or outbound links.
 
 ## Privacy
 
@@ -89,7 +100,7 @@ Scope is limited to medication lookup. Automatic mode starts NLM RxTerms after 2
 
 FDA harmonized RxCUIs are label-associated candidates, not an exact ingredient/strength/form relationship. Every candidate is marked accordingly; a visible warning accompanies label details and cabinet entries, and mapping limits remain in structured encounter metadata. Users must reconcile exact salt, strength, release form and actual regimen against the product label. FDA result limits and truncation are stated. FDA is not an exhaustive RxNorm replacement or an independent clinical recommendation source.
 
-The reported Anticoagulation procedure dropdown and switch result display remain open defects. No added drug-pair scope or changed dose rule is delivered in this focused patch. The v0.12.1 generated UI requires deployed browser acceptance; runtime recovery checks are not represented as browser validation.
+Historical v0.12.1 status: the Anticoagulation procedure dropdown and switch result display were open defects at that release; later increments supersede this status. No added drug-pair scope or changed dose rule is delivered in this focused patch. The v0.12.1 generated UI requires deployed browser acceptance; runtime recovery checks are not represented as browser validation.
 
 ## v0.13 MDM and usability contract
 
@@ -101,7 +112,7 @@ Switch UI filters reviewed targets by current product, labels incomplete facts, 
 
 Medication UI uses original ClinicalRx task flow, source badges, public-name shortcuts, topic buttons and readable label sections; the actual source APIs and uncertainty disclosures remain. OpenRxData is a visual comparator only, not copied code/data or a clinical source. No new capabilities are inferred from appearance.
 
-## v0.14 expanded coverage contract
+## Historical v0.14 expanded coverage contract (GLP behavior superseded by v0.15)
 
 `glpSwitch` supports seven exact-product adult-T2DM directions from Victoza, Ozempic and Trulicity into selected weekly targets including Mounjaro. Current dose/frequency/duration, last dose and clinical context must be supplied; first target date is derived from last dose. Generic transition-date input is hidden for this branch. Default schedule uses reviewed target-label starts and conditional titration/reassessment, not inferred equipotent doses. Safety, current GI tolerance and insulin/sulfonylurea context cannot default to absent. No overlapping full GLP-1 regimens, automatic hypoglycemia dose reduction or invented high-dose target. Tirzepatide5mg direct-switch research is an explicitly off-label alternative for full clinician appraisal, not generated calendar instructions. Timing guidance is expert-based; extension to tirzepatide is marked extrapolation. Sources, populations and maintenance limits remain visible.
 

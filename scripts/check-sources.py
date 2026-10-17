@@ -26,6 +26,7 @@ urls.update(['https://open.fda.gov/apis/drug/label/',
              'https://australianprescriber.tg.org.au/articles/antipsychotic-switching-tool.html',
              'https://rxnav.nlm.nih.gov/REST/version.json',
              'https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data'])
+urls.update(x['url'] for x in json.loads((root / 'docs/data/registry.json').read_text())['sources'] if x['id'].startswith('SW15-'))
 baseline_path = root / 'documentation/source-monitor-baseline.json'
 baseline = json.loads(baseline_path.read_text()) if baseline_path.exists() else {}
 report = {'checked': datetime.datetime.now(datetime.timezone.utc).isoformat(),
