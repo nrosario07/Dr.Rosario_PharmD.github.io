@@ -1,8 +1,12 @@
-# Dr. Rosario / ClinicalRx build specification — v0.15.0
+# Dr. Rosario / ClinicalRx build specification — v0.16.0
 
 ## Current phase and acceptance
 
-Current release0.15.0 advances Phase04 reviewed therapeutic switching. The full platform is incomplete.337 automated tests pass. Browser acceptance this run covers deployed0.14.2 (four pillars/task hub, metoprolol example and blocked CSV feedback); new0.15.0 is packaged but not deployed or browser-tested. See AUDIT_0.15.0.md and PHASE_CHECKLIST.md. Version-specific sections below describe historical increments; this current contract supersedes the older GLP and age behavior.
+Current release 0.16.0 advances Phase00 navigation and discovery. The platform is not complete. 340 automated tests pass. The deployed 0.15.0 hub and the provider-layout reference were visually inspected; GitHub's release manifest matched the prior local package. New 0.16.0 layout is not yet browser-tested or deployed.
+
+### Tool discovery contract
+
+A local search covers all four pillars and the available condition modules, with a pillar selector, live result counts, keyboard-accessible controls, empty state and clear action. Search uses case-insensitive AND matching across titles, aliases and type labels. Search is not transmitted or persisted. The default view retains four pillars and task shortcuts; condition modules are collapsed initially. Result labels distinguish tool/reference entries from module readiness descriptions. No clinical capability is inferred from a search match. Responsive styles stack the finder and result cards on narrow screens; visual acceptance remains pending.
 
 ### Current switch contract
 

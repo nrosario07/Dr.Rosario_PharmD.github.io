@@ -1,10 +1,10 @@
-# ClinicalRx phase checklist —0.15.0
+# ClinicalRx phase checklist —0.16.0
 
-**Current: Phase04 reviewed switching expansion, with focused deployed0.14.2 acceptance. Full platform incomplete.** Prior historical release details remain in their release/audit documents; this is the current checklist.
+**Current: Phase00 navigation refinement delivered; Phase04 clinical workflow expansion remains partial. Full platform incomplete.**
 
 | Phase | Delivered | Remaining / blockers |
 |---|---|---|
-|00 Profile and foundation|Professional profile, four pillars, LinkedIn-only contact, task-oriented hub and readable clinical headings|Narrow-screen/keyboard/visual regression across every tool|
+|00 Profile and foundation|Professional profile, four pillars, LinkedIn-only contact, task-oriented hub, unified local finder, pillar filtering, compact navigation and readable clinical headings|Narrow-screen/keyboard/visual regression across every tool|
 |01B Privacy and reporting|Tab-only drafts, no automatic save/restore, no-PHI export gates, honest dispatch feedback and structured exports|Institutional EHR adoption/review; longitudinal data model intentionally absent|
 |01D SOAP/MTP/MDM|Referral-first note, confirmed MTPs, expanded phrase recognition, evidence-backed provisional MDM, patient plan, section navigation|Broad clinical language validation, independent coding review and complete quality specifications|
 |01E Economics|Historical intervention-category benchmarks and AMA references|Outpatient/type-specific causal estimates and overlap validation; no realized-savings claim|
@@ -20,7 +20,7 @@
 
 ## Ordered next steps
 
-1. Deploy0.15.0 and browser-test all new positive/negative switch paths, responsive layout and exports. New clinical logic also needs independent clinical review.
+1. Deploy 0.16.0; browser-test finder search/filter/reset, mobile layout and keyboard navigation. Finish 0.15.0 positive/negative switch and export browser acceptance. Clinical logic still needs independent clinical review.
 2. Expand exact-product antidepressant/antipsychotic and other switch coverage only with direction-specific rules, source dates and boundary fixtures. No assumed inverse dose maps.
 3. Broaden structured medication/condition MTP checks; validate coding candidates independently.
 4. Continue medication-data normalization and education; full diabetes and residency applications remain later phases.
