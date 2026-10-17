@@ -1,3 +1,5 @@
+Release 0.16.0: unified ClinicalRx finder and compact four-pillar navigation. Read UPLOAD_0.16.0.md and documentation/AUDIT_0.16.0.md.
+
 # ClinicalRx0.15.0 by Dr. Rosario
 
 Free four-pillar professional and clinical resource. LinkedIn-only contact; fictional/de-identified cases only. No PHI or automatic clinical persistence. Public drug-name lookups reach public APIs; encounter drafts stay in tab memory. Exports require review.

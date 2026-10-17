@@ -35,3 +35,18 @@ main[data-route="medicine"] .page-heading h1{font-family:inherit;font-size:clamp
 .switch-evidence-grid p{margin:.55rem 0}.switch-evidence-grid .badge{white-space:normal}
 .switch-evidence-grid a{font-size:.8rem}.switch-workspace [hidden]{display:none!important}
 @media(max-width:680px){.switch-evidence-grid{grid-template-columns:1fr}}
+
+/* 0.16.0: unified discovery, four pillars retained. */
+[data-route="clinical-tools"] .page-heading{margin-bottom:1.5rem}
+.tool-finder{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) auto;align-items:end;gap:1rem;padding:1.25rem;background:#fff;border:1px solid #ccd9d8;border-radius:14px;margin-bottom:1.5rem}
+.tool-finder .field{margin:0}.tool-finder input,.tool-finder select,.tool-finder button{min-height:46px}.tool-finder #tool-count{grid-column:1/-1;margin:0;color:#526365;font-size:.875rem}
+.finder-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.finder-card{display:flex;flex-direction:column;gap:.65rem;padding:1.25rem;background:white;border:1px solid #ccd9d8;border-radius:12px;color:#203b40;text-decoration:none}.finder-card strong{font-size:1.1rem}.finder-card>span:last-child{font-size:.85rem;color:#49676b}.finder-card:hover{border-color:#216861;background:#f4faf8}.finder-empty{grid-column:1/-1;padding:2rem;background:white;border-radius:12px}
+[data-route="clinical-tools"] .pillar-grid article{border-top:1px solid #ccd9d8;border-radius:12px;box-shadow:none}
+[data-route="clinical-tools"] .pillar-grid h2{font-family:inherit;font-size:1.25rem}
+[data-route="clinical-tools"] .pillar-grid .tool-nav{display:grid;gap:0}
+[data-route="clinical-tools"] .pillar-grid .tool-nav a{border:0;border-bottom:1px solid #e8eeed;border-radius:0;padding:.75rem .2rem;min-height:44px;display:flex;align-items:center;justify-content:space-between}
+[data-route="clinical-tools"] .pillar-grid .tool-nav a:after{content:'→';margin-left:1rem}
+.module-disclosure{margin:1.5rem 0;padding:1.25rem;background:white;border:1px solid #ccd9d8;border-radius:12px}.module-disclosure summary{cursor:pointer;font-weight:650;min-height:44px}.module-disclosure .module-grid{margin-top:1rem}
+[data-route="clinical-tools"] [hidden]{display:none!important}
+[data-route="clinical-tools"] :is(a,button,input,select,summary):focus-visible{outline:3px solid #287b73;outline-offset:3px}
+@media(max-width:700px){.tool-finder,.finder-results{grid-template-columns:1fr}.tool-finder #tool-count{grid-column:1}.tool-finder button{width:100%}}
