@@ -12,9 +12,9 @@ site=root/'docs'
 subprocess.run([sys.executable,str(root/'scripts/validate-site.py')],check=True)
 html=(site/'index.html').read_text()
 html=html.replace("script-src 'self'", "script-src 'self' 'unsafe-inline'").replace("style-src 'self'", "style-src 'self' 'unsafe-inline'")
-html=html.replace('<link rel="stylesheet" href="assets/styles.css?v=0.17.0">','<style>'+ (site/'assets/styles.css').read_text()+'</style>')
+html=html.replace('<link rel="stylesheet" href="assets/styles.css?v=0.18.0">','<style>'+ (site/'assets/styles.css').read_text()+'</style>')
 icon='data:image/svg+xml;base64,'+base64.b64encode((site/'assets/mark.svg').read_bytes()).decode()
-html=html.replace('assets/mark.svg?v=0.17.0',icon)
+html=html.replace('assets/mark.svg?v=0.18.0',icon)
 rules_uri='data:application/json;base64,'+base64.b64encode((site/'data/clinical-rules.json').read_bytes()).decode()
 html=html.replace('data/clinical-rules.json',rules_uri)
 for name in ['startup.js','content.js','mtp-taxonomy.js','core.js','rules.js','clinical.js','module-data.js','modules.js','drug-api.js','icd-index.js','advanced.js','medication-sections.js','advanced-platform.js','next-phase.js','next-platform.js','calculator-links.js','reporting.js','clinical-support.js','purple-data.js','support-platform.js','platform.js','encounter-review.js','fee-reference.js','cpa-workspace.js','lai-switch.js','decision-support.js','decision-workspaces.js','cpa-template.js','cpa-builder.js','workspaces.js','app.js']:
@@ -25,14 +25,14 @@ for name in ['startup.js','content.js','mtp-taxonomy.js','core.js','rules.js','c
         js=js.replace('data/clinical-rules.json',rules_uri)
         js=js.replace('downloads/'+item.name,uri)
         html=html.replace('downloads/'+item.name,uri)
-    html=html.replace(f'<script defer src="assets/{name}?v=0.17.0"></script>','<script defer>'+js.replace('</script','<\\/script')+'</script>')
+    html=html.replace(f'<script defer src="assets/{name}?v=0.18.0"></script>','<script defer>'+js.replace('</script','<\\/script')+'</script>')
 # Inline classic scripts must execute after the DOM: defer applies only to external scripts.
 scripts=re.findall(r'<script defer>.*?</script>',html,re.S)
 html=re.sub(r'<script defer>.*?</script>','',html,flags=re.S)
 html=html.replace('</body>','\n'+ '\n'.join(s.replace('<script defer>','<script>') for s in scripts)+'\n</body>')
-(out/'ClinicalRx_0.17.0_Preview.html').write_text(html)
-(out/'ClinicalRx_0.17.0_Build_Specification.md').write_text((root/'documentation/BUILD_SPECIFICATION.md').read_text())
-archive=out/'ClinicalRx_0.17.0_GitHub_Update.zip'
+(out/'ClinicalRx_0.18.0_Preview.html').write_text(html)
+(out/'ClinicalRx_0.18.0_Build_Specification.md').write_text((root/'documentation/BUILD_SPECIFICATION.md').read_text())
+archive=out/'ClinicalRx_0.18.0_GitHub_Update.zip'
 staging=archive.with_suffix('.zip.part')
 with zipfile.ZipFile(staging,'w',zipfile.ZIP_DEFLATED) as z:
     for item in sorted(root.rglob('*')):

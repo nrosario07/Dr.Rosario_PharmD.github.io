@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist —0.17.0
+# ClinicalRx phase checklist —0.18.0
 
 **Current: Phase02 medication/evidence intelligence, Phase06 education discovery and Phase09 monitoring installation readiness. Full platform incomplete.**
 
@@ -34,3 +34,6 @@ A phase closes when its specified coverage, tests, deployed browser acceptance a
 - SOAP/MDM: fictional complete notes with independently reviewed expected coding/MTP outputs.
 - Residency: program type and intended accreditation standards cycle.
 No additional material blocks the current technical release.
+
+## Public progress bars
+11 of 13 tracks have initial capabilities (including pilot/reference/maintainer tools). 0 of 13 are formally closed with full documented acceptance. Equal-weight track counts are not overall percent complete, clinical validation or effort estimates. The dashboard lists every remaining gate. Current release adds progress visibility, not new clinical coverage.

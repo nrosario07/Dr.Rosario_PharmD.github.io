@@ -1,4 +1,4 @@
-# Dr. Rosario / ClinicalRx build specification — v0.17.0
+# Dr. Rosario / ClinicalRx build specification — v0.18.0
 
 ## Current phase and acceptance
 
@@ -131,3 +131,6 @@ Time-only text must not contradict the independent MDM evidence assistant. Incom
 
 Section-jump controls use native buttons, focus the existing section and do not modify hash routes, note content or export-review state. Detailed switch coverage remains available in a native disclosure. GLP-1 paths omit irrelevant withdrawal inputs; LAI-specific inputs appear only for appropriate targets. Public release copy must reflect actual pilot status and identify later work without claiming independent validation. Preserve clinical algorithms, privacy gates, four pillars and free access through this UI-only increment.
 
+
+## 0.18.0 progress contract
+Sources & provenance renders two labeled native progress elements: initial implementation tracks (11/13) and documented full-track acceptance (0/13). All 13 tracks are expandable with remaining requirements and relevant links. No invented overall completion percentage or final date. Monitoring state is a dated manual repository observation, not a live health check. Clinical rules remain unchanged.
