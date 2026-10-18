@@ -1,8 +1,11 @@
-# Dr. Rosario / ClinicalRx build specification — v0.16.0
+# Dr. Rosario / ClinicalRx build specification — v0.17.0
 
 ## Current phase and acceptance
 
-Current release 0.16.0 advances Phase00 navigation and discovery. The platform is not complete. 340 automated tests pass. The deployed 0.15.0 hub and the provider-layout reference were visually inspected; GitHub's release manifest matched the prior local package. New 0.16.0 layout is not yet browser-tested or deployed.
+Current release 0.17.0 advances Phase02 source/data access and Phase06 education discovery. Phase09 monitor installation remains blocked by an absent repository workflow. 346 automated tests pass; new layout acceptance pending deployment. Full platform incomplete.
+
+### Resources contract
+Nine original source cards provide local search/filter/reset, links to specialist checkers and patient references, and explicit API/candidate status. External links never include cabinet or encounter data. Shortage API uses public medication names only, shows status/date/product/source, caps records at100 and displays total, uses a five-minute memory cache, and distinguishes no matches from network failure. Input edits invalidate results and stale replies cannot replace changed inputs. No general interaction clearance is inferred. No third-party clinical content is copied.
 
 ### Tool discovery contract
 
@@ -127,3 +130,4 @@ Time-only text must not contradict the independent MDM evidence assistant. Incom
 ## v0.14.2 workflow contract
 
 Section-jump controls use native buttons, focus the existing section and do not modify hash routes, note content or export-review state. Detailed switch coverage remains available in a native disclosure. GLP-1 paths omit irrelevant withdrawal inputs; LAI-specific inputs appear only for appropriate targets. Public release copy must reflect actual pilot status and identify later work without claiming independent validation. Preserve clinical algorithms, privacy gates, four pillars and free access through this UI-only increment.
+
