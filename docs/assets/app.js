@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 const D=window.ClinicalData,C=window.ClinicalCore,e=C.escapeHtml;
-const releaseVersion='0.16.0';
+const releaseVersion='0.17.0';
 const sections=['About','Experience','Clinical Practice','Research','Publications','Teaching','Presentations','Projects','Clinical Tools','CV','Contact'];
 const slug=x=>x.toLowerCase().replaceAll(' ','-');
 const main=document.getElementById('main');

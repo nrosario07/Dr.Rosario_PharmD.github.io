@@ -1,4 +1,4 @@
-Release 0.16.0: unified ClinicalRx finder and compact four-pillar navigation. Read UPLOAD_0.16.0.md and documentation/AUDIT_0.16.0.md.
+Current release 0.17.0 (rebuilt). Read UPLOAD_0.17.0.md, especially missing workflow installation.
 
 # ClinicalRx0.15.0 by Dr. Rosario
 
