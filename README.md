@@ -1,3 +1,5 @@
+Current release 0.18.0: progress dashboard and FDA fallback. Read UPLOAD_0.18.0.md.
+
 Current release 0.17.0 (rebuilt). Read UPLOAD_0.17.0.md, especially missing workflow installation.
 
 # ClinicalRx0.15.0 by Dr. Rosario
