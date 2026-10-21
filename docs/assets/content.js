@@ -19,7 +19,7 @@ window.ClinicalData = {
       "English",
       "Spanish"
     ],
-    "bio": "I am a clinical pharmacist, educator and researcher whose work connects ambulatory care, population health and comprehensive medication management. My practice includes chronic disease pharmacotherapy, medication adherence, patient education and collaborative clinical workflows. I also teach and precept healthcare learners, contribute to clinical research and textbook chapters, and develop documentation and practice tools that make evidence easier to use.",
+    "bio": "I am a pharmacist practitioner, educator and researcher whose work connects ambulatory care, population health and comprehensive medication management. My practice includes chronic disease pharmacotherapy, medication adherence, patient education and collaborative clinical workflows. I also teach and precept healthcare learners, contribute to clinical research and textbook chapters, and develop documentation and practice tools that make evidence easier to use.",
     "experience": [
       {
         "title": "Population Health Management Pharmacist",

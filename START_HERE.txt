@@ -1,3 +1,5 @@
+Current patch: 0.18.1. See UPLOAD_0.18.1.md and documentation/RELEASE_0.18.1.md.
+
 Current release 0.18.0: progress dashboard and FDA fallback. Read UPLOAD_0.18.0.md.
 
 Current release 0.17.0 (rebuilt). Read UPLOAD_0.17.0.md, especially missing workflow installation.
