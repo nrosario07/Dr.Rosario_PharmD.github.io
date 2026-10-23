@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist —0.18.0
+# ClinicalRx phase checklist —0.18.2
 
 **Current: Phase02 medication/evidence intelligence, Phase06 education discovery and Phase09 monitoring installation readiness. Full platform incomplete.**
 
@@ -19,11 +19,20 @@
 |09 Release/source governance|Local manifest/tests, atomic verified ZIP packaging, review-only monitoring scripts; public phase overview|GitHub CI/workflow installation and reliable source-review queue; independent clinical review; no automatic clinical-rule publication|
 
 ## Ordered next steps
-1. Upload0.17.0, install missing source-monitor workflow, verify its artifact, and browser-accept resource search/links/shortage results/errors/mobile layout.
-2. Finish full medication→cabinet→SOAP→patient-plan and switch/anticoagulation browser regression before expanding algorithms.
-3. Normalize NADAC exact NDC/unit/date and ClinicalTrials v2 data; expand direction-specific switch/MTP rules with independently reviewed evidence.
-4. Complete device-specific education, bilingual content and licensed quality/coding review.
-5. Complete scoped diabetes app; residency remains a separately scoped later build.
+1. Upload 0.18.2 and browser-accept stale-cabinet warnings, re-sync and export recovery.
+2. Install both workflows using SOURCE_MONITOR_SETUP.md; run them and review the first source report. No automatic baseline approval.
+3. Complete mobile/keyboard regression and broader switch/anticoagulation browser fixtures.
+4. Normalize exact-NDC/unit/date drug pricing and expand source-reviewed product switches.
+5. Complete device/bilingual education and scoped diabetes application; residency remains later.
+
+## October 21 checkpoint
+- [x] Deployed 0.18.1 identity filtering and selected-product retention.
+- [x] Fictional cabinet → SOAP → reviewed patient plan → actual downloaded text inspected.
+- [x] Reproduced stale cabinet confirmation; regression-tested local fix.
+- [x] Packaged release/source governance tests and manual baseline tooling.
+- [ ] Deployed 0.18.2 browser acceptance.
+- [ ] Workflows installed and hosted runs verified.
+- [ ] Mobile/keyboard acceptance.
 
 ## When is it complete?
 A phase closes when its specified coverage, tests, deployed browser acceptance and required clinical/licensing review pass. No reliable calendar completion date exists while medication/condition coverage is open-ended, reviewer availability is unscheduled and residency scope is undefined. Maintenance continues after feature completion; no automatic background development is promised.

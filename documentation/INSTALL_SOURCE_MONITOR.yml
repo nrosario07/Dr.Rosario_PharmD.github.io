@@ -15,8 +15,11 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/check-sources.py
+      - run: python scripts/source-review-summary.py
       - uses: actions/upload-artifact@v4
         with:
           name: public-source-review
-          path: source-monitor-report.json
+          path: |
+            source-monitor-report.json
+            source-monitor-summary.md
           retention-days: 30
