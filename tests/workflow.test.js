@@ -85,3 +85,12 @@ test('identity filtering stays local, retains chosen identity and cabinet sync r
  h.click('med-add');h.click('med-note');assert.match(h.ids.get('cabinet-sync-status').textContent,/Cabinet synced/);assert.match(h.main.innerHTML,/Continue to SOAP/);
  h.route('mtp');assert.match(h.ids.get('output').textContent,/Fictional 500 MG Oral Tablet/);h.set('encounter','plan','Bring your list.');h.set('encounter','monitoring','Write down your checks.');h.set('encounter','followup','Call in 2 weeks.');h.set('encounter','education','Tell us your plan.');h.ids.get('plan-agreed').checked=true;h.ids.get('plan-agreed').onchange({target:h.ids.get('plan-agreed')});assert.match(h.ids.get('patient-output').textContent,/Bring your list/);assert.doesNotMatch(h.ids.get('patient-output').textContent,/RxCUI|fixture/);
 });
+
+test('changed cabinet blocks exports until re-synced and warns on both workspaces',async()=>{
+ const h=harness();h.context.ClinicalDrugAPI.createClient=()=>({concepts:async()=>({rows:[{rxcui:'1',name:'Fictional drug',tty:'SCD'}],retrieved:'fixture'}),labels:async()=>({rows:[{set_id:'fixture',openfda:{generic_name:['Fictional drug']}}],retrieved:'fixture'}),enrich:async()=>({})});
+ h.route('medicine');h.ids.get('med-term').value='Fictional';await h.ids.get('med-search').onclick();h.ids.get('med-identity').value='1';await h.ids.get('med-identity').onchange({target:{value:'1'}});await h.ids.get('med-label').onchange({target:{value:'0'}});h.click('med-add');h.click('med-note');
+ h.ui('[data-cabinet="0"][data-property="regimen"]','Changed fictional regimen');assert.match(h.ids.get('cabinet-sync-status').textContent,/Sync again/);
+ h.route('mtp');assert.match(h.main.innerHTML,/cabinet and SOAP copy differ/);h.ids.get('no-phi-review').checked=true;h.click('json-download');assert.equal(h.blobs.length,0);
+ h.route('medicine');assert.match(h.ids.get('cabinet-sync-status').textContent,/Sync again/);h.click('med-note');h.route('mtp');h.ids.get('no-phi-review').checked=true;h.click('json-download');assert.equal(h.blobs.length,2);assert.match(h.ids.get('output').textContent,/Changed fictional regimen/);
+ h.set('encounter','objective','Manual replacement of linked block');h.ids.get('no-phi-review').checked=true;h.click('json-download');assert.equal(h.blobs.length,2);
+});

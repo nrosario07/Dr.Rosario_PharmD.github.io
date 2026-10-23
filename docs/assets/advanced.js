@@ -29,5 +29,11 @@ function interactionReview(cabinet){const flags=[],same=new Map();for(const med 
 for(let i=0;i<cabinet.length;i++)for(let j=i+1;j<cabinet.length;j++){const a=cabinet[i],b=cabinet[j];for(const [from,to] of [[a,b],[b,a]]){const words=(to.ingredients||[]).map(x=>String(x).toLowerCase()).filter(x=>x.length>=4);const text=String(from.interactionText||'').toLowerCase();if(words.some(word=>text.includes(word)))flags.push({kind:'Label mention requiring review',pair:[from.name,to.name],note:'The selected label mentions the other ingredient. Mentions may describe avoidance, monitoring, dose change OR a documented lack of interaction; read the exact section. No severity or recommendation is inferred from a keyword.',source:from.source});}}
 return {status:'LIMITED_LABEL_REVIEW',flags,note:'Local duplicate/label-mention screen only. No flag does not mean no interaction. It does not cover every class/enzyme, OTC/herbal product, disease interaction or dose adjustment. RxNav interaction API is discontinued; use a validated institutional checker for comprehensive review.',source:'https://www.lhncbc.nlm.nih.gov/RxNav/information/FAQs.html'};}
 function cabinetNote(objective,cabinet){const start='[CLINICALRX MEDICATION CABINET]',end='[/CLINICALRX MEDICATION CABINET]';const original=String(objective||'');const a=original.indexOf(start),b=a<0?-1:original.indexOf(end,a);const clean=a>=0&&b>=a?original.slice(0,a)+original.slice(b+end.length):original;return clean.trimEnd()+'\n\n'+start+'\nReconciliation draft — verify actual use; not prescribing instructions.\n'+cabinet.map(x=>x.name+' [RxCUI '+x.rxcui+'] | '+(x.regimen||'[regimen not entered]')+' | '+(x.useStatus||'Not reconciled')).join('\n')+'\n'+end;}
-return {cabinetNote,tables,sources,conversion,fib4,adherenceReview,periop,pulmonary,interactionReview,validDate,add};
+function cabinetSyncStatus(cabinet,encounter){
+ if(!Array.isArray(encounter.medicationCabinet))return 'not-linked';
+ const signature=rows=>JSON.stringify(rows.map(x=>[x.name||'',x.rxcui||'',x.regimen||'',x.useStatus||'Not reconciled',x.source||'',x.labelSet||'']));
+ const expected=cabinetNote('',cabinet).trim();
+ return signature(cabinet)===signature(encounter.medicationCabinet)&&String(encounter.objective||'').includes(expected)?'synced':'stale';
+}
+return {cabinetSyncStatus,cabinetNote,tables,sources,conversion,fib4,adherenceReview,periop,pulmonary,interactionReview,validDate,add};
 });

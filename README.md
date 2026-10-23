@@ -1,3 +1,5 @@
+Current release: 0.18.2. Read UPLOAD_0.18.2.md and documentation/SOURCE_MONITOR_SETUP.md.
+
 Current patch: 0.18.1. See UPLOAD_0.18.1.md and documentation/RELEASE_0.18.1.md.
 
 Current release 0.18.0: progress dashboard and FDA fallback. Read UPLOAD_0.18.0.md.
