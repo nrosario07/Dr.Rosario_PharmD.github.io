@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist —0.19.4
+# ClinicalRx phase checklist —0.19.5
 
 **Current: Phase02 medication/evidence intelligence, Phase06 education discovery and Phase09 monitoring installation readiness. Full platform incomplete.**
 
@@ -93,3 +93,10 @@ No additional material blocks the current technical release.
 - [x] Patient-plan sectioned preview implemented and regression-tested.
 - [ ] New preview deployed visual acceptance; mobile/print acceptance.
 - [ ] Hosted workflows remain absent.
+
+## 0.19.5 checkpoint
+- [x] Deployed0.19.4:47/47 public files match.
+- [x] Desktop patient-plan cards and incomplete-plan/review recovery accepted.
+- [x] Missing-section feedback and placeholder-free reading estimate implemented/tested.
+- [ ] New readiness UI deployed acceptance; print/mobile, bilingual/device education.
+- [ ] Monitoring/CI installation and hosted runs.
