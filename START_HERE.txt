@@ -1,14 +1,11 @@
-Current release: 0.19.0. Read UPLOAD_0.19.0.md and documentation/RELEASE_0.19.0.md.
-
-Current release: 0.18.2. Read UPLOAD_0.18.2.md and documentation/SOURCE_MONITOR_SETUP.md.
-
-Current patch: 0.18.1. See UPLOAD_0.18.1.md and documentation/RELEASE_0.18.1.md.
-
-Current release 0.18.0: progress dashboard and FDA fallback. Read UPLOAD_0.18.0.md.
-
-Current release 0.17.0 (rebuilt). Read UPLOAD_0.17.0.md, especially missing workflow installation.
-
-ClinicalRx0.15.0 — Phase04 switching expansion
-337 automated tests passed; new release browser acceptance pending.
-Read UPLOAD_0.15.0.md, documentation/PHASE_CHECKLIST.md and documentation/AUDIT_0.15.0.md.
-Full platform incomplete. No universal equipotent switching.
+ClinicalRx 0.19.1 — browser upload packet
+Extract this ZIP first. Do NOT upload this ZIP or the numbered wrapper folders.
+For each numbered batch, open it and upload its CONTENTS at the GitHub repository ROOT.
+Keep folder paths intact: docs stays docs, documentation stays documentation, tests stays tests.
+Commit each batch separately. Each batch is below GitHub's 100-file limit.
+Upload the complete site batch first; it includes all site assets in one commit.
+Do not delete the existing repository. Existing files with matching paths are replaced.
+Pages remains main /docs. Wait for deployment before checking the new version.
+Hidden .github files may not appear in your file picker: create the two workflow files manually using documentation/SOURCE_MONITOR_SETUP.md if needed.
+The numbered batches are: {"01_SITE": 50, "02_SUPPORT": 90, "03_SUPPORT": 48}
+SHA256SUMS.json maps repository paths to checksums for verification. Do not upload it or this instruction file.
