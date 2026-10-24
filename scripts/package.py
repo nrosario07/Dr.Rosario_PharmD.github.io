@@ -38,7 +38,7 @@ archive=out/f'ClinicalRx_{version}_GitHub_Update.zip'
 staging=archive.with_suffix('.zip.part')
 with zipfile.ZipFile(staging,'w',zipfile.ZIP_DEFLATED) as z:
     for item in sorted(root.rglob('*')):
-        if item.is_file() and '.git' not in item.parts and '__pycache__' not in item.parts and item.name != 'source-monitor-report.json' and item.suffix != '.pyc':
+        if item.is_file() and '.git' not in item.parts and '__pycache__' not in item.parts and item.name != 'source-monitor-report.json' and item.suffix != '.pyc' and not any(part.startswith('.') and part not in ('.github','.nojekyll','.gitignore') for part in item.relative_to(root).parts):
             z.write(item,str(item.relative_to(root)))
 with zipfile.ZipFile(staging) as verified:
     bad=verified.testzip()
@@ -50,7 +50,7 @@ print('Preview, specification and verified source ZIP created.')
 
 # Browser upload packet: one complete site batch, supporting files in <=90-file batches.
 from upload_batches import make_batches
-files=[p for p in sorted(root.rglob('*')) if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and p.name!='source-monitor-report.json' and p.suffix!='.pyc']
+files=[p for p in sorted(root.rglob('*')) if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and p.name!='source-monitor-report.json' and p.suffix!='.pyc' and not any(part.startswith('.') and part not in ('.github','.nojekyll','.gitignore') for part in p.relative_to(root).parts)]
 batches=make_batches([p.relative_to(root).as_posix() for p in files])
 packet=out/f'ClinicalRx_{version}_Upload_Batches.zip'
 counts={name:len(paths) for name,paths in batches.items()}
