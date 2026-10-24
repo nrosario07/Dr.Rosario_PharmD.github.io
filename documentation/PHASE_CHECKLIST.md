@@ -100,3 +100,16 @@ No additional material blocks the current technical release.
 - [x] Missing-section feedback and placeholder-free reading estimate implemented/tested.
 - [ ] New readiness UI deployed acceptance; print/mobile, bilingual/device education.
 - [ ] Monitoring/CI installation and hosted runs.
+
+## 0.20.0 checkpoint — October 24, 2026
+
+- [x] Deployed 0.19.5 public integrity: 47/47; patient readiness/review invalidation control test.
+- [x] Phase 00: reorganized About and README; corrected stale release descriptions.
+- [x] Phase 01B: original privacy and terms/disclosure routes.
+- [x] Phase 06N extension: source-linked D/B12/B6 discussion-guide pilot and input safety tests.
+- [ ] Deploy and browser-accept new profile, policy routes and nutrition UI.
+- [ ] Phase 09: install workflows and verify first successful Actions runs.
+- [ ] Phase 06N: independent pharmacist/dietitian review, consumer usability and timed completion, nutrition treatment/interaction scope.
+- [ ] Affiliate activation: owner-supplied links, product criteria and policy review.
+
+Original-track progress remains 11/13 with initial capability and 0/13 fully accepted. Nutrition extension is not counted as another completed track. No reliable final completion date while clinical, legal, source-monitor and later residency gates remain open.

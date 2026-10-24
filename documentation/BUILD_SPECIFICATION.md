@@ -385,3 +385,7 @@ Phase06 patient education: desktop card-preview acceptance completed; readiness 
 
 ## Upload
 Extract upload packet. Upload each numbered batch's CONTENTS to repository root, preserving folders. Commit separately. Do not upload wrapper folders or ZIP itself. All batches below100 files. Pages remains main /docs. No repository deletion required.
+
+## Release 0.20.0 extension — October 24, 2026
+
+Profile/repository clarity: one current README, repository-role map, four-pillar About entry points, original privacy/terms routes, root cleanup instructions preserving application paths. Added Phase 06N nutrition education pilot; scope and acceptance gates are in NUTRITION_AND_API_ROADMAP.md. No unreviewed claim of expert approval, under-two-minute completion, deficiency treatment or comprehensive interaction checks. Monetization must remain optional and independent of clinical selection; no shopping URLs carry health inputs. OpenMed/USDA are assessed candidates, not active services.
