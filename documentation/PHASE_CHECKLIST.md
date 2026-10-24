@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist —0.19.0
+# ClinicalRx phase checklist —0.19.2
 
 **Current: Phase02 medication/evidence intelligence, Phase06 education discovery and Phase09 monitoring installation readiness. Full platform incomplete.**
 
@@ -19,7 +19,7 @@
 |09 Release/source governance|Local manifest/tests, atomic verified ZIP packaging, review-only monitoring scripts; public phase overview|GitHub CI/workflow installation and reliable source-review queue; independent clinical review; no automatic clinical-rule publication|
 
 ## Ordered next steps
-1. Upload 0.19.0 and browser-accept printable handout export, print/PDF layout and review invalidation.
+1. Upload 0.19.1 in numbered batches; printable handout download and review invalidation passed on 0.19.0. Print/PDF and mobile acceptance remain open.
 2. Install both missing workflows using SOURCE_MONITOR_SETUP.md and verify hosted runs/report.
 3. Finish mobile/keyboard and broader switch/anticoagulation browser regression.
 4. Expand exact-product normalized evidence and switching coverage after review.
@@ -64,3 +64,16 @@ No additional material blocks the current technical release.
 
 ## Phase progress
 11/13 tracks have initial capabilities; 0/13 fully accepted. Remain in Phase02 connected medication workflows with Phase09 monitoring installation blocked. Successful fictional workflow is a partial acceptance checkpoint, not phase closure. Next: deployed filter/navigation acceptance, actual export and mobile regression, then broader normalized data and source-reviewed switch coverage.
+
+## October 24 checkpoints
+- [x] Deployed handout download and review invalidation.
+- [x] Upload batching below 100 files, all site assets together, byte and CRC validation.
+- [ ] Print/PDF and mobile visual acceptance.
+- [ ] Hosted monitoring/CI installation and successful runs.
+
+## 0.19.2 checkpoint
+- [x] Deployed 40-file integrity check.
+- [x] Browser metoprolol generation and stale-result invalidation.
+- [x] Full-public-file manifest and repeatable deployment verifier.
+- [ ] Hosted monitoring/CI, print/mobile, comprehensive clinical review.
+- [ ] Later business/video studio: deferred until current phases complete; see BUSINESS_EDUCATION_FUTURE.md.
