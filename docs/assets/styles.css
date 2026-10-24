@@ -65,3 +65,6 @@ main[data-route="medicine"] .page-heading h1{font-family:inherit;font-size:clamp
 #med-search,#med-note,#patient-handout{background:#19564f;color:#fff;border-color:#19564f}
 #med-search:hover,#med-note:hover,#patient-handout:hover{background:#123f3a}
 [data-route="medicine"] .tool-nav a{color:#19564f;border-color:#b8ccc4;background:#fff;min-height:44px;align-items:center}
+/* A single transition is a reading card, not one empty calendar column. */
+.action-calendar > .calendar-day:only-child{grid-column:1 / -1}
+.recommendation-dose small{color:#e4f4ef;opacity:1}

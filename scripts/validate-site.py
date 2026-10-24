@@ -12,7 +12,7 @@ assert assets and all((site/f).is_file() for f,_ in assets), 'Missing loaded ass
 assert 'local-draft.js' not in html, 'Retired persistence module loaded'
 assert not re.search(r'<script[^>]+src="https?://',html), 'Unexpected external script'
 version=next(iter(versions))
-paths=['index.html']+sorted(set(f for f,_ in assets))+sorted(str(p.relative_to(site)) for p in (site/'data').glob('*.json') if p!=manifest)
+paths=sorted(str(p.relative_to(site)) for p in site.rglob('*') if p.is_file() and p!=manifest)
 current={p:digest(site/p) for p in paths}
 if '--write' in sys.argv:
  manifest.write_text(json.dumps({'version':version,'sha256':current},indent=2)+'\n')

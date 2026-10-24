@@ -818,7 +818,7 @@ window.ClinicalData = {
       "title": "CMS Stars annual source files",
       "url": "https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data",
       "category": "Quality measurement",
-      "summary": "Current annual data/technical-note source. The Gap Closer is a documentation organizer and does not implement certified measure closure.",
+      "summary": "Current annual data/technical-note source. SOAP quality-measure leads support documentation review; they do not implement certified measure closure.",
       "status": "Limited rule / retrieval reference",
       "lastChecked": "2026-10-11",
       "reviewStatus": "Rule-specific review; not full clinical release certification"
