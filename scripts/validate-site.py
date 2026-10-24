@@ -13,6 +13,7 @@ assert 'local-draft.js' not in html, 'Retired persistence module loaded'
 assert not re.search(r'<script[^>]+src="https?://',html), 'Unexpected external script'
 version=next(iter(versions))
 assert f'name="clinicalrx-release" content="{version}"' in html, 'HTML release metadata mismatch'
+assert f'Loading ClinicalRx {version}' in html and f'Clinical tools release {version}' in html, 'Visible release label mismatch'
 assert f"const releaseVersion='{version}'" in (site/'assets/app.js').read_text(), 'Application release version mismatch'
 paths=sorted(str(p.relative_to(site)) for p in site.rglob('*') if p.is_file() and p!=manifest and not any(part.startswith('.') for part in p.relative_to(site).parts))
 current={p:digest(site/p) for p in paths}
