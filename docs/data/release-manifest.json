@@ -1,10 +1,10 @@
 {
-  "version": "0.19.0",
+  "version": "0.19.1",
   "sha256": {
-    "index.html": "09a98da5ec198144d9b0b260f2e7e071db71d60eab3bb054c57ca064128a4135",
+    "index.html": "c808ed5e1370f9a708248476f985b9a5b2c362c3ff3c51aec05ea26a5204fbef",
     "assets/advanced-platform.js": "1808a19367388467b94960ea705ca6353e7a8a39feab30e9f180ca36fb7d5bac",
     "assets/advanced.js": "933b712cd837c0b093ab3d31710512794e319e0e1428743ab0972dec1338ce71",
-    "assets/app.js": "8706c45daeafd994bbc55fd11066fc5819c0ec604137828243723ae476696319",
+    "assets/app.js": "ac4bac303d7aeffe62c66495d62877bebea6300f2ffff94a4ddc067d9cfb40e1",
     "assets/calculator-links.js": "b2271ffb1942b894bd8d9e80e1ca3c08f25ad278e6d97b50408e5592a1ed0e2c",
     "assets/clinical-support.js": "24af94c05ef43b3576c8432f11592551d31459803693b8d2368a515fb9f863d2",
     "assets/clinical.js": "bf4cf841e561a9b3a6cc557e355ea613cba588edec462c796b709cd5507e4371",
