@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist —0.18.2
+# ClinicalRx phase checklist —0.19.0
 
 **Current: Phase02 medication/evidence intelligence, Phase06 education discovery and Phase09 monitoring installation readiness. Full platform incomplete.**
 
@@ -13,26 +13,25 @@
 |04 Clinical workflows|Bounded anticoagulation, oral/LAI/exact IR-ER switch pilots, nine GLP-1 directions, tiered off-label options and three new formulation directions; numbered conditional form|Independent clinical review, expanded exact-product pairs, device/clock-time complexities and broader browser fixtures|
 |04D Diabetes application|Basic incomplete application removed|Complete current-source normalized decision application and independent validation|
 |05 Professional practice|Prefilled Texas CPA, identity/term controls, annual review rule, readiness and practice planning|Local physician/legal approval, institutional privileges and payer-specific contracts|
-|06 Education|SOAP-derived patient draft|Bilingual handouts, devices, quizzes and teaching studio|
+|06 Education|SOAP-derived patient draft and reviewed printable HTML handout|Bilingual handouts, devices, quizzes and teaching studio|
 |07 Adherence/quality|Public PQA context and VAS/claims interpretation; limited measure leads|Licensed denominator/exclusion rules and independent measurement validation|
 |08 Residency|Later-build scope documented|Program-type standards/recruitment/orientation/audit implementation|
 |09 Release/source governance|Local manifest/tests, atomic verified ZIP packaging, review-only monitoring scripts; public phase overview|GitHub CI/workflow installation and reliable source-review queue; independent clinical review; no automatic clinical-rule publication|
 
 ## Ordered next steps
-1. Upload 0.18.2 and browser-accept stale-cabinet warnings, re-sync and export recovery.
-2. Install both workflows using SOURCE_MONITOR_SETUP.md; run them and review the first source report. No automatic baseline approval.
-3. Complete mobile/keyboard regression and broader switch/anticoagulation browser fixtures.
-4. Normalize exact-NDC/unit/date drug pricing and expand source-reviewed product switches.
-5. Complete device/bilingual education and scoped diabetes application; residency remains later.
+1. Upload 0.19.0 and browser-accept printable handout export, print/PDF layout and review invalidation.
+2. Install both missing workflows using SOURCE_MONITOR_SETUP.md and verify hosted runs/report.
+3. Finish mobile/keyboard and broader switch/anticoagulation browser regression.
+4. Expand exact-product normalized evidence and switching coverage after review.
+5. Complete bilingual/device education and scoped diabetes application; residency remains later.
 
-## October 21 checkpoint
-- [x] Deployed 0.18.1 identity filtering and selected-product retention.
-- [x] Fictional cabinet → SOAP → reviewed patient plan → actual downloaded text inspected.
-- [x] Reproduced stale cabinet confirmation; regression-tested local fix.
-- [x] Packaged release/source governance tests and manual baseline tooling.
-- [ ] Deployed 0.18.2 browser acceptance.
-- [ ] Workflows installed and hosted runs verified.
-- [ ] Mobile/keyboard acceptance.
+## October 22 checkpoints
+- [x] Deployed 0.18.2 stale-cabinet warning and export refusal verified.
+- [x] Re-sync/export recovery verified and actual downloaded SOAP text inspected.
+- [x] Printable handout implemented and regression-tested.
+- [ ] Deployed 0.19.0 handout and print visual acceptance.
+- [ ] Mobile and keyboard acceptance.
+- [ ] Both workflows installed and hosted runs verified.
 
 ## When is it complete?
 A phase closes when its specified coverage, tests, deployed browser acceptance and required clinical/licensing review pass. No reliable calendar completion date exists while medication/condition coverage is open-ended, reviewer availability is unscheduled and residency scope is undefined. Maintenance continues after feature completion; no automatic background development is promised.
