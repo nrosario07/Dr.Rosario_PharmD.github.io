@@ -19,7 +19,7 @@ icon='data:image/svg+xml;base64,'+base64.b64encode((site/'assets/mark.svg').read
 html=html.replace(f'assets/mark.svg?v={version}',icon)
 rules_uri='data:application/json;base64,'+base64.b64encode((site/'data/clinical-rules.json').read_bytes()).decode()
 html=html.replace('data/clinical-rules.json',rules_uri)
-for name in ['startup.js','content.js','mtp-taxonomy.js','core.js','rules.js','clinical.js','module-data.js','modules.js','drug-api.js','icd-index.js','advanced.js','medication-sections.js','advanced-platform.js','next-phase.js','next-platform.js','calculator-links.js','reporting.js','clinical-support.js','purple-data.js','support-platform.js','platform.js','encounter-review.js','fee-reference.js','cpa-workspace.js','lai-switch.js','decision-support.js','decision-workspaces.js','cpa-template.js','cpa-builder.js','workspaces.js','app.js']:
+for name in ['startup.js','content.js','mtp-taxonomy.js','core.js','rules.js','clinical.js','module-data.js','modules.js','drug-api.js','icd-index.js','advanced.js','medication-sections.js','advanced-platform.js','next-phase.js','next-platform.js','calculator-links.js','reporting.js','clinical-support.js','purple-data.js','support-platform.js','platform.js','encounter-review.js','fee-reference.js','cpa-workspace.js','lai-switch.js','decision-support.js','decision-workspaces.js','cpa-template.js','cpa-builder.js','workspaces.js','nutrition.js','app.js']:
     js=(site/'assets'/name).read_text()
     for item in (site/'downloads').iterdir():
         mime='application/pdf' if item.suffix=='.pdf' else 'text/plain;charset=utf-8'

@@ -10,7 +10,7 @@ window.ClinicalData = {
       "BCPS",
       "BCACP"
     ],
-    "role": "Clinical pharmacist, educator and researcher",
+    "role": "Pharmacist Practitioner, educator and researcher",
     "contactUrl": "https://www.linkedin.com/in/norbertrosario/",
     "email": null,
     "cvFile": "downloads/Norbert_Rosario_Public_CV.pdf",
@@ -1046,6 +1046,56 @@ window.ClinicalData = {
       "reviewStatus": "Source access reviewed; external clinical content not imported",
       "rights": "Outbound links and original summaries",
       "sourceVersion": "ClinicalRx0.17.0"
+    },
+    {
+      "id": "NUT-D",
+      "title": "NIH ODS: Vitamin D",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+      "summary": "Nutrition education source; not an individualized dose algorithm.",
+      "status": "Educational reference",
+      "category": "Nutrition & integration candidates",
+      "lastChecked": "2026-10-24",
+      "reviewStatus": "Source reviewed; application expert review pending"
+    },
+    {
+      "id": "NUT-B12",
+      "title": "NIH ODS: Vitamin B12",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+      "summary": "Nutrition and medication-context education; independent app review pending.",
+      "status": "Educational reference",
+      "category": "Nutrition & integration candidates",
+      "lastChecked": "2026-10-24",
+      "reviewStatus": "Source reviewed; application expert review pending"
+    },
+    {
+      "id": "NUT-B6",
+      "title": "NIH ODS: Vitamin B6",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional/",
+      "summary": "Food sources and excess supplement cautions.",
+      "status": "Educational reference",
+      "category": "Nutrition & integration candidates",
+      "lastChecked": "2026-10-24",
+      "reviewStatus": "Source reviewed; application expert review pending"
+    },
+    {
+      "id": "API-USDA",
+      "title": "USDA FoodData Central",
+      "url": "https://fdc.nal.usda.gov/api-guide/",
+      "summary": "Candidate food nutrient data; API key must be protected, not embedded in Pages. No live integration.",
+      "status": "Candidate — not connected",
+      "category": "Nutrition & integration candidates",
+      "lastChecked": "2026-10-24",
+      "reviewStatus": "Source reviewed; application expert review pending"
+    },
+    {
+      "id": "API-OPENMED",
+      "title": "OpenMed documentation",
+      "url": "https://openmed.life/docs/",
+      "summary": "Candidate local NLP SDK, not a clinical knowledge API. Version/model licensing and validation required. No health text is sent.",
+      "status": "Candidate — not connected",
+      "category": "Nutrition & integration candidates",
+      "lastChecked": "2026-10-24",
+      "reviewStatus": "Source reviewed; application expert review pending"
     }
   ],
   "rationales": [

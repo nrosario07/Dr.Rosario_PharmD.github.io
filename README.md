@@ -1,19 +1,73 @@
-Current release: 0.19.0. Read UPLOAD_0.19.0.md and documentation/RELEASE_0.19.0.md.
+# ClinicalRx · Dr. Norbert Rosario
 
-Current release: 0.18.2. Read UPLOAD_0.18.2.md and documentation/SOURCE_MONITOR_SETUP.md.
+**PharmD, BCPS, BCACP · Pharmacist Practitioner, educator and researcher**
 
-Current patch: 0.18.1. See UPLOAD_0.18.1.md and documentation/RELEASE_0.18.1.md.
+Free educational tools connecting medication evidence, clinical documentation and professional practice.
 
-Current release 0.18.0: progress dashboard and FDA fallback. Read UPLOAD_0.18.0.md.
+[Visit the site](https://nrosario07.github.io/) · [Build specification](documentation/BUILD_SPECIFICATION.md) · [Phase checklist](documentation/PHASE_CHECKLIST.md) · [LinkedIn](https://www.linkedin.com/in/norbertrosario/)
 
-Current release 0.17.0 (rebuilt). Read UPLOAD_0.17.0.md, especially missing workflow installation.
+## Current release
 
-# ClinicalRx0.15.0 by Dr. Rosario
+**0.20.0 — profile, repository guidance and nutrition education pilot.**
 
-Free four-pillar professional and clinical resource. LinkedIn-only contact; fictional/de-identified cases only. No PHI or automatic clinical persistence. Public drug-name lookups reach public APIs; encounter drafts stay in tab memory. Exports require review.
+[Release notes](documentation/RELEASE_0.20.0.md) · [Audit and verification limits](documentation/AUDIT_0.20.0.md) · [Upload instructions](UPLOAD.md)
 
-Current phase:04 therapeutic switching. Adds nine GLP directions with evidence-tiered options, three formulation-conversion directions and a simpler conditional form. No universal equivalence or complete medication catalog. See documentation/BUILD_SPECIFICATION.md, PHASE_CHECKLIST.md and AUDIT_0.15.0.md.
+The deployed 0.19.5 baseline matched all 47 public files. New 0.20.0 changes require deployed browser acceptance. Automated tests are software checks, not clinical validation.
 
-337 automated tests pass. Browser-tested baseline0.14.2: task hub/four pillars, metoprolol example and corrected CSV-block feedback. New0.15.0 has not been deployed or browser-tested. Prior GitHub integration write403 remains unresolved. Automated tests do not replace independent clinical review.
+## Four pillars
 
-Run `node --test tests/*.test.js`, `python scripts/validate-site.py` and `python scripts/package.py`. Pages remains main:/docs. Follow UPLOAD_0.15.0.md. Source monitoring queues review and never changes clinical recommendations automatically.
+| Pillar | Capabilities |
+| --- | --- |
+| Clinical care | SOAP/MTP drafts, bounded switching and anticoagulation support, adherence education |
+| Drug & evidence intelligence | Public medication identities and labels, source provenance and external references |
+| Professional practice | Texas CPA drafts, credentialing preparation and business planning |
+| Education | Patient-plan drafts, external calculators and a limited nutrition discussion-guide pilot |
+
+## Typical workflow
+
+1. Look up a public medication term and verify the exact product source.
+2. Review a fictional/de-identified medication cabinet and synchronize it to the SOAP workspace.
+3. Review MTP suggestions, documented actions and the patient plan.
+4. Confirm the output contains no identifiers before exporting.
+
+## Privacy and clinical limits
+
+- Do not enter PHI. Clinical drafts use tab memory; no automatic save/restore.
+- Public API requests send medication terms/identifiers and normal network metadata, not SOAP text.
+- No account, analytics scripts or affiliate shopping links in this release.
+- Outputs require professional review. A CPA, NPI or code suggestion does not establish billing eligibility.
+- Source monitoring flags changes for review; it does not automatically change clinical recommendations.
+- Nutrition is an education pilot, not a diagnostic or supplement-prescribing application. Expert review is pending.
+
+## Repository map
+
+| Path | Purpose |
+| --- | --- |
+| `docs/` | GitHub Pages site; entry point `docs/index.html` |
+| `docs/assets/` | Browser application code and visual styles |
+| `docs/data/` | Versioned reference data and release manifest |
+| `documentation/` | Specification, audits, evidence review and release history |
+| `scripts/` | Validation, deployment verification and packaging |
+| `tests/` | Automated software regression tests |
+| `.github/workflows/` | Release checks and source-monitor automation; installation must be verified |
+
+The site is a static application, not an analytics notebook project. Its structure separates published assets from supporting evidence and tests without adding unused directories.
+
+## Validate and package
+
+Requirements: Node.js and Python 3. Tests use standard libraries.
+
+```sh
+node --test tests/*.test.js
+python -m unittest discover -s tests -p 'test_*.py'
+python scripts/validate-site.py
+python scripts/package.py
+```
+
+GitHub Pages serves **main → /docs**. Browser-upload packets are split below the 100-file limit. Upload each batch's contents, preserving paths; do not upload wrapper folders or packet manifests.
+
+## Roadmap and review
+
+Initial capability exists in **11 of 13 original tracks**; **0 complete tracks have final acceptance**. These counts do not measure overall completion. The nutrition extension is tracked separately in Phase 06N and does not inflate that count.
+
+Next: deployed UI acceptance, verified source-monitor installation, independent clinical/coding review, and broader workflow coverage. See the phase checklist for remaining gates. Report issues or collaborate through LinkedIn without patient information.
