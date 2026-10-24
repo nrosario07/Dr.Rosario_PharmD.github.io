@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist —0.19.3
+# ClinicalRx phase checklist —0.19.4
 
 **Current: Phase02 medication/evidence intelligence, Phase06 education discovery and Phase09 monitoring installation readiness. Full platform incomplete.**
 
@@ -85,3 +85,11 @@ No additional material blocks the current technical release.
 - [ ] Consistent deployed runtime acceptance; browser still displayed 0.19.1 during audit.
 - [ ] Mobile/print, hosted monitoring, broad clinical acceptance.
 - [x] Future AI/Canva source-to-content workflow specified; generation integrations not implemented.
+
+## 0.19.4 checkpoint
+- [x] All47 public hashes and browser application release match0.19.3.
+- [x] Prior runtime-mismatch interpretation corrected: stale footer label.
+- [x] Keyboard skip link focuses main.
+- [x] Patient-plan sectioned preview implemented and regression-tested.
+- [ ] New preview deployed visual acceptance; mobile/print acceptance.
+- [ ] Hosted workflows remain absent.
