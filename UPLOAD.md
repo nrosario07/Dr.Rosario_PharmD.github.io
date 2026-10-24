@@ -1,10 +1,10 @@
-# Upload ClinicalRx 0.20.0
+# Upload ClinicalRx 0.21.0
 
-1. Extract `ClinicalRx_0.20.0_Upload_Batches.zip`.
+1. Extract `ClinicalRx_0.21.0_Upload_Batches.zip`.
 2. Open `01_SITE`. Upload its **contents** to the repository root in one commit. Keep `docs/` intact.
 3. Upload each support batch's contents separately; each has at most 90 files.
 4. Do not upload the ZIP, numbered folders, `START_HERE.txt`, or packet `SHA256SUMS.json`.
-5. Keep Pages configured to `main` / `docs`. Wait for the Pages deployment, then confirm release 0.20.0.
+5. Keep Pages configured to `main` / `docs`. Wait for the Pages deployment, then confirm release 0.21.0.
 6. Follow `documentation/SOURCE_MONITOR_SETUP.md` to install and verify the two workflows if still absent.
 
 ## Optional root cleanup after upload
@@ -15,4 +15,4 @@ The mistakenly uploaded root `START_HERE.txt` and `SHA256SUMS.json` are packagin
 
 ## Acceptance
 
-Check About, four pillars, Privacy, Terms and Nutrition education pilot. Test all five nutrition questions, a special-population referral, change-answer invalidation and clear. Recheck medication → cabinet → SOAP → reviewed patient plan. New UI has automated coverage but is not yet browser-accepted on the deployed site.
+Verify release 0.21.0. Open Taper & Switch: no target options until a current product is chosen; select carvedilol IR or glipizide IR and check only the correct target appears. Exercise missing review, unsupported dose and risk exclusions. Use fictional cases. New recommendations require independent clinical review; source availability and clinical approval are not inferred from software tests. See CORE_ACCEPTANCE_PLAN.md for the original 13 tracks.

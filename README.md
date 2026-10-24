@@ -8,11 +8,11 @@ Free educational tools connecting medication evidence, clinical documentation an
 
 ## Current release
 
-**0.20.0 — profile, repository guidance and nutrition education pilot.**
+**0.21.0 — core switch data consistency and bounded formulation conversions.**
 
-[Release notes](documentation/RELEASE_0.20.0.md) · [Audit and verification limits](documentation/AUDIT_0.20.0.md) · [Upload instructions](UPLOAD.md)
+[Release notes](documentation/RELEASE_0.21.0.md) · [Audit and verification limits](documentation/AUDIT_0.21.0.md) · [Upload instructions](UPLOAD.md)
 
-The deployed 0.19.5 baseline matched all 47 public files. New 0.20.0 changes require deployed browser acceptance. Automated tests are software checks, not clinical validation.
+The deployed 0.20.0 baseline matched all 48 public files. New 0.21.0 changes require deployed browser acceptance. Automated tests are software checks, not clinical validation.
 
 ## Four pillars
 
@@ -71,3 +71,5 @@ GitHub Pages serves **main → /docs**. Browser-upload packets are split below t
 Initial capability exists in **11 of 13 original tracks**; **0 complete tracks have final acceptance**. These counts do not measure overall completion. The nutrition extension is tracked separately in Phase 06N and does not inflate that count.
 
 Next: deployed UI acceptance, verified source-monitor installation, independent clinical/coding review, and broader workflow coverage. See the phase checklist for remaining gates. Report issues or collaborate through LinkedIn without patient information.
+
+Core acceptance first: [13-track acceptance plan](documentation/CORE_ACCEPTANCE_PLAN.md). Future nutrition/affiliate expansion is paused. Current switch catalog has 22 directional pathways, not a comprehensive formulary.
