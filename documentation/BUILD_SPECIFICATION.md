@@ -389,3 +389,7 @@ Extract upload packet. Upload each numbered batch's CONTENTS to repository root,
 ## Release 0.20.0 extension — October 24, 2026
 
 Profile/repository clarity: one current README, repository-role map, four-pillar About entry points, original privacy/terms routes, root cleanup instructions preserving application paths. Added Phase 06N nutrition education pilot; scope and acceptance gates are in NUTRITION_AND_API_ROADMAP.md. No unreviewed claim of expert approval, under-two-minute completion, deficiency treatment or comprehensive interaction checks. Monetization must remain optional and independent of clinical selection; no shopping URLs carry health inputs. OpenMed/USDA are assessed candidates, not active services.
+
+## 0.21.0 core acceptance priority
+
+User priority: finish the original 13 tracks before expanding future-state applications. CORE_ACCEPTANCE_PLAN.md defines gates and sequencing. Phase04 now has a canonical 22-direction catalog and two bounded label-formulation references. SWITCH_DATA_REVIEW_0.21.0.md records evidence, limits and remaining normalization work. No automatic equipotence inference; clinical, API and source changes require review. Nutrition/affiliate implementation paused.

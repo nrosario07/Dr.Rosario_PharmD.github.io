@@ -1,6 +1,6 @@
-# ClinicalRx phase checklist —0.19.5
+# ClinicalRx phase checklist —0.21.0
 
-**Current: Phase02 medication/evidence intelligence, Phase06 education discovery and Phase09 monitoring installation readiness. Full platform incomplete.**
+**Current: Phase04 switch data quality/coverage and Phase09 acceptance infrastructure. Core 13 tracks take priority; future-state expansion paused. Full platform incomplete. See CORE_ACCEPTANCE_PLAN.md.**
 
 | Phase | Delivered | Remaining / blockers |
 |---|---|---|
@@ -19,11 +19,10 @@
 |09 Release/source governance|Local manifest/tests, atomic verified ZIP packaging, review-only monitoring scripts; public phase overview|GitHub CI/workflow installation and reliable source-review queue; independent clinical review; no automatic clinical-rule publication|
 
 ## Ordered next steps
-1. Upload 0.19.1 in numbered batches; printable handout download and review invalidation passed on 0.19.0. Print/PDF and mobile acceptance remain open.
-2. Install both missing workflows using SOURCE_MONITOR_SETUP.md and verify hosted runs/report.
-3. Finish mobile/keyboard and broader switch/anticoagulation browser regression.
-4. Expand exact-product normalized evidence and switching coverage after review.
-5. Complete bilingual/device education and scoped diabetes application; residency remains later.
+1. Deployed acceptance of new switch pathways; independent clinical review remains required.
+2. Install and verify both workflows; complete navigation, external-link and export acceptance checks.
+3. Expand normalized exact-product switching evidence, then broader clinical workflows.
+4. Complete remaining original tracks before expanding nutrition/affiliate commerce.
 
 ## October 22 checkpoints
 - [x] Deployed 0.18.2 stale-cabinet warning and export refusal verified.
@@ -113,3 +112,10 @@ No additional material blocks the current technical release.
 - [ ] Affiliate activation: owner-supplied links, product criteria and policy review.
 
 Original-track progress remains 11/13 with initial capability and 0/13 fully accepted. Nutrition extension is not counted as another completed track. No reliable final completion date while clinical, legal, source-monitor and later residency gates remain open.
+
+## 0.21.0 checkpoint
+
+- [x] 0.20.0 public files 48/48 match and fictional switch browser regression.
+- [x] Canonical 22-direction catalog and two bounded label-reference branches; 395 JS/9 Python tests.
+- [ ] Deployed new-branch acceptance, independent clinical review and broader medication coverage.
+- [ ] Full acceptance: 0/13; initial capability: 11/13. Future-state expansion frozen.
