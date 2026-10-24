@@ -94,3 +94,10 @@ test('changed cabinet blocks exports until re-synced and warns on both workspace
  h.route('medicine');assert.match(h.ids.get('cabinet-sync-status').textContent,/Sync again/);h.click('med-note');h.route('mtp');h.ids.get('no-phi-review').checked=true;h.click('json-download');assert.equal(h.blobs.length,2);assert.match(h.ids.get('output').textContent,/Changed fictional regimen/);
  h.set('encounter','objective','Manual replacement of linked block');h.ids.get('no-phi-review').checked=true;h.click('json-download');assert.equal(h.blobs.length,2);
 });
+
+test('printable handout requires plan review and privacy gate; edits revoke review',async()=>{
+ const h=harness();assert.equal(h.ids.get('patient-handout').disabled,true);h.click('example');h.click('patient-handout');assert.equal(h.blobs.length,0);
+ h.ids.get('patient-review').checked=true;h.ids.get('patient-review').onchange({target:h.ids.get('patient-review')});h.click('patient-handout');assert.equal(h.blobs.length,0);
+ h.ids.get('no-phi-review').checked=true;h.click('patient-handout');assert.equal(h.blobs.length,2);assert.equal(h.blobs[0].type,'text/html;charset=utf-8');assert.match(await h.blobs[0].text(),/<h1>Your visit plan<\/h1>/);
+ h.set('encounter','monitoring','Changed fictional instructions.');assert.equal(h.ids.get('patient-handout').disabled,true);h.click('patient-handout');assert.equal(h.blobs.length,2);
+});

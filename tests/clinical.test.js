@@ -24,3 +24,19 @@ test('Cockcroft–Gault male/female fixtures and unstable kidney function exclud
 test('CSV quoting and formula injection defenses; output contains stable MTP IDs',()=>{assert.match(E.csv([['=HYPERLINK("bad")','\n@evil','a,b','"quote"']]),/"'=HYPERLINK/);assert.match(E.csv([['\n@evil']]),/"'\n@evil"/);assert.match(E.mtpCSV({encounterId:'TEST'},[{id:'P1',actionType:'Educate / demonstrate'}],[]),/P1/);});
 test('JSON separates service assumptions, MTP evidence and economic events',()=>{const r=E.report(completeEncounter(),[],completeBilling(),[event()],R);assert.equal(r.schemaVersion,'0.4.0');assert.ok(r.service.review);assert.ok(r.service.benchmark);assert.equal(r.economicEvents.length,1);assert.doesNotMatch(JSON.stringify(r),/signature_generated/);});
 test('all executable reference assets forbid remote input and persistent storage',()=>{for(const name of ['app.js','workspaces.js','clinical.js','rules.js'])assert.doesNotMatch(fs.readFileSync(path.join(__dirname,'../docs/assets',name),'utf8'),/\b(fetch|XMLHttpRequest|localStorage|sessionStorage|indexedDB|eval)\s*[.(]/);assert.equal(R.fees.length,16);assert.equal(R.icds.length,12);assert.ok(R.provenance.every(x=>/^[a-f0-9]{64}$/.test(x.sha256)));});
+
+test('printable patient handout preserves instructions and excludes internal encounter data',()=>{
+ const encounter={...completeEncounter(),plan:'Do not take 2.5 mg if your care team tells you to hold it.\nBring the 10 mg/mL bottle.',assessment:'INTERNAL_ASSESSMENT',objective:'PRIVATE_OBJECTIVE',billing:{code:'99214'}};
+ const html=E.patientHandout(encounter,R),draft=E.patientDraft(encounter,R);
+ assert.match(html,/Do not take 2\.5 mg/);assert.match(html,/10 mg\/mL/);assert.match(html,/@media print/);
+ assert.doesNotMatch(html,/INTERNAL_ASSESSMENT|PRIVATE_OBJECTIVE|99214/);
+ for(const section of draft.sections)assert.ok(html.includes(section.body));
+});
+test('handout escapes HTML from entered instructions and has no executable or remote assets',()=>{
+ const html=E.patientHandout({...completeEncounter(),education:'<script>alert(1)</script><img src="https://evil.test/x">'},R);
+ assert.match(html,/&lt;script&gt;/);assert.doesNotMatch(html,/<script|<img|<iframe|<link|onload=/i);assert.match(html,/default-src 'none'/);
+});
+test('pending or incomplete plans cannot produce printable handouts',()=>{
+ assert.throws(()=>E.patientHandout({...completeEncounter(),planStatus:'Pending recommendations'},R));
+ assert.throws(()=>E.patientHandout({...completeEncounter(),monitoring:''},R));
+});

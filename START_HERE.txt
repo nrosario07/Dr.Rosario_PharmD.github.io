@@ -1,3 +1,5 @@
+Current release: 0.19.0. Read UPLOAD_0.19.0.md and documentation/RELEASE_0.19.0.md.
+
 Current release: 0.18.2. Read UPLOAD_0.18.2.md and documentation/SOURCE_MONITOR_SETUP.md.
 
 Current patch: 0.18.1. See UPLOAD_0.18.1.md and documentation/RELEASE_0.18.1.md.

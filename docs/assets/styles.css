@@ -56,3 +56,12 @@ main[data-route="medicine"] .page-heading h1{font-family:inherit;font-size:clamp
 
 /* Phase progress: accessible native meters and separate acceptance status. */
 .progress-summary{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0}.progress-summary article{background:#fff;border:1px solid #ccd9d8;border-radius:12px;padding:1.25rem}.progress-summary label{display:block;font-weight:650;line-height:1.5}.progress-summary progress{display:block;width:100%;height:18px;margin:1rem 0;accent-color:#21675f}.progress-summary p{font-size:.9rem;line-height:1.6;color:#526365}.monitor-blocker{border-left:4px solid #9b7427;background:#fff9ed;padding:1rem 1.25rem;border-radius:8px}.phase-detail summary{cursor:pointer;min-height:44px;font-weight:650;padding:1rem 0}.phase-detail .phase-cards{margin-top:1rem}@media(max-width:700px){.progress-summary{grid-template-columns:1fr}}
+
+/* Phase 06 printable handouts and narrow-screen navigation. */
+@media(max-width:760px){.sidebar .brand{padding-right:90px}.sidebar .brand>span:last-child{min-width:0;overflow-wrap:anywhere}.form-section select,.form-section input,.form-section textarea{min-width:0;max-width:100%}.work-layout>div,.work-layout>aside{min-width:0}.actions{flex-wrap:wrap}.actions button{white-space:normal}}
+/* Consistent controls in medication and patient workspaces. */
+:is([data-route="medicine"],[data-route="education"],[data-route="mtp"]) .form-section>button,
+#med-search,#med-fda-search,#med-add,#med-clear,#med-note,#patient-handout,#patient-download{min-height:44px;padding:10px 16px;border:1px solid #b8ccc4;border-radius:9px;background:#edf4f0;color:#194e45;font-weight:600;line-height:1.35;margin:3px 5px 3px 0}
+#med-search,#med-note,#patient-handout{background:#19564f;color:#fff;border-color:#19564f}
+#med-search:hover,#med-note:hover,#patient-handout:hover{background:#123f3a}
+[data-route="medicine"] .tool-nav a{color:#19564f;border-color:#b8ccc4;background:#fff;min-height:44px;align-items:center}
