@@ -293,3 +293,38 @@ Suggested future folder layout: 01_course_inventory, 02_original_notes, 03_reusa
 Acceptance: cited claims and calculation assumptions; clear educational/consulting boundaries; owner review before publication; accessible captions/transcripts; separate learner and executive outputs; no automatic public posting. Each lesson carries source, date, permitted use and reviewer metadata. Materials optimize the business tool only after an explicit source-to-feature map and gap assessment.
 
 Visual defect fixed: single-event transition cards now span the calendar width; dose-heading contrast improved. CSS changes await deployed visual acceptance.
+
+
+# ClinicalRx 0.19.3 — release consistency and anticoagulation acceptance
+Audit: October 24, 2026.
+
+## Findings
+Repository manifest and app.js identify v0.19.2. Latest inspected GitHub Pages build succeeded (run 40105291590). Direct HTTPS check matched 47/49 manifest entries; the two unavailable entries were deployment/build artifacts that should not have been tested as public URLs. All 47 intended public content files matched. The browser requested v0.19.2 assets but continued to display runtime v0.19.1 after one reload. Cause is not established; do not call this a complete browser acceptance of v0.19.2.
+
+## Browser-tested on the observed runtime
+- Anticoagulation procedure selector populated.
+- Fictional AF/apixaban 5 mg twice daily, age65, CrCl80, elective inguinal hernia repair November10 generated the existing dated conditional calendar and no-bridge rationale with sources.
+- Selecting an urgent/emergency procedure and submitting replaced that calendar with REVIEW_REQUIRED; no regimen remained.
+These are software checks, not independent clinical validation or a new source review. No patient data entered.
+
+## Changes
+- Startup compares expected HTML version with the executing app version. A mismatch displays an explicit warning, instructing users to preserve reviewed de-identified work before a hard refresh; no automatic reload or storage added.
+- Build validator rejects disagreement between HTML metadata, asset versions and app version.
+- Public URL manifest excludes deployment controls; package excludes temporary build artifacts, while retaining required deployment configuration.
+- Empty monitoring/source headings removed from unsupported decision outputs.
+- Future AI/Canva studio requirements clarified in BUSINESS_EDUCATION_FUTURE.md.
+
+## Verification
+355 JavaScript tests and 9 Python tests passed. ZIP CRC, byte comparison and <100-file batching required. New startup warning and revised rendering are automated-tested, not deployed/browser-tested. Mobile, print/PDF, all-tool coverage, hosted monitoring and independent clinical validation remain open. No clinical algorithms or dose rules changed.
+
+## Phase checkpoint
+Phase09: release-consistency safeguards. Phase04: elective DOAC and urgent-context software checks. 11/13 tracks initially implemented, 0/13 fully accepted. No whole-platform completion date assigned. Next: accept consistent deployed runtime, activate missing monitoring/CI, finish mobile/print and broader clinical workflow acceptance before expansion.
+
+## AI generation and Canva — clarified October 24
+Owner intends AI to create outputs, not merely suggest topics. Inputs include permission-cleared uploaded materials, future MBA content, Zotero references/full text when accessible, PubMed/PMC and primary publications discovered through Google Scholar. Zotero/Scholar are discovery and organization layers, not automatic evidence validation. Each claim must retain primary source, publication/effective date, population/context, reuse rights and review status.
+
+Planned flow: approved source collection → evidence extraction and claim/source map → AI-authored lesson/script → factual and rights review → Canva editable design → output QA/accessibility → owner-approved publication. Outputs include short videos, posters/infographics, presentations, audio/podcast scripts, resumes/CVs and consulting/business materials. Do not invent CV achievements. Keep clinician and patient-facing outputs distinct. Never send encounter drafts or patient information into Canva or an AI service.
+
+Capability check of the installed Canva tools: create_design supports editable text/image layouts including presentations, posters, documents and resumes; it explicitly excludes video and whiteboards. The exposed tools can upload audio/video but upload is not generation. AI video rendering, narration/audio generation and final export therefore remain separately unverified integration capabilities. Do not equate this ChatGPT Canva connector with a public API available to every GitHub Pages visitor. Public-app OAuth/backend, licensing, quotas and cost model require a later design decision; never embed connector credentials/API secrets in the static site. Free ClinicalRx access remains required.
+
+Canva can also create original website media and educational illustrations; keep interactive clinical forms, calculations and accessible navigation in repository code. This turn authorizes considering Canva, not replacing the working site with a Canva-hosted website. No Canva design or video has been created in this release. Materials intake remains deferred until current phases are complete, per owner preference; then start with course inventory, original notes/templates and permission-cleared examples. Six remaining courses may be added through December2027.

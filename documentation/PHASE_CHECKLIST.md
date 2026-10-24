@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist —0.19.2
+# ClinicalRx phase checklist —0.19.3
 
 **Current: Phase02 medication/evidence intelligence, Phase06 education discovery and Phase09 monitoring installation readiness. Full platform incomplete.**
 
@@ -77,3 +77,11 @@ No additional material blocks the current technical release.
 - [x] Full-public-file manifest and repeatable deployment verifier.
 - [ ] Hosted monitoring/CI, print/mobile, comprehensive clinical review.
 - [ ] Later business/video studio: deferred until current phases complete; see BUSINESS_EDUCATION_FUTURE.md.
+
+## 0.19.3 checkpoint
+- [x] 47 intended deployed public files match.
+- [x] Procedure selector and elective DOAC/urgent-context browser checks on observed runtime.
+- [x] Runtime mismatch detection and build version-consistency checks.
+- [ ] Consistent deployed runtime acceptance; browser still displayed 0.19.1 during audit.
+- [ ] Mobile/print, hosted monitoring, broad clinical acceptance.
+- [x] Future AI/Canva source-to-content workflow specified; generation integrations not implemented.
