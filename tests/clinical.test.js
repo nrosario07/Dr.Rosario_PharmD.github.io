@@ -40,3 +40,5 @@ test('pending or incomplete plans cannot produce printable handouts',()=>{
  assert.throws(()=>E.patientHandout({...completeEncounter(),planStatus:'Pending recommendations'},R));
  assert.throws(()=>E.patientHandout({...completeEncounter(),monitoring:''},R));
 });
+test('patient preview is sectioned, escaped and excludes clinician-only content',()=>{const html=E.patientPreview({...completeEncounter(),assessment:'INTERNAL_ONLY',education:'<img src=x onerror=alert(1)>',plan:'Take 5 mg once daily. Do not double the dose.'},R);assert.equal((html.match(/class="patient-plan-card"/g)||[]).length,5);assert.match(html,/Take 5 mg once daily\. Do not double the dose\./);assert.match(html,/&lt;img/);assert.doesNotMatch(html,/<img|INTERNAL_ONLY/);});
+test('patient preview suppresses unagreed plan',()=>{const html=E.patientPreview({...completeEncounter(),planStatus:'Pending recommendations',plan:'SECRET_PENDING_DOSE'},R);assert.doesNotMatch(html,/SECRET_PENDING_DOSE/);assert.match(html,/unreviewed or pending/);});
