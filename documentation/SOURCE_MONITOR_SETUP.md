@@ -1,6 +1,6 @@
 # Install source monitoring and release checks
 
-Prepared October 21, 2026. The source-monitor workflow path returned 404 remotely. Neither workflow was installed by this release-building session. No clinical updates are published automatically.
+Rechecked October 25, 2026. The source-monitor workflow path returned 404 remotely. Neither workflow was installed by this release-building session. No clinical updates are published automatically.
 
 1. In GitHub, at repository root choose Add file → Create new file.
 2. Name it `.github/workflows/source-monitor.yml`. Paste the exact contents of `documentation/INSTALL_SOURCE_MONITOR.yml`. Commit.
