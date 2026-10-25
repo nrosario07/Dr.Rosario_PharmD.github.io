@@ -35,3 +35,7 @@ Replace the example URL with the exact report URL. Repeat --url only when the sa
 GitHub. Workflow syntax for GitHub Actions. Accessed October 21, 2026. https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 
 GitHub. Workflow commands for GitHub Actions: adding a job summary. Accessed October 21, 2026. https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+
+## Texas retrieval workflow
+
+A third workflow is supplied for Monday Texas VDP retrieval. Install `.github/workflows/texas-data.yml` from `INSTALL_TEXAS_DATA.yml`; follow TEXAS_DATA_INTEGRATION.md. Installation and a successful hosted run are not verified. It does not publish prices.
