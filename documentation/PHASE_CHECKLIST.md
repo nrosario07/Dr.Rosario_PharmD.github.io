@@ -1,4 +1,4 @@
-# ClinicalRx phase checklist —0.23.0
+# ClinicalRx phase checklist —0.24.0
 
 **Current: Phase02 medication data clarity and Phase09 acceptance infrastructure. Core 13 tracks take priority; future-state expansion paused. Full platform incomplete. See CORE_ACCEPTANCE_PLAN.md.**
 
@@ -120,8 +120,12 @@ Original-track progress remains 11/13 with initial capability and 0/13 fully acc
 - [ ] Deployed new-branch acceptance, independent clinical review and broader medication coverage.
 - [ ] Full acceptance: 0/13; initial capability: 11/13. Future-state expansion frozen.
 
-### 0.23.0 increment
-Biosimilar designation filtering and public-data boundaries delivered. Product-level prices/HCPCS/orphan/gene-cell catalogs pending. No additional final acceptance gates closed. See AUDIT_0.23.0.md for browser versus automated evidence.
+### 0.24.0 increment
+Biosimilar designation filtering and public-data boundaries delivered. Product-level prices/HCPCS/orphan/gene-cell catalogs pending. No additional final acceptance gates closed. See AUDIT_0.24.0.md for browser versus automated evidence.
 
-### 0.23.0 acceptance increment
-Deployed0.22 filters and focused medication→cabinet→SOAP→patient-plan/clear workflow browser checked. New paging, filters and importer validation delivered; new visual/mobile/export acceptance remains open. Both remote workflow files still return404. No full track closed. See AUDIT_0.23.0.md.
+### 0.24.0 acceptance increment
+Deployed0.22 filters and focused medication→cabinet→SOAP→patient-plan/clear workflow browser checked. New paging, filters and importer validation delivered; new visual/mobile/export acceptance remains open. Both remote workflow files still return404. No full track closed. See AUDIT_0.24.0.md.
+
+## v0.24.0 acceptance increment
+
+Texas source directory and validated retrieval foundation delivered in Phases 02/09. Official field mapping, price normalization, deployed UI acceptance and unattended publication remain blocked/pending. See TEXAS_DATA_INTEGRATION.md and AUDIT_0.24.0.md. No additional track reaches full acceptance.

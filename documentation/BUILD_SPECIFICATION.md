@@ -1,8 +1,8 @@
-# Dr. Rosario / ClinicalRx build specification — v0.23.0
+# Dr. Rosario / ClinicalRx build specification — v0.24.0
 
 ## Current phase and acceptance
 
-Phase02 medication intelligence and Phase09 acceptance are active. See RELEASE_0.23.0.md and CORE_ACCEPTANCE_PLAN.md. 11/13 tracks have initial implementations; 0/13 are fully accepted. This release adds paginated biosimilar browsing, exact reference/marketing filters, source-card clarity and fail-closed FDA import validation. Pricing and specialty-therapy product integrations remain pending. Earlier contracts below remain historical implementation detail where not superseded.
+Phase02 medication intelligence and Phase09 acceptance are active. See RELEASE_0.24.0.md and CORE_ACCEPTANCE_PLAN.md. 11/13 tracks have initial implementations; 0/13 are fully accepted. This release adds paginated biosimilar browsing, exact reference/marketing filters, source-card clarity and fail-closed FDA import validation. Pricing and specialty-therapy product integrations remain pending. Earlier contracts below remain historical implementation detail where not superseded.
 
 ### Resources contract
 Nine original source cards provide local search/filter/reset, links to specialist checkers and patient references, and explicit API/candidate status. External links never include cabinet or encounter data. Shortage API uses public medication names only, shows status/date/product/source, caps records at100 and displays total, uses a five-minute memory cache, and distinguishes no matches from network failure. Input edits invalidate results and stale replies cannot replace changed inputs. No general interaction clearance is inferred. No third-party clinical content is copied.
@@ -393,3 +393,7 @@ Profile/repository clarity: one current README, repository-role map, four-pillar
 ## 0.21.0 core acceptance priority
 
 User priority: finish the original 13 tracks before expanding future-state applications. CORE_ACCEPTANCE_PLAN.md defines gates and sequencing. Phase04 now has a canonical 22-direction catalog and two bounded label-formulation references. SWITCH_DATA_REVIEW_0.21.0.md records evidence, limits and remaining normalization work. No automatic equipotence inference; clinical, API and source changes require review. Nutrition/affiliate implementation paused.
+
+## v0.24.0 acceptance increment
+
+Texas source directory and validated retrieval foundation delivered in Phases 02/09. Official field mapping, price normalization, deployed UI acceptance and unattended publication remain blocked/pending. See TEXAS_DATA_INTEGRATION.md and AUDIT_0.24.0.md. No additional track reaches full acceptance.
