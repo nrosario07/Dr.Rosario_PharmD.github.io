@@ -1,8 +1,8 @@
-# Dr. Rosario / ClinicalRx build specification — v0.18.0
+# Dr. Rosario / ClinicalRx build specification — v0.23.0
 
 ## Current phase and acceptance
 
-Current release 0.17.0 advances Phase02 source/data access and Phase06 education discovery. Phase09 monitor installation remains blocked by an absent repository workflow. 346 automated tests pass; new layout acceptance pending deployment. Full platform incomplete.
+Phase02 medication intelligence and Phase09 acceptance are active. See RELEASE_0.23.0.md and CORE_ACCEPTANCE_PLAN.md. 11/13 tracks have initial implementations; 0/13 are fully accepted. This release adds paginated biosimilar browsing, exact reference/marketing filters, source-card clarity and fail-closed FDA import validation. Pricing and specialty-therapy product integrations remain pending. Earlier contracts below remain historical implementation detail where not superseded.
 
 ### Resources contract
 Nine original source cards provide local search/filter/reset, links to specialist checkers and patient references, and explicit API/candidate status. External links never include cabinet or encounter data. Shortage API uses public medication names only, shows status/date/product/source, caps records at100 and displays total, uses a five-minute memory cache, and distinguishes no matches from network failure. Input edits invalidate results and stale replies cannot replace changed inputs. No general interaction clearance is inferred. No third-party clinical content is copied.

@@ -1,6 +1,6 @@
 # Core 13-track acceptance plan
 
-Updated October 24, 2026, release 0.21.0. Core platform first. Nutrition/affiliate commerce and the business AI studio are frozen at their current pilot/planning state until core acceptance progresses. Full acceptance means the scoped functionality, data provenance, failure handling, accessibility and relevant professional review are documented; a unit-test count alone cannot close a phase.
+Updated October 25, 2026, release 0.23.0. Core platform first. Nutrition/affiliate commerce and the business AI studio are frozen at their current pilot/planning state until core acceptance progresses. Full acceptance means the scoped functionality, data provenance, failure handling, accessibility and relevant professional review are documented; a unit-test count alone cannot close a phase.
 
 | Track | Next acceptance task | Evidence needed before closure |
 | --- | --- | --- |
@@ -31,3 +31,8 @@ Independent reviews and GitHub workflow access are external gates, not tasks tha
 ## Later monetized application
 
 Keep a separate backlog: domain purchase/setup, social-preview metadata, optional affiliate catalog and ranking, then React only if complexity warrants it; accounts/database only if saved user features justify them. Analytics requires a fresh privacy/cookie assessment. Neither React, authentication, a database nor Google Analytics is necessary for a basic static affiliate site. No purchases, tracking, authentication, database or affiliate links are added in this core release. Maintain a usable free path and independent clinical selection criteria.
+
+0.23.0: Phase02 biosimilar search includes both FDA designations; pricing and specialty-data source guide added. Public integration and professional review remain acceptance gates. See AUDIT_0.23.0.md.
+
+### 0.23.0 acceptance increment
+Deployed0.22 filters and focused medication→cabinet→SOAP→patient-plan/clear workflow browser checked. New paging, filters and importer validation delivered; new visual/mobile/export acceptance remains open. Both remote workflow files still return404. No full track closed. See AUDIT_0.23.0.md.

@@ -1,6 +1,6 @@
-# ClinicalRx phase checklist —0.21.0
+# ClinicalRx phase checklist —0.23.0
 
-**Current: Phase04 switch data quality/coverage and Phase09 acceptance infrastructure. Core 13 tracks take priority; future-state expansion paused. Full platform incomplete. See CORE_ACCEPTANCE_PLAN.md.**
+**Current: Phase02 medication data clarity and Phase09 acceptance infrastructure. Core 13 tracks take priority; future-state expansion paused. Full platform incomplete. See CORE_ACCEPTANCE_PLAN.md.**
 
 | Phase | Delivered | Remaining / blockers |
 |---|---|---|
@@ -119,3 +119,9 @@ Original-track progress remains 11/13 with initial capability and 0/13 fully acc
 - [x] Canonical 22-direction catalog and two bounded label-reference branches; 395 JS/9 Python tests.
 - [ ] Deployed new-branch acceptance, independent clinical review and broader medication coverage.
 - [ ] Full acceptance: 0/13; initial capability: 11/13. Future-state expansion frozen.
+
+### 0.23.0 increment
+Biosimilar designation filtering and public-data boundaries delivered. Product-level prices/HCPCS/orphan/gene-cell catalogs pending. No additional final acceptance gates closed. See AUDIT_0.23.0.md for browser versus automated evidence.
+
+### 0.23.0 acceptance increment
+Deployed0.22 filters and focused medication→cabinet→SOAP→patient-plan/clear workflow browser checked. New paging, filters and importer validation delivered; new visual/mobile/export acceptance remains open. Both remote workflow files still return404. No full track closed. See AUDIT_0.23.0.md.
