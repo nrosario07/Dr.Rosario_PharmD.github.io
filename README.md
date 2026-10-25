@@ -8,11 +8,11 @@ Free educational tools connecting medication evidence, clinical documentation an
 
 ## Current release
 
-**0.23.0 — compact biosimilar browsing and validated FDA imports.**
+**0.24.0 — Texas public-data retrieval foundation.**
 
-[Release notes](documentation/RELEASE_0.23.0.md) · [Audit and verification limits](documentation/AUDIT_0.23.0.md) · [Upload instructions](UPLOAD.md)
+[Release notes](documentation/RELEASE_0.24.0.md) · [Audit and verification limits](documentation/AUDIT_0.24.0.md) · [Upload instructions](UPLOAD.md)
 
-The deployed 0.22.0 baseline matched all 48 public files. New 0.23.0 changes require deployed browser acceptance. Automated tests are software checks, not clinical validation.
+The deployed 0.23.0 baseline matched all 48 public files. New 0.24.0 changes require deployed browser acceptance. Automated tests are software checks, not clinical validation.
 
 ## Four pillars
 
