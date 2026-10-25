@@ -8,11 +8,11 @@ Free educational tools connecting medication evidence, clinical documentation an
 
 ## Current release
 
-**0.21.0 — core switch data consistency and bounded formulation conversions.**
+**0.22.0 — biosimilar designation clarity and medication data guide.**
 
-[Release notes](documentation/RELEASE_0.21.0.md) · [Audit and verification limits](documentation/AUDIT_0.21.0.md) · [Upload instructions](UPLOAD.md)
+[Release notes](documentation/RELEASE_0.22.0.md) · [Audit and verification limits](documentation/AUDIT_0.22.0.md) · [Upload instructions](UPLOAD.md)
 
-The deployed 0.20.0 baseline matched all 48 public files. New 0.21.0 changes require deployed browser acceptance. Automated tests are software checks, not clinical validation.
+The deployed 0.21.0 baseline matched all 48 public files. New 0.22.0 changes require deployed browser acceptance. Automated tests are software checks, not clinical validation.
 
 ## Four pillars
 
