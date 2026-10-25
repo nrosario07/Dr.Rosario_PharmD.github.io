@@ -1,9 +1,9 @@
 {
-  "version": "0.22.0",
+  "version": "0.23.0",
   "sha256": {
     "assets/advanced-platform.js": "1808a19367388467b94960ea705ca6353e7a8a39feab30e9f180ca36fb7d5bac",
     "assets/advanced.js": "933b712cd837c0b093ab3d31710512794e319e0e1428743ab0972dec1338ce71",
-    "assets/app.js": "73a63342f035fed5cf0b86072b58ce563edb44f4f731694475bd108fef1b18ff",
+    "assets/app.js": "2fdbdd5d815b108712a764cfce2e260e9dfa6692fc903d34b168e947332cb3c5",
     "assets/calculator-links.js": "b2271ffb1942b894bd8d9e80e1ca3c08f25ad278e6d97b50408e5592a1ed0e2c",
     "assets/clinical-support.js": "89450b1c0e355938ef5951a5698b2ae39811f824f43e5ee688c1e64f1ea71561",
     "assets/clinical.js": "199d4b233c5ccbcb9428d2fab6c7601ef6dd6c57936fdd7b00beb835aa24648b",
@@ -32,8 +32,8 @@
     "assets/reporting.js": "faf1063d86950c7c922008a37f68d299ed5a56ac8cbf3170d763600de74486a5",
     "assets/rules.js": "2ed9b70c016ec6515f1b654c4cb21e99c451b50f8bc2d229eaaa02582cac9b61",
     "assets/startup.js": "099403e58a9afa35a89003716a8eb5f0a6a2e2ecf8f5ef0349dfea379a654bf5",
-    "assets/styles.css": "44770b5f846242a8e626f29d10ae9cade0b34adb945c3d43fe6977900a0fb8a1",
-    "assets/support-platform.js": "d956b51039a2ccdcf2edc27febade2330a57d72b540089d16dedf14ad57bd84c",
+    "assets/styles.css": "8e00fbba67191b6970ced448fed2081035810844a40368774be8a47eef1be134",
+    "assets/support-platform.js": "37bd8fd5b1be6ef77102b7e7994e3eeebfad6a0d675d4cbbe28cf4aab440211f",
     "assets/workspaces.js": "876cc9a72897852f6ed3b5675cf2108a3821e2b0f5e0bd2cac3e78271ef3b89d",
     "data/advanced-provenance.json": "0effd0f61ca71e768a58e2ac15189df6906987784d3238bb408f8d7ce72fd4d6",
     "data/clinical-rules.json": "4c5e437d03cd5cc5ff61549098aa82f4cf53ad2e1927bbab5a42b993c6984139",
@@ -48,6 +48,6 @@
     "downloads/Texas_CPA_Authority.md": "04049fe4a6e391f26f18767a1c80dd62c0ea5b2559b4304be5f9294391850140",
     "downloads/Texas_Pharmacist_Code_Pathways.csv": "703c040de4ad89cc11dd7237c9740b7131ceee652c44dad2af167709d59f69d5",
     "downloads/Texas_Pharmacist_Code_Pathways.md": "f07e7c3dc3e325672e29e3df3927eb30089f5914db0b4c75f64561a051f5ad6f",
-    "index.html": "ccb30386e2231739e8b3662c885e82bb880ee80b08be6e7b7c252f60f19b703f"
+    "index.html": "538fa8af47568e8dc934657b3e96f69e84164602ce5e33106b01966f45ba2299"
   }
 }
