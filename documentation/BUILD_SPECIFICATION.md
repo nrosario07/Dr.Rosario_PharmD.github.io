@@ -1,4 +1,4 @@
-# Dr. Rosario / ClinicalRx build specification — v0.24.0
+# Dr. Rosario / ClinicalRx build specification — v0.25.0
 
 ## Current phase and acceptance
 
@@ -397,3 +397,7 @@ User priority: finish the original 13 tracks before expanding future-state appli
 ## v0.24.0 acceptance increment
 
 Texas source directory and validated retrieval foundation delivered in Phases 02/09. Official field mapping, price normalization, deployed UI acceptance and unattended publication remain blocked/pending. See TEXAS_DATA_INTEGRATION.md and AUDIT_0.24.0.md. No additional track reaches full acceptance.
+
+## 0.25.0 acceptance and discovery contract
+
+The current 13-track status is maintained in PHASE_CHECKLIST.md; historical checkpoints do not define current acceptance. No future-state expansion precedes core acceptance. External calculator discovery combines local multi-word AND search with a topic filter, announces result counts, supports reset and an empty state, and links to original providers without transmitting encounter/cabinet data. Source registry dates are not live availability claims. The Texas data directory and medication-data guide are directly discoverable from the second pillar. Reduced-motion preference disables smooth page scrolling.
