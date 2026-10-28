@@ -1,6 +1,6 @@
-# ClinicalRx phase acceptance checklist — 0.25.0
+# ClinicalRx phase acceptance checklist — 0.26.0
 
-Updated October 25, 2026. This is the current acceptance record. Earlier checkpoint text is archived under documentation/history; release-specific audit files remain the evidence source.
+Updated October 26, 2026. This is the current acceptance record. Earlier checkpoint text is archived under documentation/history; release-specific audit files remain the evidence source.
 
 **11/13 initial capabilities; 0/13 fully accepted.** Initial delivery is not percent complete. Future nutrition, affiliate, AI/video and separate-app expansion is paused until these tracks are accepted. Residency and diabetes remain part of the existing 13-track scope.
 
@@ -20,17 +20,20 @@ Updated October 25, 2026. This is the current acceptance record. Earlier checkpo
 |08|Residency|Not implemented|Define initial program type; map lifecycle templates to current accreditation requirements.|Implementation and program-director review|
 |09|Release/source governance|Maintainer tooling|Install all three workflows; inspect hosted test/report artifacts and source review queue.|GitHub integration write denied; owner installation required|
 
-## This release closes these checkpoints only
+## Verified acceptance checkpoints in 0.26.0
 
-- [x] Deployed v0.24.0: 48/48 public hashes match.
-- [x] Deployed Texas directory: nine entries and 340B filter verified.
-- [x] Professional route headings and LinkedIn-only contact checked.
-- [x] Medication identity → cabinet → SOAP → patient preview, review invalidation and encounter clearing checked; timing observation remains open.
-- [x] Current GitHub workflow paths checked; installation permission failure documented.
-- [x] Calculator search/topic/reset and empty-state automated regression coverage.
-- [x] Historical/current progress documentation separated.
-- [ ] New directory deployed visual, keyboard and mobile acceptance.
-- [ ] All three hosted workflows installed and successful artifacts inspected.
+- [x] v0.25.0 deployment: 48/48 public files match.
+- [x] Phase 03 desktop topic/search/empty/reset controls, including keyboard reset.
+- [x] Phase 03 primary-provider destination inventory: 14 URLs retrieved; PREVENT embedded content remains unverified.
+- [x] Phase 01B/06 actual fictional HTML handout downloaded and its content inspected.
+- [x] Phase 01B previous-payer carryover reproduced in browser and fixed with regression tests.
+- [x] Phase 06 plan edits revoke agreement in both connected workspaces; automated tests verify review/export restrictions.
+- [ ] Deployed browser acceptance of new fixes.
+- [ ] Phase 00/03 mobile/responsive checks and complete keyboard path.
+- [ ] Phase 06 visual print/PDF and comprehension/device/bilingual review.
+- [ ] Phase 09 hosted workflows and successful run artifacts.
+
+These completed checkpoints are not whole-phase completion. No clinical, licensing or institutional approval is inferred. The 11/13 figure described partial presence, not a sequential phase or 85% completion.
 
 ## Next work in order
 

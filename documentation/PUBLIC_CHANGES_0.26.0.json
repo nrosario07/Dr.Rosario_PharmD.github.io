@@ -1,0 +1,13 @@
+{
+  "from": "0.25.0",
+  "to": "0.26.0",
+  "changed": [
+    "assets/advanced-platform.js",
+    "assets/app.js",
+    "assets/calculator-links.js",
+    "assets/cpa-workspace.js",
+    "index.html"
+  ],
+  "added": [],
+  "removed": []
+}
