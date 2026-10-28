@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-26",
+  "deployedVersion": "0.25.0",
+  "fixture": "Built-in fictional hypertension case",
+  "downloaded": true,
+  "bytes": 2207,
+  "sha256": "acdaf5a98d1b0d467d4e494b43f8fe16bafccaaf814a6045d93cbfbac9154767",
+  "sections": [
+    "Your health",
+    "Your plan",
+    "What to check",
+    "Next visit",
+    "What we learned"
+  ],
+  "fictionalLabelPresent": true,
+  "containsScript": false,
+  "containsExternalResource": false,
+  "containsInternalAppendix": false,
+  "visualPrintVerified": false,
+  "limit": "Actual downloaded HTML contents inspected; local file protocol blocked by browser policy, so no browser rendering or print/PDF verification."
+}

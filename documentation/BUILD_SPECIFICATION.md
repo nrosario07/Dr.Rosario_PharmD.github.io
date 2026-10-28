@@ -1,4 +1,4 @@
-# Dr. Rosario / ClinicalRx build specification — v0.25.0
+# Dr. Rosario / ClinicalRx build specification — v0.26.0
 
 ## Current phase and acceptance
 
@@ -401,3 +401,7 @@ Texas source directory and validated retrieval foundation delivered in Phases 02
 ## 0.25.0 acceptance and discovery contract
 
 The current 13-track status is maintained in PHASE_CHECKLIST.md; historical checkpoints do not define current acceptance. No future-state expansion precedes core acceptance. External calculator discovery combines local multi-word AND search with a topic filter, announces result counts, supports reset and an empty state, and links to original providers without transmitting encounter/cabinet data. Source registry dates are not live availability claims. The Texas data directory and medication-data guide are directly discoverable from the second pillar. Reduced-motion preference disables smooth page scrolling.
+
+## 0.26.0 review-state and case-isolation contract
+
+Loading the built-in fictional encounter must clear all preceding encounter, payer, MTP, economic-event and cabinet context. Independent practice/business drafts are not implicitly cleared. Changing patient action text in either connected workspace resets plan agreement and final review; those actions must remain withheld until agreement is renewed. Actual patient handout export remains gated by completeness, review, cabinet consistency and de-identification. Source-destination checks are separately dated from registry reviews and cannot be labeled external calculator validation. Progress counts fully accepted tracks; partial presence is not a sequential phase.

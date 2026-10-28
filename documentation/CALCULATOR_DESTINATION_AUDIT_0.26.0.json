@@ -1,0 +1,132 @@
+{
+  "checked": "2026-10-25",
+  "method": "Primary provider pages retrieved with web research; separate browser checks exercised the ClinicalRx directory. No external numerical result validation.",
+  "rows": [
+    {
+      "id": "child-pugh",
+      "title": "Child-Pugh cirrhosis severity",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/340/child-pugh-score-cirrhosis-mortality",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "meld",
+      "title": "MELD / MELD3.0",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/10437/model-end-stage-liver-disease-meld",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "prevent",
+      "title": "PREVENT cardiovascular risk",
+      "provider": "American Heart Association",
+      "url": "https://professional.heart.org/en/guidelines-and-statements/prevent-calculator",
+      "checked": "2026-10-25",
+      "result": "Provider page reached; embedded calculator not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "af-scores",
+      "title": "CHA₂DS₂-VASc",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/801/cha2ds2-vasc-score-atrial-fibrillation-stroke-risk",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "has-bled",
+      "title": "HAS-BLED",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/807/has-bled-score-major-bleeding-risk",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "calculators",
+      "title": "Creatinine clearance / kidney estimates",
+      "provider": "ClinCalc",
+      "url": "https://clincalc.com/Kinetics/CrCl.aspx",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "egfr",
+      "title": "Adult and pediatric eGFR",
+      "provider": "NIDDK",
+      "url": "https://www.niddk.nih.gov/health-information/professionals/clinical-tools-patient-management/kidney-disease/laboratory-evaluation/estimated-gfr-calculators/adults-pediatrics",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "fib4",
+      "title": "FIB-4",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/2200/fibrosis-4-fib-4-index-liver-fibrosis",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "bmi",
+      "title": "BMI / body surface area",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/29/body-mass-index-bmi-body-surface-area-bsa",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "phq9",
+      "title": "PHQ-9",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/1725/phq9-patient-health-questionnaire9",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "gad7",
+      "title": "GAD-7",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/1727/gad7-general-anxiety-disorder7",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "hamd",
+      "title": "Hamilton Depression Rating Scale (HAM-D)",
+      "provider": "MDCalc",
+      "url": "https://www.mdcalc.com/calc/10043/hamilton-depression-rating-scale-hamd",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "steroid",
+      "title": "Corticosteroid equivalence",
+      "provider": "ClinCalc",
+      "url": "https://clincalc.com/Corticosteroids/",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    },
+    {
+      "id": "benzo",
+      "title": "Benzodiazepine equivalence",
+      "provider": "ClinCalc",
+      "url": "https://clincalc.com/benzodiazepine/",
+      "checked": "2026-10-25",
+      "result": "Destination identified; external calculation not tested.",
+      "integration": "Outbound hyperlink only; no instrument text, equations, scores or patient data embedded/transmitted."
+    }
+  ]
+}

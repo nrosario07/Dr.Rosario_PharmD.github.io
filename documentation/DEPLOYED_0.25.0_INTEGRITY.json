@@ -1,0 +1,201 @@
+{
+  "version": "0.25.0",
+  "checkedAt": "2026-10-25T19:55:29.131243+00:00",
+  "base": "https://nrosario07.github.io",
+  "passed": true,
+  "files": [
+    {
+      "path": "assets/advanced-platform.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/advanced.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/app.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/calculator-links.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/clinical-support.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/clinical.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/content.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/core.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/cpa-builder.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/cpa-template.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/cpa-workspace.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/decision-support.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/decision-workspaces.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/drug-api.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/encounter-review.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/fee-reference.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/icd-index.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/lai-switch.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/mark.svg",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/medication-sections.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/module-data.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/modules.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/mtp-taxonomy.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/next-phase.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/next-platform.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/nutrition.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/platform.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/purple-data.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/reporting.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/rules.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/startup.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/styles.css",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/support-platform.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "assets/workspaces.js",
+      "status": "MATCH"
+    },
+    {
+      "path": "data/advanced-provenance.json",
+      "status": "MATCH"
+    },
+    {
+      "path": "data/clinical-rules.json",
+      "status": "MATCH"
+    },
+    {
+      "path": "data/modules.json",
+      "status": "MATCH"
+    },
+    {
+      "path": "data/mtp-taxonomy.json",
+      "status": "MATCH"
+    },
+    {
+      "path": "data/purple-book.json",
+      "status": "MATCH"
+    },
+    {
+      "path": "data/registry.json",
+      "status": "MATCH"
+    },
+    {
+      "path": "downloads/EHR_Template_Adaptation_Guide.txt",
+      "status": "MATCH"
+    },
+    {
+      "path": "downloads/MTP_EHR_Note_Template.txt",
+      "status": "MATCH"
+    },
+    {
+      "path": "downloads/Norbert_Rosario_Public_CV.pdf",
+      "status": "MATCH"
+    },
+    {
+      "path": "downloads/Norbert_Rosario_Public_CV.txt",
+      "status": "MATCH"
+    },
+    {
+      "path": "downloads/Texas_CPA_Authority.md",
+      "status": "MATCH"
+    },
+    {
+      "path": "downloads/Texas_Pharmacist_Code_Pathways.csv",
+      "status": "MATCH"
+    },
+    {
+      "path": "downloads/Texas_Pharmacist_Code_Pathways.md",
+      "status": "MATCH"
+    },
+    {
+      "path": "index.html",
+      "status": "MATCH"
+    }
+  ],
+  "limits": "Byte integrity only. Does not certify clinical accuracy, API availability, browser behavior or source monitoring."
+}
