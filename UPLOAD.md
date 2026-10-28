@@ -1,10 +1,10 @@
-# Upload ClinicalRx 0.25.0
+# Upload ClinicalRx 0.26.0
 
-1. Extract `ClinicalRx_0.25.0_Upload_Batches.zip`.
+1. Extract `ClinicalRx_0.26.0_Upload_Batches.zip`.
 2. Open `01_SITE`. Upload its **contents** to the repository root in one commit. Keep `docs/` intact.
 3. Upload each support batch's contents separately; each has at most 90 files.
 4. Do not upload the ZIP, numbered folders, `START_HERE.txt`, or packet `SHA256SUMS.json`.
-5. Keep Pages configured to `main` / `docs`. Wait for the Pages deployment, then confirm release 0.25.0.
+5. Keep Pages configured to `main` / `docs`. Wait for the Pages deployment, then confirm release 0.26.0.
 6. Follow `documentation/SOURCE_MONITOR_SETUP.md` to install and verify the source-monitor, release-check and Texas retrieval workflows if still absent.
 
 ## Optional root cleanup after upload
@@ -14,7 +14,9 @@ Historical upload instructions are now preserved under `documentation/history/up
 The mistakenly uploaded root `START_HERE.txt` and `SHA256SUMS.json` are packaging instructions/inventory, not application dependencies. They may be removed after the current upload succeeds. This packet does not silently delete remote files. No mass repository deletion is needed.
 
 ## Acceptance
-Confirm 0.25.0 in the footer. Open the calculator directory: filter Mental health, search PHQ, clear filters and test an unmatched query. Open the two data-guide links from pillar 02. Review the current checklist and AUDIT_0.25.0.md.
+Confirm 0.26.0 in the footer. In SOAP, select a payer, then Load fictional case: payer must return to Select. An existing medication cabinet must be empty after loading the case. Change the plan: agreement and review must clear; renew both before exporting. Repeat from the patient studio. Use fictional data only.
+
+Read documentation/AUDIT_0.26.0.md for evidence and remaining limits. The progress panel now counts fully accepted tracks; partial work does not advance the completion bar.
 
 ## Required workflow installation
 The three workflow paths remain absent. Direct creation was rejected with GitHub 403: Resource not accessible by integration. Uploading documentation YAML copies does not install workflows. Use Add file → Create new file to create each exact path below with its supplied copy, then commit:
