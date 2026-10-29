@@ -62,7 +62,7 @@ Commit each batch separately. Each batch is below GitHub's 100-file limit.
 Upload the complete site batch first; it includes all site assets in one commit.
 Do not delete the existing repository. Existing files with matching paths are replaced.
 Pages remains main /docs. Wait for deployment before checking the new version.
-Hidden .github files may not appear in your file picker: create the two workflow files manually using documentation/SOURCE_MONITOR_SETUP.md if needed.
+The .github/workflows/release-check.yml, source-monitor.yml and texas-data.yml files are included in the repository package. If GitHub's browser uploader hides dot-directories, use GitHub Desktop or create each workflow at its exact path from the matching documentation/INSTALL_*.yml template. After committing, verify hosted Actions runs.
 The numbered batches are: {json.dumps(counts)}
 SHA256SUMS.json maps repository paths to checksums for verification. Do not upload it or this instruction file.
 """

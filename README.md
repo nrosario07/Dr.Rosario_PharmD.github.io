@@ -49,7 +49,7 @@ The deployed 0.25.0 baseline matched all 48 public files. New 0.26.0 changes req
 | `documentation/` | Specification, audits, evidence review and release history |
 | `scripts/` | Validation, deployment verification and packaging |
 | `tests/` | Automated software regression tests |
-| `.github/workflows/` | Release checks and source-monitor automation; installation must be verified |
+| `.github/workflows/` | Release checks, source monitoring and Texas-data retrieval; hosted runs must be verified |
 
 The site is a static application, not an analytics notebook project. Its structure separates published assets from supporting evidence and tests without adding unused directories.
 

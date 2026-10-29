@@ -18,13 +18,10 @@ Confirm 0.26.0 in the footer. In SOAP, select a payer, then Load fictional case:
 
 Read documentation/AUDIT_0.26.0.md for evidence and remaining limits. The progress panel now counts fully accepted tracks; partial work does not advance the completion bar.
 
-## Required workflow installation
-The three workflow paths remain absent. Direct creation was rejected with GitHub 403: Resource not accessible by integration. Uploading documentation YAML copies does not install workflows. Use Add file → Create new file to create each exact path below with its supplied copy, then commit:
+## GitHub Actions workflow verification
+This remediation package includes the three workflow files at their active paths:
+- `.github/workflows/release-check.yml`
+- `.github/workflows/source-monitor.yml`
+- `.github/workflows/texas-data.yml`
 
-| Destination | Copy content from |
-|---|---|
-| .github/workflows/release-check.yml | documentation/INSTALL_RELEASE_CHECK.yml |
-| .github/workflows/source-monitor.yml | documentation/INSTALL_SOURCE_MONITOR.yml |
-| .github/workflows/texas-data.yml | documentation/INSTALL_TEXAS_DATA.yml |
-
-Run each from Actions and inspect its report. Texas access/schema failures are review outcomes, not valid price data. No automatic clinical-rule publication is enabled.
+After uploading/committing the package, open **GitHub → Actions** and verify that the release-check workflow completes successfully. Manually run the source-monitor and Texas-data workflows once, inspect their artifacts/reports, and resolve any failures. Scheduled workflows can take time to run. Workflow files present in this ZIP are not evidence of a successful hosted run. Texas access/schema failures are review outcomes, not valid price data. No automatic clinical-rule publication is enabled.
