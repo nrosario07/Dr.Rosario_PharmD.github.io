@@ -18,7 +18,7 @@ Updated October 26, 2026. This is the current acceptance record. Earlier checkpo
 |06|Education|Pilot|Inspect downloaded/printed plans; check completeness, teach-back, devices and bilingual materials.|Comprehension and language review|
 |07|Adherence/quality|Pilot|Claims edge cases and VAS provenance; clearly distinguish public educational context from certified measures.|Measure specification/license and research review|
 |08|Residency|Not implemented|Define initial program type; map lifecycle templates to current accreditation requirements.|Implementation and program-director review|
-|09|Release/source governance|Maintainer tooling|Install all three workflows; inspect hosted test/report artifacts and source review queue.|GitHub integration write denied; owner installation required|
+|09|Release/source governance|Maintainer tooling|Commit active workflow files, verify hosted release-check, source-monitor and Texas-data run artifacts, and inspect source review queue.|Hosted GitHub Actions runs still require owner verification after upload|
 
 ## Verified acceptance checkpoints in 0.26.0
 
@@ -31,7 +31,7 @@ Updated October 26, 2026. This is the current acceptance record. Earlier checkpo
 - [ ] Deployed browser acceptance of new fixes.
 - [ ] Phase 00/03 mobile/responsive checks and complete keyboard path.
 - [ ] Phase 06 visual print/PDF and comprehension/device/bilingual review.
-- [ ] Phase 09 hosted workflows and successful run artifacts.
+- [ ] Phase 09 hosted workflow runs and successful artifacts (the active workflow files are included in this remediation package; hosted execution is not verifiable from the ZIP alone).
 
 These completed checkpoints are not whole-phase completion. No clinical, licensing or institutional approval is inferred. The 11/13 figure described partial presence, not a sequential phase or 85% completion.
 
