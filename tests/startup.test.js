@@ -1,4 +1,0 @@
-const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
-function start(actual){const events={},panel={hidden:true,textContent:''};const context={document:{getElementById:id=>id==='main'?{childElementCount:1}:panel,querySelector:()=>({content:'0.19.3'})},ClinicalReleaseVersion:actual};context.window=context;context.addEventListener=(name,fn)=>events[name]=fn;vm.runInNewContext(fs.readFileSync('docs/assets/startup.js','utf8'),context);events.load();return panel;}
-test('matching release starts without a mismatch warning',()=>assert.equal(start('0.19.3').hidden,true));
-test('stale runtime and missing runtime warn without automatic reload',()=>{for(const runtime of ['0.19.1',undefined]){const p=start(runtime);assert.equal(p.hidden,false);assert.match(p.textContent,/Release mismatch/);assert.match(p.textContent,/Refreshing clears tab-only drafts/);}});

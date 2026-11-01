@@ -1,141 +1,61 @@
 {
-  "registry_version": "1.0.0",
-  "last_reviewed": "2026-10-31",
-  "policy": {
-    "official_sources_preferred": true,
-    "no_phi": true,
-    "publish_requires_validation": true,
-    "preserve_last_known_good": true
-  },
+  "schemaVersion": "1.0.0",
+  "lastReviewed": "2026-10-31",
+  "status": "reference-registry-only",
   "sources": [
     {
-      "id": "cms_pfs_indicators_2026",
-      "publisher": "CMS",
-      "dataset_id": "7c7df311-5315-4f38-b9ed-fd62f8bebe11",
-      "dataset_name": "Indicators for 2026",
-      "type": "dataset_api_and_download",
-      "url": "https://pfs.data.cms.gov/dataset/7c7df311-5315-4f38-b9ed-fd62f8bebe11",
-      "check_schedule": "weekly",
-      "consumer": [
-        "Pharmacist Billing Intelligence"
-      ],
-      "status": "SCHEDULED_CHECK",
-      "notes": "Discover current resources from CMS catalog metadata; do not hard-code year-specific files."
+      "id": "FDA_LABELS",
+      "name": "DailyMed / FDA drug labeling",
+      "domain": "dailymed.nlm.nih.gov",
+      "use": "Drug labeling reference",
+      "mode": "reference-only",
+      "licenseReview": "Required before data redistribution"
     },
     {
-      "id": "cms_pfs_localities_2026",
-      "publisher": "CMS",
-      "dataset_id": "81f942b8-3f6c-4b36-a151-0888376d9ca0",
-      "dataset_name": "Localities for 2026",
-      "type": "dataset_api_and_download",
-      "url": "https://pfs.data.cms.gov/dataset/81f942b8-3f6c-4b36-a151-0888376d9ca0",
-      "check_schedule": "weekly",
-      "consumer": [
-        "Pharmacist Billing Intelligence"
-      ],
-      "status": "SCHEDULED_CHECK",
-      "notes": "Separate locality reference; join only on verified fields."
+      "id": "RXNAV",
+      "name": "NLM RxNav",
+      "domain": "rxnav.nlm.nih.gov",
+      "use": "Drug terminology and identifiers",
+      "mode": "not-connected",
+      "licenseReview": "Review current API terms and service status"
     },
     {
-      "id": "rxnav",
-      "publisher": "NLM",
-      "type": "live_api",
-      "url": "https://rxnav.nlm.nih.gov/REST",
-      "check_schedule": "live_on_demand",
-      "consumer": [
-        "Drug Intelligence",
-        "Medication Review"
-      ],
-      "status": "LIVE_QUERY",
-      "notes": "Official RxNav API family; monthly RxNorm bulk release comparison is a separate job."
+      "id": "PUBMED",
+      "name": "PubMed / NCBI E-utilities",
+      "domain": "eutils.ncbi.nlm.nih.gov",
+      "use": "Biomedical literature discovery",
+      "mode": "not-connected",
+      "licenseReview": "Observe NCBI usage policy"
     },
     {
-      "id": "dailymed",
-      "publisher": "NLM",
-      "type": "live_api_and_bulk",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/",
-      "documentation": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm",
-      "check_schedule": "live_on_demand_and_daily_index_check",
-      "consumer": [
-        "Drug Intelligence",
-        "Medication Review"
-      ],
-      "status": "LIVE_QUERY"
+      "id": "CMS_PFS",
+      "name": "CMS Physician Fee Schedule",
+      "domain": "cms.gov",
+      "use": "National billing reference",
+      "mode": "reference-only",
+      "licenseReview": "Confirm current year, locality and file terms"
     },
     {
-      "id": "openfda_drug_label",
-      "publisher": "FDA",
-      "type": "live_api",
-      "url": "https://api.fda.gov/drug/label.json",
-      "documentation": "https://open.fda.gov/apis/",
-      "check_schedule": "live_on_demand",
-      "consumer": [
-        "Drug Intelligence",
-        "Medication Review"
-      ],
-      "status": "LIVE_QUERY",
-      "notes": "Not all openFDA data are validated for clinical or production decisions."
+      "id": "TX_BOP",
+      "name": "Texas State Board of Pharmacy",
+      "domain": "pharmacy.texas.gov",
+      "use": "Texas pharmacist practice and CPA legal references",
+      "mode": "reference-only",
+      "licenseReview": "Verify current statute/rule effective dates"
     },
     {
-      "id": "purple_book",
-      "publisher": "FDA",
-      "type": "monthly_download",
-      "url": "https://purplebooksearch.fda.gov/index.cfm?event=downloads",
-      "check_schedule": "weekly",
-      "consumer": [
-        "Biosimilar Intelligence"
-      ],
-      "status": "SCHEDULED_CHECK",
-      "notes": "Discover newest month/year from official page; retain monthly change file and full snapshot."
-    },
-    {
-      "id": "cms_icd10_valid_list",
-      "publisher": "CMS",
-      "type": "scheduled_download",
-      "url": "https://www.cms.gov/medicare/coordination-benefits-recovery/overview/icd-code-lists",
-      "check_schedule": "weekly",
-      "consumer": [
-        "Clinical coding tools"
-      ],
-      "status": "SCHEDULED_CHECK",
-      "notes": "Discover newest fiscal-year workbook; do not hard-code FY27 filename."
-    },
-    {
-      "id": "nlm_clinical_tables",
-      "publisher": "NLM",
-      "type": "live_api",
-      "url": "https://clinicaltables.nlm.nih.gov/",
-      "check_schedule": "live_on_demand",
-      "consumer": [
-        "Drug Intelligence",
-        "Clinical coding tools"
-      ],
-      "status": "LIVE_QUERY"
-    },
-    {
-      "id": "medlineplus_connect",
-      "publisher": "NLM",
-      "type": "live_web_service",
-      "url": "https://medlineplus.gov/medlineplus-connect/web-service/",
-      "check_schedule": "live_on_demand",
-      "consumer": [
-        "Patient education references"
-      ],
-      "status": "LIVE_QUERY"
-    },
-    {
-      "id": "ncbi_eutilities_pubmed",
-      "publisher": "NCBI",
-      "type": "live_api",
-      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
-      "documentation": "https://eutilities.github.io/site/",
-      "check_schedule": "live_on_demand",
-      "consumer": [
-        "Evidence Intelligence",
-        "Guideline Repository"
-      ],
-      "status": "LIVE_QUERY",
-      "notes": "Use tool/email identification, batching and published rate limits."
+      "id": "GUIDELINES",
+      "name": "Issuing professional societies and government agencies",
+      "domain": null,
+      "use": "Clinical practice guidelines",
+      "mode": "reference-only",
+      "licenseReview": "Track copyright, access and redistribution conditions"
     }
+  ],
+  "excludedScope": [
+    "Texas Vendor Drug Program ingestion",
+    "Texas Medicaid formulary and drug coverage workflows",
+    "Texas drug pricing and reimbursement datasets",
+    "NDC-HCPCS pricing/reimbursement pipelines"
   ]
 }
